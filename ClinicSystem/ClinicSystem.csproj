@@ -71,9 +71,6 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="ReaLTaiizor, Version=3.8.0.7, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\ReaLTaiizor.3.8.0.7\lib\net48\ReaLTaiizor.dll</HintPath>
-    </Reference>
     <Reference Include="RestSharp, Version=110.2.0.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.110.2.0\lib\net471\RestSharp.dll</HintPath>
     </Reference>
@@ -135,28 +132,40 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="frmAddAdmin.cs">
+    <Compile Include="Dashboard\frmDoctorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddAdmin.Designer.cs">
+    <Compile Include="Dashboard\frmDoctorDashboard.Designer.cs">
+      <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmSecretaryDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmSecretaryDashboard.Designer.cs">
+      <DependentUpon>frmSecretaryDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmAddAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmAddAdmin.Designer.cs">
       <DependentUpon>frmAddAdmin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddDoctor.cs">
+    <Compile Include="Doctor\frmAddDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddDoctor.Designer.cs">
+    <Compile Include="Doctor\frmAddDoctor.Designer.cs">
       <DependentUpon>frmAddDoctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAddSecretary.cs">
+    <Compile Include="Secretary\frmAddSecretary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAddSecretary.Designer.cs">
+    <Compile Include="Secretary\frmAddSecretary.Designer.cs">
       <DependentUpon>frmAddSecretary.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAdminDashboard.cs">
+    <Compile Include="Dashboard\frmAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAdminDashboard.Designer.cs">
+    <Compile Include="Dashboard\frmAdminDashboard.Designer.cs">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAdminMain.cs">
@@ -165,28 +174,34 @@
     <Compile Include="frmAdminMain.Designer.cs">
       <DependentUpon>frmAdminMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctors.cs">
+    <Compile Include="frmDoctorMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctors.Designer.cs">
+    <Compile Include="frmDoctorMain.Designer.cs">
+      <DependentUpon>frmDoctorMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Doctor\frmDoctors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Doctor\frmDoctors.Designer.cs">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditUser.cs">
+    <Compile Include="User\frmEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditUser.Designer.cs">
+    <Compile Include="User\frmEditUser.Designer.cs">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditDoctor.cs">
+    <Compile Include="Doctor\frmEditDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditDoctor.Designer.cs">
+    <Compile Include="Doctor\frmEditDoctor.Designer.cs">
       <DependentUpon>frmEditDoctor.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmEditSecretary.cs">
+    <Compile Include="Secretary\frmEditSecretary.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmEditSecretary.Designer.cs">
+    <Compile Include="Secretary\frmEditSecretary.Designer.cs">
       <DependentUpon>frmEditSecretary.cs</DependentUpon>
     </Compile>
     <Compile Include="frmLogin.cs">
@@ -195,55 +210,73 @@
     <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmSecretaries.cs">
+    <Compile Include="Secretary\frmSecretaries.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmSecretaries.Designer.cs">
+    <Compile Include="Secretary\frmSecretaries.Designer.cs">
       <DependentUpon>frmSecretaries.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmUsers.cs">
+    <Compile Include="frmSecretaryMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmUsers.Designer.cs">
+    <Compile Include="frmSecretaryMain.Designer.cs">
+      <DependentUpon>frmSecretaryMain.cs</DependentUpon>
+    </Compile>
+    <Compile Include="User\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="User\frmUsers.Designer.cs">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </Compile>
     <Compile Include="GlobalProdecure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="frmAddAdmin.resx">
+    <EmbeddedResource Include="Dashboard\frmDoctorDashboard.resx">
+      <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmSecretaryDashboard.resx">
+      <DependentUpon>frmSecretaryDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmAddAdmin.resx">
       <DependentUpon>frmAddAdmin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddDoctor.resx">
+    <EmbeddedResource Include="Doctor\frmAddDoctor.resx">
       <DependentUpon>frmAddDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAddSecretary.resx">
+    <EmbeddedResource Include="Secretary\frmAddSecretary.resx">
       <DependentUpon>frmAddSecretary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAdminDashboard.resx">
+    <EmbeddedResource Include="Dashboard\frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminMain.resx">
       <DependentUpon>frmAdminMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctors.resx">
+    <EmbeddedResource Include="frmDoctorMain.resx">
+      <DependentUpon>frmDoctorMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Doctor\frmDoctors.resx">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditUser.resx">
+    <EmbeddedResource Include="User\frmEditUser.resx">
       <DependentUpon>frmEditUser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditDoctor.resx">
+    <EmbeddedResource Include="Doctor\frmEditDoctor.resx">
       <DependentUpon>frmEditDoctor.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmEditSecretary.resx">
+    <EmbeddedResource Include="Secretary\frmEditSecretary.resx">
       <DependentUpon>frmEditSecretary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmSecretaries.resx">
+    <EmbeddedResource Include="Secretary\frmSecretaries.resx">
       <DependentUpon>frmSecretaries.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmUsers.resx">
+    <EmbeddedResource Include="frmSecretaryMain.resx">
+      <DependentUpon>frmSecretaryMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="User\frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -270,5 +303,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
