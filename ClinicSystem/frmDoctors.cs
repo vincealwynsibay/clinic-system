@@ -25,7 +25,11 @@ namespace ClinicSystem
         private void frmDoctors_Load(object sender, EventArgs e)
         {
             this.globalProcedure.checkDatabaseConnection();
+            prcLoadDoctors();
+        }
 
+        private void prcLoadDoctors()
+        {
             try
             {
                 globalProcedure.sqlClinicAdapter = new MySqlDataAdapter();
@@ -47,13 +51,12 @@ namespace ClinicSystem
                     {
                         grdDoctors.Rows[row].Cells[0].Value = globalProcedure.datDoctors.Rows[row]["id"].ToString();
                         grdDoctors.Rows[row].Cells[1].Value = globalProcedure.datDoctors.Rows[row]["firstname"].ToString();
-                        grdDoctors.Rows[row].Cells[2].Value = globalProcedure.datDoctors.Rows[row]["middlename"].ToString();
-                        grdDoctors.Rows[row].Cells[3].Value = globalProcedure.datDoctors.Rows[row]["lastname"].ToString();
-                        grdDoctors.Rows[row].Cells[4].Value = globalProcedure.datDoctors.Rows[row]["gender"].ToString();
-                        grdDoctors.Rows[row].Cells[5].Value = globalProcedure.datDoctors.Rows[row]["birthdate"].ToString();
-                        grdDoctors.Rows[row].Cells[6].Value = globalProcedure.datDoctors.Rows[row]["email"].ToString();
-                        grdDoctors.Rows[row].Cells[7].Value = globalProcedure.datDoctors.Rows[row]["mobileno"].ToString();
-                        grdDoctors.Rows[row].Cells[8].Value = globalProcedure.datDoctors.Rows[row]["address"].ToString();
+                        grdDoctors.Rows[row].Cells[2].Value = globalProcedure.datDoctors.Rows[row]["lastname"].ToString();
+                        grdDoctors.Rows[row].Cells[3].Value = globalProcedure.datDoctors.Rows[row]["gender"].ToString();
+                        grdDoctors.Rows[row].Cells[4].Value = globalProcedure.datDoctors.Rows[row]["birthdate"].ToString();
+                        grdDoctors.Rows[row].Cells[5].Value = globalProcedure.datDoctors.Rows[row]["email"].ToString();
+                        grdDoctors.Rows[row].Cells[6].Value = globalProcedure.datDoctors.Rows[row]["mobileno"].ToString();
+                        grdDoctors.Rows[row].Cells[7].Value = globalProcedure.datDoctors.Rows[row]["address"].ToString();
                         row++;
                     }
                 }
@@ -88,7 +91,29 @@ namespace ClinicSystem
             if (grdDoctors.SelectedRows.Count != 0)
             {
                 DataGridViewRow row = this.grdDoctors.SelectedRows[0];
-                mainForm.NavigateToForm(new frmEditDoctor(row.Cells["id"].Value.ToString()));
+                mainForm.NavigateToForm(new frmEditDoctor(mainForm, row.Cells["id"].Value.ToString()));
+            }
+        }
+
+        private void btnDeleteDoctor_Click(object sender, EventArgs e)
+        {
+            if (grdDoctors.SelectedRows.Count != 0)
+            {
+                MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
+                try
+                {
+                    sqlCmd.Parameters.Clear();
+                    sqlCmd.CommandText = "procDeleteDoctorByID";
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    DataGridViewRow row = this.grdDoctors.SelectedRows[0];
+                    sqlCmd.Parameters.AddWithValue("@p_id", grdDoctors.CurrentRow.Cells["id"].Value.ToString());
+                    sqlCmd.ExecuteNonQuery();
+                    prcLoadDoctors();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
     }
