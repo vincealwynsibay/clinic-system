@@ -27,6 +27,8 @@ namespace ClinicSystem
 
         public MySqlDataAdapter sqlClinicAdapter;
         public DataTable datDoctors;
+        public DataTable datSecretaries;
+        public DataTable datUsers;
 
         public bool fncConnectToDatabase()
         {
