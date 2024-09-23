@@ -56,15 +56,19 @@ namespace ClinicSystem
                     {
                         frmAdminMain frmAdmin = new frmAdminMain();
                         frmAdmin.Show();
-                        this.Dispose();
+                        this.Hide();
                     }
                     else if (role == 2)
                     {
-                        MessageBox.Show("Doctor");
+                        frmDoctorMain frmDoctor = new frmDoctorMain();
+                        frmDoctor.Show();
+                        this.Hide();
                     }
                     else if (role == 3)
                     {
-                        MessageBox.Show("Secretary");
+                        frmSecretaryMain frmSecretary = new frmSecretaryMain();
+                        frmSecretary.Show();
+                        this.Hide();
                     }
                 }
                 else
