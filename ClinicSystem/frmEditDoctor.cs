@@ -56,7 +56,7 @@ namespace ClinicSystem
                         rdoGender2.Checked = true;
                     }
 
-                    if (reader["photo"] != DBNull.Value)
+                    if (reader["photo"] != DBNull.Value && reader["photo"].ToString() != "")
                     {
                         picProfile.Image = new Bitmap(reader.GetString("photo"));
                     } 
