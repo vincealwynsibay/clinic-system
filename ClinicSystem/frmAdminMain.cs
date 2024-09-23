@@ -52,5 +52,9 @@ namespace ClinicSystem
             LoadFormIntoPanel(childForm);
         }
 
+        private void btnSecretaries_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
