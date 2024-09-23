@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net48\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="BouncyCastle.Cryptography, Version=2.0.0.0, Culture=neutral, PublicKeyToken=072edcf4a5328938, processorArchitecture=MSIL">
       <HintPath>..\packages\BouncyCastle.Cryptography.2.3.1\lib\net461\BouncyCastle.Cryptography.dll</HintPath>
     </Reference>
@@ -144,6 +147,12 @@
     <Compile Include="frmAddDoctor.Designer.cs">
       <DependentUpon>frmAddDoctor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddSecretary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddSecretary.Designer.cs">
+      <DependentUpon>frmAddSecretary.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,11 +171,35 @@
     <Compile Include="frmDoctors.Designer.cs">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmEditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditUser.Designer.cs">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditDoctor.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmEditDoctor.Designer.cs">
       <DependentUpon>frmEditDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEditSecretary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEditSecretary.Designer.cs">
+      <DependentUpon>frmEditSecretary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSecretaries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSecretaries.Designer.cs">
+      <DependentUpon>frmSecretaries.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUsers.cs">
       <SubType>Form</SubType>
@@ -183,6 +216,9 @@
     <EmbeddedResource Include="frmAddDoctor.resx">
       <DependentUpon>frmAddDoctor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAddSecretary.resx">
+      <DependentUpon>frmAddSecretary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminDashboard.resx">
       <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,8 +228,20 @@
     <EmbeddedResource Include="frmDoctors.resx">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmEditUser.resx">
+      <DependentUpon>frmEditUser.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditDoctor.resx">
       <DependentUpon>frmEditDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEditSecretary.resx">
+      <DependentUpon>frmEditSecretary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSecretaries.resx">
+      <DependentUpon>frmSecretaries.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsers.resx">
       <DependentUpon>frmUsers.cs</DependentUpon>

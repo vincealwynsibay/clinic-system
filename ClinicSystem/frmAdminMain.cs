@@ -36,6 +36,10 @@ namespace ClinicSystem
         {
             LoadFormIntoPanel(new frmDoctors(this));
         }
+        private void btnSecretaries_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new frmSecretaries(this));
+        }
 
         public void LoadFormIntoPanel(Form form)
         {
@@ -52,9 +56,5 @@ namespace ClinicSystem
             LoadFormIntoPanel(childForm);
         }
 
-        private void btnSecretaries_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
