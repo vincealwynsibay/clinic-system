@@ -103,5 +103,10 @@ namespace ClinicSystem
                 }
             }
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            mainForm.NavigateToForm(new frmAddAdmin(mainForm));
+        }
     }
 }

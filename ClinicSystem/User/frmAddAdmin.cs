@@ -45,6 +45,9 @@ namespace ClinicSystem
                 sqlCmd.CommandType = CommandType.StoredProcedure;
                 sqlCmd.Parameters.AddWithValue("@p_username", txtUsername.Text);
                 sqlCmd.Parameters.AddWithValue("@p_password", hashedPassword);
+                sqlCmd.Parameters.AddWithValue("@p_role", 1);
+                sqlCmd.Parameters.AddWithValue("@p_doctorId", null);
+                sqlCmd.Parameters.AddWithValue("@p_secretaryId", null);
                 sqlCmd.ExecuteNonQuery();
 
                 MessageBox.Show("User added Succesfully");

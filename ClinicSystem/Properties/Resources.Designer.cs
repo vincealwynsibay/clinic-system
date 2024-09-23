@@ -59,5 +59,15 @@ namespace ClinicSystem.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PGDEFZF�}� ?GPOS�����WbGSUBԘ�m� _�HVAR��?8.�+�MVAR�a� �OS/2qe�`STATl4V��&quot;avar�u��4cmapM����d�fvar	��|�gaspdglyf�-����gvarp�kj���head2�Z��6hhea�\�$hmtx���Z�-�loca;p�d-�maxp��l namek���	�post�k^�z@Hpreph��\�������n�p��t��h�n��@@�����
+        ///&amp;f&quot;�330�@@B`^��_&lt;��v�� [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Inter {
+            get {
+                return ResourceManager.GetString("Inter", resourceCulture);
+            }
+        }
     }
 }
