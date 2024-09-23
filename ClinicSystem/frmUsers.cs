@@ -17,8 +17,7 @@ namespace ClinicSystem
     {
         private frmAdminMain mainForm;
         private GlobalProcedure globalProcedure = new GlobalProcedure();
-        DataTable datDoctors = new DataTable();
-        DataTable datSecretary = new DataTable();
+        int row = 0;
         public frmUsers(frmAdminMain mainForm)
         {
             InitializeComponent();
@@ -28,33 +27,44 @@ namespace ClinicSystem
         private void frmUsers_Load(object sender, EventArgs e)
         {
             this.globalProcedure.checkDatabaseConnection();
+            prcLoadUsers();
+        }
 
+        private void prcLoadUsers()
+        {
             try
             {
-                DataTable datRole = new DataTable();
+                globalProcedure.sqlClinicAdapter = new MySqlDataAdapter();
+                globalProcedure.datUsers = new DataTable();
 
                 globalProcedure.sqlCommand.Parameters.Clear();
-                globalProcedure.sqlCommand.CommandText = "procGetAllRoles";
+                globalProcedure.sqlCommand.CommandText = "procDisplayAllUsers";
                 globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
-                datRole.Load(globalProcedure.sqlCommand.ExecuteReader());
+                globalProcedure.sqlClinicAdapter.SelectCommand = globalProcedure.sqlCommand;
+                globalProcedure.datUsers.Clear();
+                globalProcedure.sqlClinicAdapter.Fill(globalProcedure.datUsers);
 
-                cmbRole.DataSource = datRole;
-                cmbRole.ValueMember = "id";
-                cmbRole.DisplayMember = "name";
+                if (globalProcedure.datUsers.Rows.Count > 0)
+                {
+                    row = 0;
+                    //lblTotal.Text = "Total: " + Convert.ToString(globalProcedure.datUsers.Rows.Count);
+                    grdUsers.RowCount = globalProcedure.datUsers.Rows.Count;
+                    while (!(globalProcedure.datUsers.Rows.Count - 1 < row))
+                    {
+                        grdUsers.Rows[row].Cells[0].Value = globalProcedure.datUsers.Rows[row]["id"].ToString();
+                        grdUsers.Rows[row].Cells[1].Value = globalProcedure.datUsers.Rows[row]["username"].ToString();
+                        grdUsers.Rows[row].Cells[2].Value = globalProcedure.datUsers.Rows[row]["role"].ToString();
+                        grdUsers.Rows[row].Cells[3].Value = globalProcedure.datUsers.Rows[row]["fullname"].ToString();
+                        row++;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Record not found!", "Records", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
 
-                globalProcedure.sqlCommand.Parameters.Clear();
-                globalProcedure.sqlCommand.CommandText = "procGetAllDoctorsByFullname";
-                globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
-                globalProcedure.sqlCommand.Parameters.AddWithValue("@p_fullname", "");
-                datDoctors.Load(globalProcedure.sqlCommand.ExecuteReader());
-                datDoctors.CaseSensitive = false;
-
-                globalProcedure.sqlCommand.Parameters.Clear();
-                globalProcedure.sqlCommand.CommandText = "procGetAllSecretaryByFullname";
-                globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
-                globalProcedure.sqlCommand.Parameters.AddWithValue("@p_fullname", "");
-                datSecretary.Load(globalProcedure.sqlCommand.ExecuteReader());
-                datSecretary.CaseSensitive = false;
+                globalProcedure.sqlClinicAdapter.Dispose();
+                globalProcedure.datUsers.Dispose();
 
             }
             catch (Exception ex)
@@ -63,30 +73,35 @@ namespace ClinicSystem
             }
         }
 
-
-        private void cmbRole_SelectedIndexChanged(object sender, EventArgs e)
+        private void btnEditUser_Click(object sender, EventArgs e)
         {
-            if (cmbRole.Text.ToString() == "ADMIN")
+            if (grdUsers.SelectedRows.Count != 0)
             {
-                //cmbFullname.Enabled = false;
-            }
-            else if (cmbRole.Text.ToString() == "DOCTOR")
-            {
-                //cmbFullname.Enabled = true;
-                //cmbFullname.ValueMember = datDoctors.Columns["id"].ColumnName;
-                //cmbFullname.DisplayMember = datDoctors.Columns["fullname"].ColumnName;
-                //cmbFullname.DataSource = datDoctors;
-
-            }
-            else if (cmbRole.Text.ToString() == "SECRETARY")
-            {
-                //cmbFullname.Enabled = true;
-                //cmbFullname.ValueMember = "id";
-                //cmbFullname.DisplayMember = "fullname";
-                //cmbFullname.DataSource = datSecretary;
+                DataGridViewRow row = this.grdUsers.SelectedRows[0];
+                mainForm.NavigateToForm(new frmEditUser(mainForm, row.Cells["id"].Value.ToString()));
             }
         }
 
-      
+        private void btnDeleteUser_Click(object sender, EventArgs e)
+        {
+            if (grdUsers.SelectedRows.Count != 0)
+            {
+                MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
+                try
+                {
+                    sqlCmd.Parameters.Clear();
+                    sqlCmd.CommandText = "procDeleteUserByID";
+                    sqlCmd.CommandType = CommandType.StoredProcedure;
+                    DataGridViewRow row = this.grdUsers.SelectedRows[0];
+                    sqlCmd.Parameters.AddWithValue("@p_id", grdUsers.CurrentRow.Cells["id"].Value.ToString());
+                    sqlCmd.ExecuteNonQuery();
+                    prcLoadUsers();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+        }
     }
 }
