@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdSecretaries = new Guna.UI2.WinForms.Guna2DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,22 +48,18 @@
             // 
             // grdSecretaries
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.grdSecretaries.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.grdSecretaries.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdSecretaries.BackgroundColor = System.Drawing.Color.White;
-            this.grdSecretaries.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdSecretaries.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grdSecretaries.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdSecretaries.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.grdSecretaries.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdSecretaries.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdSecretaries.ColumnHeadersHeight = 52;
+            this.grdSecretaries.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grdSecretaries.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.firstname,
@@ -73,23 +69,22 @@
             this.email,
             this.mobileno,
             this.address});
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdSecretaries.DefaultCellStyle = dataGridViewCellStyle9;
-            this.grdSecretaries.EnableHeadersVisualStyles = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdSecretaries.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdSecretaries.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.grdSecretaries.Location = new System.Drawing.Point(61, 162);
+            this.grdSecretaries.Location = new System.Drawing.Point(17, 136);
+            this.grdSecretaries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdSecretaries.Name = "grdSecretaries";
             this.grdSecretaries.RowHeadersVisible = false;
             this.grdSecretaries.RowHeadersWidth = 51;
             this.grdSecretaries.RowTemplate.Height = 24;
-            this.grdSecretaries.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdSecretaries.Size = new System.Drawing.Size(1175, 541);
+            this.grdSecretaries.Size = new System.Drawing.Size(881, 440);
             this.grdSecretaries.TabIndex = 6;
             this.grdSecretaries.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.White;
             this.grdSecretaries.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -164,62 +159,54 @@
             // 
             // btnDeleteSecretary
             // 
-            this.btnDeleteSecretary.CheckedState.Parent = this.btnDeleteSecretary;
-            this.btnDeleteSecretary.CustomImages.Parent = this.btnDeleteSecretary;
             this.btnDeleteSecretary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(22)))), ((int)(((byte)(86)))));
             this.btnDeleteSecretary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteSecretary.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteSecretary.HoverState.Parent = this.btnDeleteSecretary;
-            this.btnDeleteSecretary.Location = new System.Drawing.Point(1086, 759);
+            this.btnDeleteSecretary.Location = new System.Drawing.Point(785, 621);
+            this.btnDeleteSecretary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteSecretary.Name = "btnDeleteSecretary";
-            this.btnDeleteSecretary.ShadowDecoration.Parent = this.btnDeleteSecretary;
-            this.btnDeleteSecretary.Size = new System.Drawing.Size(150, 45);
+            this.btnDeleteSecretary.Size = new System.Drawing.Size(112, 37);
             this.btnDeleteSecretary.TabIndex = 7;
             this.btnDeleteSecretary.Text = "DELETE";
             this.btnDeleteSecretary.Click += new System.EventHandler(this.btnDeleteSecretary_Click);
             // 
             // btnEditSecretary
             // 
-            this.btnEditSecretary.CheckedState.Parent = this.btnEditSecretary;
-            this.btnEditSecretary.CustomImages.Parent = this.btnEditSecretary;
             this.btnEditSecretary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.btnEditSecretary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEditSecretary.ForeColor = System.Drawing.Color.Black;
-            this.btnEditSecretary.HoverState.Parent = this.btnEditSecretary;
-            this.btnEditSecretary.Location = new System.Drawing.Point(916, 759);
+            this.btnEditSecretary.Location = new System.Drawing.Point(658, 621);
+            this.btnEditSecretary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditSecretary.Name = "btnEditSecretary";
-            this.btnEditSecretary.ShadowDecoration.Parent = this.btnEditSecretary;
-            this.btnEditSecretary.Size = new System.Drawing.Size(150, 45);
+            this.btnEditSecretary.Size = new System.Drawing.Size(112, 37);
             this.btnEditSecretary.TabIndex = 8;
             this.btnEditSecretary.Text = "EDIT";
             this.btnEditSecretary.Click += new System.EventHandler(this.btnEditSecretary_Click);
             // 
             // btnAddSecretary
             // 
-            this.btnAddSecretary.CheckedState.Parent = this.btnAddSecretary;
-            this.btnAddSecretary.CustomImages.Parent = this.btnAddSecretary;
             this.btnAddSecretary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.btnAddSecretary.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddSecretary.ForeColor = System.Drawing.Color.Black;
-            this.btnAddSecretary.HoverState.Parent = this.btnAddSecretary;
-            this.btnAddSecretary.Location = new System.Drawing.Point(742, 759);
+            this.btnAddSecretary.Location = new System.Drawing.Point(527, 621);
+            this.btnAddSecretary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddSecretary.Name = "btnAddSecretary";
-            this.btnAddSecretary.ShadowDecoration.Parent = this.btnAddSecretary;
-            this.btnAddSecretary.Size = new System.Drawing.Size(150, 45);
+            this.btnAddSecretary.Size = new System.Drawing.Size(112, 37);
             this.btnAddSecretary.TabIndex = 9;
             this.btnAddSecretary.Text = "ADD";
             this.btnAddSecretary.Click += new System.EventHandler(this.btnAddSecretary_Click);
             // 
             // frmSecretaries
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1296, 967);
+            this.BackColor = System.Drawing.SystemColors.Control;
+            this.ClientSize = new System.Drawing.Size(909, 790);
             this.Controls.Add(this.grdSecretaries);
             this.Controls.Add(this.btnDeleteSecretary);
             this.Controls.Add(this.btnEditSecretary);
             this.Controls.Add(this.btnAddSecretary);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmSecretaries";
             this.Text = "frmSecretaries";
             this.Load += new System.EventHandler(this.frmSecretaries_Load);

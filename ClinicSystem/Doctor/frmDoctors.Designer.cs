@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.grdDoctors = new Guna.UI2.WinForms.Guna2DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,22 +48,18 @@
             // 
             // grdDoctors
             // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.grdDoctors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdDoctors.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdDoctors.BackgroundColor = System.Drawing.Color.White;
-            this.grdDoctors.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdDoctors.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grdDoctors.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDoctors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.grdDoctors.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDoctors.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
             this.grdDoctors.ColumnHeadersHeight = 52;
+            this.grdDoctors.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grdDoctors.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.firstname,
@@ -73,23 +69,22 @@
             this.email,
             this.mobileno,
             this.address});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDoctors.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdDoctors.EnableHeadersVisualStyles = false;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDoctors.DefaultCellStyle = dataGridViewCellStyle9;
             this.grdDoctors.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.grdDoctors.Location = new System.Drawing.Point(49, 165);
+            this.grdDoctors.Location = new System.Drawing.Point(17, 136);
+            this.grdDoctors.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdDoctors.Name = "grdDoctors";
             this.grdDoctors.RowHeadersVisible = false;
             this.grdDoctors.RowHeadersWidth = 51;
             this.grdDoctors.RowTemplate.Height = 24;
-            this.grdDoctors.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDoctors.Size = new System.Drawing.Size(1175, 541);
+            this.grdDoctors.Size = new System.Drawing.Size(881, 440);
             this.grdDoctors.TabIndex = 4;
             this.grdDoctors.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.White;
             this.grdDoctors.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -164,61 +159,53 @@
             // 
             // btnAddDoctor
             // 
-            this.btnAddDoctor.CheckedState.Parent = this.btnAddDoctor;
-            this.btnAddDoctor.CustomImages.Parent = this.btnAddDoctor;
             this.btnAddDoctor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.btnAddDoctor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddDoctor.ForeColor = System.Drawing.Color.Black;
-            this.btnAddDoctor.HoverState.Parent = this.btnAddDoctor;
-            this.btnAddDoctor.Location = new System.Drawing.Point(730, 762);
+            this.btnAddDoctor.Location = new System.Drawing.Point(527, 621);
+            this.btnAddDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddDoctor.Name = "btnAddDoctor";
-            this.btnAddDoctor.ShadowDecoration.Parent = this.btnAddDoctor;
-            this.btnAddDoctor.Size = new System.Drawing.Size(150, 45);
+            this.btnAddDoctor.Size = new System.Drawing.Size(112, 37);
             this.btnAddDoctor.TabIndex = 5;
             this.btnAddDoctor.Text = "ADD";
             this.btnAddDoctor.Click += new System.EventHandler(this.btnAddDoctor_Click);
             // 
             // btnEditDoctor
             // 
-            this.btnEditDoctor.CheckedState.Parent = this.btnEditDoctor;
-            this.btnEditDoctor.CustomImages.Parent = this.btnEditDoctor;
             this.btnEditDoctor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.btnEditDoctor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEditDoctor.ForeColor = System.Drawing.Color.Black;
-            this.btnEditDoctor.HoverState.Parent = this.btnEditDoctor;
-            this.btnEditDoctor.Location = new System.Drawing.Point(904, 762);
+            this.btnEditDoctor.Location = new System.Drawing.Point(658, 621);
+            this.btnEditDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditDoctor.Name = "btnEditDoctor";
-            this.btnEditDoctor.ShadowDecoration.Parent = this.btnEditDoctor;
-            this.btnEditDoctor.Size = new System.Drawing.Size(150, 45);
+            this.btnEditDoctor.Size = new System.Drawing.Size(112, 37);
             this.btnEditDoctor.TabIndex = 5;
             this.btnEditDoctor.Text = "EDIT";
             this.btnEditDoctor.Click += new System.EventHandler(this.btnEditDoctor_Click);
             // 
             // btnDeleteDoctor
             // 
-            this.btnDeleteDoctor.CheckedState.Parent = this.btnDeleteDoctor;
-            this.btnDeleteDoctor.CustomImages.Parent = this.btnDeleteDoctor;
             this.btnDeleteDoctor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(22)))), ((int)(((byte)(86)))));
             this.btnDeleteDoctor.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteDoctor.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteDoctor.HoverState.Parent = this.btnDeleteDoctor;
-            this.btnDeleteDoctor.Location = new System.Drawing.Point(1074, 762);
+            this.btnDeleteDoctor.Location = new System.Drawing.Point(785, 621);
+            this.btnDeleteDoctor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteDoctor.Name = "btnDeleteDoctor";
-            this.btnDeleteDoctor.ShadowDecoration.Parent = this.btnDeleteDoctor;
-            this.btnDeleteDoctor.Size = new System.Drawing.Size(150, 45);
+            this.btnDeleteDoctor.Size = new System.Drawing.Size(112, 37);
             this.btnDeleteDoctor.TabIndex = 5;
             this.btnDeleteDoctor.Text = "DELETE";
             this.btnDeleteDoctor.Click += new System.EventHandler(this.btnDeleteDoctor_Click);
             // 
             // frmDoctors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 967);
+            this.ClientSize = new System.Drawing.Size(909, 790);
             this.Controls.Add(this.btnDeleteDoctor);
             this.Controls.Add(this.btnEditDoctor);
             this.Controls.Add(this.btnAddDoctor);
             this.Controls.Add(this.grdDoctors);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDoctors";
             this.Text = "s";
             this.Load += new System.EventHandler(this.frmDoctors_Load);

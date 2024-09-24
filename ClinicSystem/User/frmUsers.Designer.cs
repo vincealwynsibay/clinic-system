@@ -46,11 +46,6 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.grdUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.grdUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.grdUsers.BackgroundColor = System.Drawing.Color.White;
-            this.grdUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.grdUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.grdUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -60,6 +55,7 @@
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.grdUsers.ColumnHeadersHeight = 52;
+            this.grdUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
             this.grdUsers.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.username,
@@ -73,15 +69,14 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdUsers.DefaultCellStyle = dataGridViewCellStyle3;
-            this.grdUsers.EnableHeadersVisualStyles = false;
             this.grdUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            this.grdUsers.Location = new System.Drawing.Point(61, 162);
+            this.grdUsers.Location = new System.Drawing.Point(17, 136);
+            this.grdUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdUsers.Name = "grdUsers";
             this.grdUsers.RowHeadersVisible = false;
             this.grdUsers.RowHeadersWidth = 51;
             this.grdUsers.RowTemplate.Height = 24;
-            this.grdUsers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdUsers.Size = new System.Drawing.Size(1175, 541);
+            this.grdUsers.Size = new System.Drawing.Size(881, 440);
             this.grdUsers.TabIndex = 6;
             this.grdUsers.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.White;
             this.grdUsers.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -132,61 +127,53 @@
             // 
             // btnDeleteUser
             // 
-            this.btnDeleteUser.CheckedState.Parent = this.btnDeleteUser;
-            this.btnDeleteUser.CustomImages.Parent = this.btnDeleteUser;
             this.btnDeleteUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(217)))), ((int)(((byte)(22)))), ((int)(((byte)(86)))));
             this.btnDeleteUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnDeleteUser.ForeColor = System.Drawing.Color.Black;
-            this.btnDeleteUser.HoverState.Parent = this.btnDeleteUser;
-            this.btnDeleteUser.Location = new System.Drawing.Point(1086, 759);
+            this.btnDeleteUser.Location = new System.Drawing.Point(785, 621);
+            this.btnDeleteUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.ShadowDecoration.Parent = this.btnDeleteUser;
-            this.btnDeleteUser.Size = new System.Drawing.Size(150, 45);
+            this.btnDeleteUser.Size = new System.Drawing.Size(112, 37);
             this.btnDeleteUser.TabIndex = 7;
             this.btnDeleteUser.Text = "DELETE";
             this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // btnEditUser
             // 
-            this.btnEditUser.CheckedState.Parent = this.btnEditUser;
-            this.btnEditUser.CustomImages.Parent = this.btnEditUser;
             this.btnEditUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.btnEditUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnEditUser.ForeColor = System.Drawing.Color.Black;
-            this.btnEditUser.HoverState.Parent = this.btnEditUser;
-            this.btnEditUser.Location = new System.Drawing.Point(916, 759);
+            this.btnEditUser.Location = new System.Drawing.Point(658, 621);
+            this.btnEditUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEditUser.Name = "btnEditUser";
-            this.btnEditUser.ShadowDecoration.Parent = this.btnEditUser;
-            this.btnEditUser.Size = new System.Drawing.Size(150, 45);
+            this.btnEditUser.Size = new System.Drawing.Size(112, 37);
             this.btnEditUser.TabIndex = 8;
             this.btnEditUser.Text = "EDIT";
             this.btnEditUser.Click += new System.EventHandler(this.btnEditUser_Click);
             // 
             // btnAddUser
             // 
-            this.btnAddUser.CheckedState.Parent = this.btnAddUser;
-            this.btnAddUser.CustomImages.Parent = this.btnAddUser;
             this.btnAddUser.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.btnAddUser.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAddUser.ForeColor = System.Drawing.Color.Black;
-            this.btnAddUser.HoverState.Parent = this.btnAddUser;
-            this.btnAddUser.Location = new System.Drawing.Point(742, 759);
+            this.btnAddUser.Location = new System.Drawing.Point(527, 621);
+            this.btnAddUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAddUser.Name = "btnAddUser";
-            this.btnAddUser.ShadowDecoration.Parent = this.btnAddUser;
-            this.btnAddUser.Size = new System.Drawing.Size(150, 45);
+            this.btnAddUser.Size = new System.Drawing.Size(112, 37);
             this.btnAddUser.TabIndex = 9;
             this.btnAddUser.Text = "ADD";
             this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // frmUsers
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1296, 967);
+            this.ClientSize = new System.Drawing.Size(909, 790);
             this.Controls.Add(this.grdUsers);
             this.Controls.Add(this.btnDeleteUser);
             this.Controls.Add(this.btnEditUser);
             this.Controls.Add(this.btnAddUser);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmUsers";
             this.Text = "frmUsers";
             this.Load += new System.EventHandler(this.frmUsers_Load);
