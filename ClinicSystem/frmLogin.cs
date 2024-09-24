@@ -76,7 +76,7 @@ namespace ClinicSystem
                     MessageBox.Show("Invalid Credentials");
                 }
             }
-            catch (Exception ex)
+            catch
             {
 
                 MessageBox.Show("Invalid Credentials");
