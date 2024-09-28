@@ -60,7 +60,7 @@ namespace ClinicSystem
                     }
                     else if (role == 2)
                     {
-                        frmDoctorMain frmDoctor = new frmDoctorMain();
+                        frmDoctorMain frmDoctor = new frmDoctorMain(5);  // Replace '5' with the variable containing the id of the doctor logging in.
                         frmDoctor.Show();
                         this.Hide();
                     }
