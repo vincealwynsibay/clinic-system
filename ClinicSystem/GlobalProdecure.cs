@@ -29,6 +29,7 @@ namespace ClinicSystem
         public DataTable datDoctors;
         public DataTable datSecretaries;
         public DataTable datUsers;
+        public DataTable datPatients;
 
         public bool fncConnectToDatabase()
         {

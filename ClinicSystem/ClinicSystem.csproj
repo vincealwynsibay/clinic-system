@@ -49,8 +49,8 @@
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
-    <Reference Include="Guna.UI2">
-      <HintPath>..\..\..\..\Desktop\Guna_UI_Framework_Ultimate_v2.0.0.1\Guna.UI-Framework-Lib-master\Guna.UI2 WinForms\.net 4.0\Guna.UI2.dll</HintPath>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net48\Guna.UI2.dll</HintPath>
     </Reference>
     <Reference Include="K4os.Compression.LZ4, Version=1.3.8.0, Culture=neutral, PublicKeyToken=2186fa9121ef231d, processorArchitecture=MSIL">
       <HintPath>..\packages\K4os.Compression.LZ4.1.3.8\lib\net462\K4os.Compression.LZ4.dll</HintPath>
@@ -144,6 +144,30 @@
     <Compile Include="Dashboard\frmSecretaryDashboard.Designer.cs">
       <DependentUpon>frmSecretaryDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAppointments.Designer.cs">
+      <DependentUpon>frmAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctorSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorSchedule.Designer.cs">
+      <DependentUpon>frmDoctorSchedule.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctorSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorSetting.Designer.cs">
+      <DependentUpon>frmDoctorSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctorPatients.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorPatients.Designer.cs">
+      <DependentUpon>frmDoctorPatients.cs</DependentUpon>
+    </Compile>
     <Compile Include="User\frmAddAdmin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +260,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmSecretaryDashboard.resx">
       <DependentUpon>frmSecretaryDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAppointments.resx">
+      <DependentUpon>frmAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorSchedule.resx">
+      <DependentUpon>frmDoctorSchedule.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorSetting.resx">
+      <DependentUpon>frmDoctorSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorPatients.resx">
+      <DependentUpon>frmDoctorPatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmAddAdmin.resx">
       <DependentUpon>frmAddAdmin.cs</DependentUpon>

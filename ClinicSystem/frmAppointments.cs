@@ -8,17 +8,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicSystem
+namespace ClinicSystem.DoctorMain
 {
-    public partial class frmDoctorDashboard : Form
+    public partial class frmAppointments : Form
     {
         private frmDoctorMain mainForm;
-        private int key_index;
-        public frmDoctorDashboard(frmDoctorMain mainForm, int key_index)
+        public frmAppointments(frmDoctorMain mainForm)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
         }
     }
 }

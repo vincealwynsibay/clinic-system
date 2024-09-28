@@ -32,11 +32,11 @@
             this.pnlMain = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnSettings = new Guna.UI2.WinForms.Guna2Button();
             this.btnPatients = new Guna.UI2.WinForms.Guna2Button();
             this.btnAppointments = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
-            this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMain.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -47,17 +47,19 @@
             this.pnlMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(248)))), ((int)(((byte)(242)))), ((int)(((byte)(239)))));
             this.pnlMain.Controls.Add(this.panel1);
             this.pnlMain.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlMain.Location = new System.Drawing.Point(300, 0);
+            this.pnlMain.Location = new System.Drawing.Point(225, 0);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Size = new System.Drawing.Size(1341, 1020);
+            this.pnlMain.Size = new System.Drawing.Size(1006, 829);
             this.pnlMain.TabIndex = 3;
             // 
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1341, 72);
+            this.panel1.Size = new System.Drawing.Size(1006, 58);
             this.panel1.TabIndex = 0;
             // 
             // bunifuPanel1
@@ -75,102 +77,92 @@
             this.bunifuPanel1.Controls.Add(this.btnDashboard);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(300, 1020);
+            this.bunifuPanel1.Size = new System.Drawing.Size(225, 829);
             this.bunifuPanel1.TabIndex = 2;
+            // 
+            // btnLogout
+            // 
+            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogout.ForeColor = System.Drawing.Color.White;
+            this.btnLogout.Location = new System.Drawing.Point(2, 390);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLogout.Name = "btnLogout";
+            this.btnLogout.Size = new System.Drawing.Size(220, 37);
+            this.btnLogout.TabIndex = 4;
+            this.btnLogout.Text = "LOGOUT";
+            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
             // 
             // btnSettings
             // 
-            this.btnSettings.CheckedState.Parent = this.btnSettings;
-            this.btnSettings.CustomImages.Parent = this.btnSettings;
             this.btnSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.btnSettings.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSettings.ForeColor = System.Drawing.Color.White;
-            this.btnSettings.HoverState.Parent = this.btnSettings;
-            this.btnSettings.Location = new System.Drawing.Point(3, 420);
+            this.btnSettings.Location = new System.Drawing.Point(2, 341);
+            this.btnSettings.Margin = new System.Windows.Forms.Padding(2);
             this.btnSettings.Name = "btnSettings";
-            this.btnSettings.ShadowDecoration.Parent = this.btnSettings;
-            this.btnSettings.Size = new System.Drawing.Size(294, 45);
+            this.btnSettings.Size = new System.Drawing.Size(220, 37);
             this.btnSettings.TabIndex = 0;
             this.btnSettings.Text = "SETTINGS";
             this.btnSettings.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSettings.Click += new System.EventHandler(this.btnSettings_Click);
             // 
             // btnPatients
             // 
-            this.btnPatients.CheckedState.Parent = this.btnPatients;
-            this.btnPatients.CustomImages.Parent = this.btnPatients;
             this.btnPatients.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.btnPatients.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPatients.ForeColor = System.Drawing.Color.White;
-            this.btnPatients.HoverState.Parent = this.btnPatients;
-            this.btnPatients.Location = new System.Drawing.Point(3, 352);
+            this.btnPatients.Location = new System.Drawing.Point(2, 286);
+            this.btnPatients.Margin = new System.Windows.Forms.Padding(2);
             this.btnPatients.Name = "btnPatients";
-            this.btnPatients.ShadowDecoration.Parent = this.btnPatients;
-            this.btnPatients.Size = new System.Drawing.Size(294, 45);
+            this.btnPatients.Size = new System.Drawing.Size(220, 37);
             this.btnPatients.TabIndex = 0;
             this.btnPatients.Text = "PATIENTS";
             this.btnPatients.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnPatients.Click += new System.EventHandler(this.btnPatients_Click);
             // 
             // btnAppointments
             // 
-            this.btnAppointments.CheckedState.Parent = this.btnAppointments;
-            this.btnAppointments.CustomImages.Parent = this.btnAppointments;
             this.btnAppointments.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.btnAppointments.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAppointments.ForeColor = System.Drawing.Color.White;
-            this.btnAppointments.HoverState.Parent = this.btnAppointments;
-            this.btnAppointments.Location = new System.Drawing.Point(3, 287);
+            this.btnAppointments.Location = new System.Drawing.Point(2, 233);
+            this.btnAppointments.Margin = new System.Windows.Forms.Padding(2);
             this.btnAppointments.Name = "btnAppointments";
-            this.btnAppointments.ShadowDecoration.Parent = this.btnAppointments;
-            this.btnAppointments.Size = new System.Drawing.Size(291, 45);
+            this.btnAppointments.Size = new System.Drawing.Size(218, 37);
             this.btnAppointments.TabIndex = 0;
             this.btnAppointments.Text = "APPOINTMENTS";
             this.btnAppointments.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // btnDashboard
             // 
-            this.btnDashboard.CheckedState.Parent = this.btnDashboard;
-            this.btnDashboard.CustomImages.Parent = this.btnDashboard;
             this.btnDashboard.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.ForeColor = System.Drawing.Color.White;
-            this.btnDashboard.HoverState.Parent = this.btnDashboard;
-            this.btnDashboard.Location = new System.Drawing.Point(3, 221);
+            this.btnDashboard.Location = new System.Drawing.Point(2, 180);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
-            this.btnDashboard.ShadowDecoration.Parent = this.btnDashboard;
-            this.btnDashboard.Size = new System.Drawing.Size(294, 45);
+            this.btnDashboard.Size = new System.Drawing.Size(220, 37);
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "DASHBOARD";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
-            // btnLogout
-            // 
-            this.btnLogout.CheckedState.Parent = this.btnLogout;
-            this.btnLogout.CustomImages.Parent = this.btnLogout;
-            this.btnLogout.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnLogout.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLogout.ForeColor = System.Drawing.Color.White;
-            this.btnLogout.HoverState.Parent = this.btnLogout;
-            this.btnLogout.Location = new System.Drawing.Point(3, 480);
-            this.btnLogout.Name = "btnLogout";
-            this.btnLogout.ShadowDecoration.Parent = this.btnLogout;
-            this.btnLogout.Size = new System.Drawing.Size(294, 45);
-            this.btnLogout.TabIndex = 4;
-            this.btnLogout.Text = "LOGOUT";
-            this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnLogout.Click += new System.EventHandler(this.btnLogout_Click);
-            // 
             // frmDoctorMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1641, 1020);
+            this.ClientSize = new System.Drawing.Size(1231, 829);
             this.Controls.Add(this.pnlMain);
             this.Controls.Add(this.bunifuPanel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDoctorMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmDoctorMain";
             this.Load += new System.EventHandler(this.frmDoctorMain_Load);
             this.pnlMain.ResumeLayout(false);
@@ -182,12 +174,12 @@
         #endregion
 
         private System.Windows.Forms.Panel pnlMain;
-        private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Guna.UI2.WinForms.Guna2Button btnAppointments;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2Button btnPatients;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
+        private System.Windows.Forms.Panel panel1;
     }
 }

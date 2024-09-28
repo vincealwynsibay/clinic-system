@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClinicSystem.DoctorMain;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,11 @@ namespace ClinicSystem
 {
     public partial class frmDoctorMain : Form
     {
-        public frmDoctorMain()
+        private int key_index;
+        public frmDoctorMain(int key_index)
         {
             InitializeComponent();
+            this.key_index = key_index;
         }
 
         private void frmDoctorMain_Load(object sender, EventArgs e)
@@ -24,7 +27,7 @@ namespace ClinicSystem
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new frmDoctorDashboard(this));
+            LoadFormIntoPanel(new frmDoctorDashboard(this, key_index));
         }
 
         public void LoadFormIntoPanel(Form form)
@@ -47,6 +50,16 @@ namespace ClinicSystem
             frmLogin frmLogin = new frmLogin();
             frmLogin.Show();
             this.Hide();
+        }
+
+        private void btnPatients_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new frmDoctorPatients(this, key_index));
+        }
+
+        private void btnSettings_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new frmDoctorSetting(this, key_index));
         }
     }
 }
