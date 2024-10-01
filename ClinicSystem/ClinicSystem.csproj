@@ -150,6 +150,24 @@
     <Compile Include="frmAppointments.Designer.cs">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDoctorPatientDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorPatientDetail.Designer.cs">
+      <DependentUpon>frmDoctorPatientDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctorPatientDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorPatientDiagnosis.Designer.cs">
+      <DependentUpon>frmDoctorPatientDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDoctorPatientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDoctorPatientEdit.Designer.cs">
+      <DependentUpon>frmDoctorPatientEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDoctorSchedule.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -263,6 +281,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppointments.resx">
       <DependentUpon>frmAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorPatientDetail.resx">
+      <DependentUpon>frmDoctorPatientDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorPatientDiagnosis.resx">
+      <DependentUpon>frmDoctorPatientDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDoctorPatientEdit.resx">
+      <DependentUpon>frmDoctorPatientEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmDoctorSchedule.resx">
       <DependentUpon>frmDoctorSchedule.cs</DependentUpon>
