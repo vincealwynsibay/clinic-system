@@ -103,7 +103,7 @@ namespace ClinicSystem
 
             try
             {
-                if (!HasDataChanged())
+                if (!func_HasDataChanged())
                 {
                     MessageBox.Show("No changes detected. Record not updated.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
@@ -136,7 +136,7 @@ namespace ClinicSystem
             }
         }
 
-        private bool HasDataChanged()
+        private bool func_HasDataChanged()
         {
             return txtEmail.Text != originalEmail ||
                    txtMobileNo.Text != originalMobileNo ||

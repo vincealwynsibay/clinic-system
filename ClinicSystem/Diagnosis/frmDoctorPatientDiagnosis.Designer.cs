@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorPatientDiagnosis));
             this.grpDiagnosis = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnPerscription = new Guna.UI2.WinForms.Guna2Button();
             this.lblCommentData = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblComment = new Bunifu.UI.WinForms.BunifuLabel();
@@ -37,7 +38,7 @@
             this.lblDiagnosis = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblDiagnosisDate = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.grpDiagnosis.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -46,6 +47,7 @@
             this.grpDiagnosis.BorderColor = System.Drawing.Color.Black;
             this.grpDiagnosis.BorderRadius = 1;
             this.grpDiagnosis.BorderThickness = 1;
+            this.grpDiagnosis.Controls.Add(this.btnDelete);
             this.grpDiagnosis.Controls.Add(this.btnEdit);
             this.grpDiagnosis.Controls.Add(this.btnPerscription);
             this.grpDiagnosis.Controls.Add(this.lblCommentData);
@@ -62,6 +64,19 @@
             this.grpDiagnosis.Size = new System.Drawing.Size(518, 132);
             this.grpDiagnosis.TabIndex = 0;
             this.grpDiagnosis.TabStop = false;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(126)))));
+            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEdit.ForeColor = System.Drawing.Color.White;
+            this.btnEdit.Image = global::ClinicSystem.Properties.Resources.icnEdit;
+            this.btnEdit.Location = new System.Drawing.Point(352, 29);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 37);
+            this.btnEdit.TabIndex = 120;
+            this.btnEdit.Text = "Edit";
             // 
             // btnPerscription
             // 
@@ -176,17 +191,18 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(541, 534);
             this.bunifuPanel1.TabIndex = 1;
             // 
-            // btnEdit
+            // btnDelete
             // 
-            this.btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnEdit.ForeColor = System.Drawing.Color.White;
-            this.btnEdit.Location = new System.Drawing.Point(352, 29);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(157, 37);
-            this.btnEdit.TabIndex = 120;
-            this.btnEdit.Text = "Perscription";
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(1)))), ((int)(((byte)(28)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::ClinicSystem.Properties.Resources.icnDelete;
+            this.btnDelete.Location = new System.Drawing.Point(434, 29);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 37);
+            this.btnDelete.TabIndex = 120;
+            this.btnDelete.Text = "Delete";
             // 
             // frmDoctorPatientDiagnosis
             // 
@@ -216,5 +232,6 @@
         private Guna.UI2.WinForms.Guna2Button btnPerscription;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Guna.UI2.WinForms.Guna2Button btnEdit;
+        private Guna.UI2.WinForms.Guna2Button btnDelete;
     }
 }

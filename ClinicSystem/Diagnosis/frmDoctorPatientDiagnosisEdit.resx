@@ -117,14 +117,64 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Inter" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Inter-VariableFont_opsz,wght.ttf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="bunifuPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAA+4AAABkCAYAAAAYJ2qdAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALUSURBVHhe7dkhbgJRGEbRkV0GsrIGJlXIZgDBEpBdBjtv
+        h/SJCvxckvMlR71/AzdvMjMzMzMzM7NX2Py1m+bzHQAAANjY5+V91PrY/vSxPvwAAAAAEYflOqp93V/R
+        Pz8EAAAAtnAf1b5OuAMAAECNcAcAAIAw4Q4AAABhwh0AAADChDsAAACECXcAAAAIE+4AAAAQJtwBAAAg
+        TLgDAABAmHAHAACAMOEOAAAAYcIdAAAAwoQ7AAAAhAl3AAAACBPuAAAAECbcAQAAIEy4AwAAQJhwBwAA
+        gDDhDgAAAGHCHQAAAMKEOwAAAIQJdwAAAAgT7gAAABAm3AEAACBMuAMAAECYcAcAAIAw4Q4AAABhwh0A
+        AADChDsAAACECXcAAAAIE+4AAAAQJtwBAAAgTLgDAABAmHAHAACAMOEOAAAAYcIdAAAAwoQ7AAAAhAl3
+        AAAACBPuAAAAECbcAQAAIEy4AwAAQJhwBwAAgDDhDgAAAGHCHQAAAMKEOwAAAIQJdwAAAAgT7gAAABAm
+        3AEAACBMuAMAAECYcAcAAIAw4Q4AAABhwh0AAADChDsAAACECXcAAAAIE+4AAAAQJtwBAAAgTLgDAABA
+        mHAHAACAMOEOAAAAYcIdAAAAwoQ7AAAAhAl3AAAACBPuAAAAECbcAQAAIEy4AwAAQJhwBwAAgDDhDgAA
+        AGHCHQAAAMKEOwAAAIQJdwAAAAgT7gAAABAm3AEAACBMuAMAAECYcAcAAIAw4Q4AAABhwh0AAADChDsA
+        AACECXcAAAAIE+4AAAAQJtwBAAAgTLgDAABAmHAHAACAMOEOAAAAYcIdAAAAwoQ7AAAAhAl3AAAACBPu
+        AAAAECbcAQAAIEy4AwAAQJhwBwAAgDDhDgAAAGHCHQAAAMKEOwAAAIT9C/fDcn1yAAAAAGxlv3yPah+b
+        T7f14fHzDgAAAGzpEe3H49sodjMzMzMzMzNrbpp+AZIY3TelRK5zAAAAAElFTkSuQmCC
+</value>
   </data>
-  <data name="icnEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\icnEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblEditTitle.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 0px;font-family: 'Segoe UI'; font-size: 20.25pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(255, 255, 255); text-align: center; }</value>
   </data>
-  <data name="icnDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\icnDelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="lblDiagnosis.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="txtDiagnosis.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAi8AAAB0CAYAAABNAtJZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVHhe7dZBCQQxAATB+FeVJTJOxgm4JZDPOUhDFcxn
+        FPQAAMhZa33mnD8zMzOzW7d75aTLGPsAALjZ7pWTLuIFALifeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwA
+        ACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgXACBFvAAAKeIFAEgRLwBAingBAFLECwCQIl4AgBTx
+        AgCkiBcAIEW8AAAp4gUASBEvAECKeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwAACniBQBIES8AQIp4AQBS
+        xAsAkCJeAIAU8QIApIgXACBFvAAAKeIFAEgRLwBAingBAFLECwCQIl4AgBTxAgCkiBcAIEW8AAAp4gUA
+        SBEvAECKeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwAACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgX
+        ACBFvAAAKeIFAEgRLwBAingBAFLECwCQIl4AgBTxAgCkiBcAIEW8AAAp4gUASBEvAECKeAEAUsQLAJAi
+        XgCAFPECAKSIFwAgRbwAACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgXACBFvAAAKeIFAEgRLwBA
+        ingBAFLECwCQIl4AgBTxAgCkiBcAIEW8AAAp4gUASBEvAECKeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwA
+        ACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgXACBFvAAAKX/x8jzPdx9mZmZmt273ykkXAICKMV4R
+        RqVnkKcoFAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="lblComment.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="txtComment.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAi8AAAB0CAYAAABNAtJZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAI8SURBVHhe7dZBCQQxAATB+FeVJTJOxgm4JZDPOUhDFcxn
+        FPQAAMhZa33mnD8zMzOzW7d75aTLGPsAALjZ7pWTLuIFALifeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwA
+        ACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgXACBFvAAAKeIFAEgRLwBAingBAFLECwCQIl4AgBTx
+        AgCkiBcAIEW8AAAp4gUASBEvAECKeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwAACniBQBIES8AQIp4AQBS
+        xAsAkCJeAIAU8QIApIgXACBFvAAAKeIFAEgRLwBAingBAFLECwCQIl4AgBTxAgCkiBcAIEW8AAAp4gUA
+        SBEvAECKeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwAACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgX
+        ACBFvAAAKeIFAEgRLwBAingBAFLECwCQIl4AgBTxAgCkiBcAIEW8AAAp4gUASBEvAECKeAEAUsQLAJAi
+        XgCAFPECAKSIFwAgRbwAACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgXACBFvAAAKeIFAEgRLwBA
+        ingBAFLECwCQIl4AgBTxAgCkiBcAIEW8AAAp4gUASBEvAECKeAEAUsQLAJAiXgCAFPECAKSIFwAgRbwA
+        ACniBQBIES8AQIp4AQBSxAsAkCJeAIAU8QIApIgXACBFvAAAKX/x8jzPdx9mZmZmt273ykkXAICKMV4R
+        RqVnkKcoFAAAAABJRU5ErkJggg==
+</value>
   </data>
 </root>

@@ -19,8 +19,6 @@ namespace ClinicSystem
         private frmDoctorMain mainForm;
         private int key_index;
         private int patient_id;
-
-        private int row;
         public frmDoctorPatientDiagnosis(frmDoctorMain mainForm, int key_index, int patient_id)
         {
             InitializeComponent();
@@ -52,7 +50,7 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Search Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message);
             }
         }
 
@@ -63,7 +61,40 @@ namespace ClinicSystem
 
         private void func_OpenEdit(string v_diagnosisId)
         {
+            this.mainForm.NavigateToForm(new frmDoctorPatientDiagnosisEdit(mainForm, key_index, patient_id, Convert.ToInt32(v_diagnosisId)));
+            this.Close();
+        }
 
+        private void func_DeleteDiagnosis(string v_diagnosisId)
+        {
+            DialogResult dialogConfirmDelete = MessageBox.Show("Are you sure you want to delete this diagnosis permanently?",
+                                                        "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (dialogConfirmDelete == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                g_proc.sqlClinicAdapter = new MySqlDataAdapter();
+                g_proc.datPatients = new DataTable();
+
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procDeletePatientDiagnosis";
+
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", v_diagnosisId);
+
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+                g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
+                g_proc.datPatients.Clear();
+                g_proc.sqlClinicAdapter.Fill(g_proc.datPatients);
+                func_LoadPatientData();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
         }
 
         private void func_DynamicGroupBoxes(DataTable datDiagnosis)
@@ -127,14 +158,32 @@ namespace ClinicSystem
                 newGroupBox.Controls.Add(lblCommentData);
 
                 Guna.UI2.WinForms.Guna2Button btnEdit = new Guna.UI2.WinForms.Guna2Button();
-                btnEdit.Text = "Edit Details";
-                btnEdit.FillColor = System.Drawing.Color.FromArgb(0, 55, 75);
+                btnEdit.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(126)))));
                 btnEdit.Font = new System.Drawing.Font("Segoe UI", 9F);
                 btnEdit.ForeColor = System.Drawing.Color.White;
+                btnEdit.Image = global::ClinicSystem.Properties.Resources.icnEdit;
                 btnEdit.Location = new System.Drawing.Point(352, 29);
-                btnEdit.Size = new System.Drawing.Size(157, 37);
+                btnEdit.Margin = new System.Windows.Forms.Padding(2);
+                btnEdit.Name = "btnEdit";
+                btnEdit.Size = new System.Drawing.Size(75, 37);
+                btnEdit.TabIndex = 120;
+                btnEdit.Text = "Edit";
                 btnEdit.Click += (s, e) => func_OpenEdit(row["id"].ToString());
                 newGroupBox.Controls.Add(btnEdit);
+
+                Guna.UI2.WinForms.Guna2Button btnDelete = new Guna.UI2.WinForms.Guna2Button();
+                btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(1)))), ((int)(((byte)(28)))));
+                btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+                btnDelete.ForeColor = System.Drawing.Color.White;
+                btnDelete.Image = global::ClinicSystem.Properties.Resources.icnDelete;
+                btnDelete.Location = new System.Drawing.Point(434, 29);
+                btnDelete.Margin = new System.Windows.Forms.Padding(2);
+                btnDelete.Name = "btnDelete";
+                btnDelete.Size = new System.Drawing.Size(75, 37);
+                btnDelete.TabIndex = 120;
+                btnDelete.Text = "Delete";
+                btnDelete.Click += (s, e) => func_DeleteDiagnosis(row["id"].ToString());
+                newGroupBox.Controls.Add(btnDelete);
 
                 Guna.UI2.WinForms.Guna2Button btnPrescription = new Guna.UI2.WinForms.Guna2Button();
                 btnPrescription.Text = "Prescription";

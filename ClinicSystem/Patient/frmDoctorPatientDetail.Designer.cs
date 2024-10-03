@@ -46,8 +46,7 @@
             this.btnEditPatient = new Guna.UI2.WinForms.Guna2Button();
             this.lblDiagnosis = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlDiagnosis = new Bunifu.UI.WinForms.BunifuPanel();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDiagnosisAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -331,31 +330,18 @@
             this.pnlDiagnosis.Size = new System.Drawing.Size(557, 573);
             this.pnlDiagnosis.TabIndex = 120;
             // 
-            // guna2Button1
+            // btnAdd
             // 
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.Location = new System.Drawing.Point(716, 742);
-            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.Size = new System.Drawing.Size(262, 37);
-            this.guna2Button1.TabIndex = 118;
-            this.guna2Button1.Text = "Edit Details";
-            this.guna2Button1.Click += new System.EventHandler(this.btnEditPatient_Click);
-            // 
-            // btnDiagnosisAdd
-            // 
-            this.btnDiagnosisAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnDiagnosisAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDiagnosisAdd.ForeColor = System.Drawing.Color.White;
-            this.btnDiagnosisAdd.Location = new System.Drawing.Point(421, 742);
-            this.btnDiagnosisAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDiagnosisAdd.Name = "btnDiagnosisAdd";
-            this.btnDiagnosisAdd.Size = new System.Drawing.Size(262, 37);
-            this.btnDiagnosisAdd.TabIndex = 118;
-            this.btnDiagnosisAdd.Text = "Add Diagnosis";
-            this.btnDiagnosisAdd.Click += new System.EventHandler(this.btnEditPatient_Click);
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Location = new System.Drawing.Point(716, 742);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(262, 37);
+            this.btnAdd.TabIndex = 118;
+            this.btnAdd.Text = "Add Diagnosis";
+            this.btnAdd.Click += new System.EventHandler(this.btnEditPatient_Click);
             // 
             // frmDoctorPatientDetail
             // 
@@ -365,8 +351,7 @@
             this.ClientSize = new System.Drawing.Size(990, 790);
             this.Controls.Add(this.pnlDiagnosis);
             this.Controls.Add(this.lblDiagnosis);
-            this.Controls.Add(this.btnDiagnosisAdd);
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.btnEditPatient);
             this.Controls.Add(this.bunifuLabel8);
             this.Controls.Add(this.lblMaritalStat);
@@ -408,7 +393,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEditPatient;
         private Bunifu.UI.WinForms.BunifuLabel lblDiagnosis;
         private Bunifu.UI.WinForms.BunifuPanel pnlDiagnosis;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
-        private Guna.UI2.WinForms.Guna2Button btnDiagnosisAdd;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

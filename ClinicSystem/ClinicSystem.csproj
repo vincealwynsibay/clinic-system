@@ -150,40 +150,52 @@
     <Compile Include="frmAppointments.Designer.cs">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctorPatientDetail.cs">
+    <Compile Include="Patient\frmDoctorPatientDetail.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctorPatientDetail.Designer.cs">
+    <Compile Include="Patient\frmDoctorPatientDetail.Designer.cs">
       <DependentUpon>frmDoctorPatientDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctorPatientDiagnosis.cs">
+    <Compile Include="Diagnosis\frmDoctorPatientDiagnosis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctorPatientDiagnosis.Designer.cs">
+    <Compile Include="Diagnosis\frmDoctorPatientDiagnosis.Designer.cs">
       <DependentUpon>frmDoctorPatientDiagnosis.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctorPatientEdit.cs">
+    <Compile Include="Diagnosis\frmDoctorPatientDiagnosisEdit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctorPatientEdit.Designer.cs">
+    <Compile Include="Diagnosis\frmDoctorPatientDiagnosisEdit.Designer.cs">
+      <DependentUpon>frmDoctorPatientDiagnosisEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Patient\frmDoctorPatientEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\frmDoctorPatientEdit.Designer.cs">
       <DependentUpon>frmDoctorPatientEdit.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctorSchedule.cs">
+    <Compile Include="Perscription\frmDoctorPatientPerscription.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctorSchedule.Designer.cs">
+    <Compile Include="Perscription\frmDoctorPatientPerscription.Designer.cs">
+      <DependentUpon>frmDoctorPatientPerscription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DoctorForm\frmDoctorSchedule.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DoctorForm\frmDoctorSchedule.Designer.cs">
       <DependentUpon>frmDoctorSchedule.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctorSetting.cs">
+    <Compile Include="DoctorForm\frmDoctorSetting.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctorSetting.Designer.cs">
+    <Compile Include="DoctorForm\frmDoctorSetting.Designer.cs">
       <DependentUpon>frmDoctorSetting.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmDoctorPatients.cs">
+    <Compile Include="Patient\frmDoctorPatients.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmDoctorPatients.Designer.cs">
+    <Compile Include="Patient\frmDoctorPatients.Designer.cs">
       <DependentUpon>frmDoctorPatients.cs</DependentUpon>
     </Compile>
     <Compile Include="User\frmAddAdmin.cs">
@@ -282,22 +294,28 @@
     <EmbeddedResource Include="frmAppointments.resx">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctorPatientDetail.resx">
+    <EmbeddedResource Include="Patient\frmDoctorPatientDetail.resx">
       <DependentUpon>frmDoctorPatientDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctorPatientDiagnosis.resx">
+    <EmbeddedResource Include="Diagnosis\frmDoctorPatientDiagnosis.resx">
       <DependentUpon>frmDoctorPatientDiagnosis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctorPatientEdit.resx">
+    <EmbeddedResource Include="Diagnosis\frmDoctorPatientDiagnosisEdit.resx">
+      <DependentUpon>frmDoctorPatientDiagnosisEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Patient\frmDoctorPatientEdit.resx">
       <DependentUpon>frmDoctorPatientEdit.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctorSchedule.resx">
+    <EmbeddedResource Include="Perscription\frmDoctorPatientPerscription.resx">
+      <DependentUpon>frmDoctorPatientPerscription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DoctorForm\frmDoctorSchedule.resx">
       <DependentUpon>frmDoctorSchedule.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctorSetting.resx">
+    <EmbeddedResource Include="DoctorForm\frmDoctorSetting.resx">
       <DependentUpon>frmDoctorSetting.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmDoctorPatients.resx">
+    <EmbeddedResource Include="Patient\frmDoctorPatients.resx">
       <DependentUpon>frmDoctorPatients.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmAddAdmin.resx">
@@ -366,6 +384,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="src\icnEdit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\icnDelete.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

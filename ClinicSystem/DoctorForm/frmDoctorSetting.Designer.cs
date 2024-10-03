@@ -77,7 +77,7 @@
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtMobileNo = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuLabel2 = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnWorkDayTime = new Guna.UI2.WinForms.Guna2Button();
+            this.btnEditSchedule = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -854,18 +854,18 @@
             this.bunifuLabel2.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.bunifuLabel2.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // btnWorkDayTime
+            // btnEditSchedule
             // 
-            this.btnWorkDayTime.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnWorkDayTime.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnWorkDayTime.ForeColor = System.Drawing.Color.White;
-            this.btnWorkDayTime.Location = new System.Drawing.Point(521, 647);
-            this.btnWorkDayTime.Margin = new System.Windows.Forms.Padding(2);
-            this.btnWorkDayTime.Name = "btnWorkDayTime";
-            this.btnWorkDayTime.Size = new System.Drawing.Size(262, 37);
-            this.btnWorkDayTime.TabIndex = 95;
-            this.btnWorkDayTime.Text = "Edit Schedule";
-            this.btnWorkDayTime.Click += new System.EventHandler(this.btnEditSchedule_Click);
+            this.btnEditSchedule.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnEditSchedule.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnEditSchedule.ForeColor = System.Drawing.Color.White;
+            this.btnEditSchedule.Location = new System.Drawing.Point(521, 647);
+            this.btnEditSchedule.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEditSchedule.Name = "btnEditSchedule";
+            this.btnEditSchedule.Size = new System.Drawing.Size(262, 37);
+            this.btnEditSchedule.TabIndex = 95;
+            this.btnEditSchedule.Text = "Edit Schedule";
+            this.btnEditSchedule.Click += new System.EventHandler(this.btnEditSchedule_Click);
             // 
             // frmDoctorSetting
             // 
@@ -875,7 +875,7 @@
             this.ClientSize = new System.Drawing.Size(1006, 829);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.txtMobileNo);
-            this.Controls.Add(this.btnWorkDayTime);
+            this.Controls.Add(this.btnEditSchedule);
             this.Controls.Add(this.btnSaveEditDoctor);
             this.Controls.Add(this.picProfile);
             this.Controls.Add(this.bunifuPanel1);
@@ -933,6 +933,6 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Bunifu.UI.WinForms.BunifuTextBox txtMobileNo;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel2;
-        private Guna.UI2.WinForms.Guna2Button btnWorkDayTime;
+        private Guna.UI2.WinForms.Guna2Button btnEditSchedule;
     }
 }
