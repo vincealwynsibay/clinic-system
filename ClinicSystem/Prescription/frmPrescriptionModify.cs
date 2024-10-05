@@ -8,6 +8,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -23,8 +24,14 @@ namespace ClinicSystem.Prescription
         private int doctor_id;
         private int patient_id;
         private int prescription_id;
+        private int prescriptionitem_id;
 
         private int row;
+        private string originalQuantity;
+        private string originalMedicine;
+        private string originalDosage;
+        private string originalFrequency;
+        private string originalComment;
 
         public frmPrescriptionModify(frmDoctorMain mainForm, int doctor_id, int patient_id, int prescription_id)
         {
@@ -34,7 +41,7 @@ namespace ClinicSystem.Prescription
             this.patient_id = patient_id;
             this.prescription_id = prescription_id;
             g_proc.fncConnectToDatabase();
-            
+
             btnDelete.Visible = false;
             btnSave.Visible = false;
             func_LoadPrescription();
@@ -42,6 +49,7 @@ namespace ClinicSystem.Prescription
 
         private void func_LoadPrescription()
         {
+            txtQuantity.Focus();
             try
             {
                 g_proc.sqlClinicAdapter = new MySqlDataAdapter();
@@ -70,6 +78,7 @@ namespace ClinicSystem.Prescription
                         grdPrescription.Rows[row].Cells[2].Value = patientRow["dosage"].ToString();
                         grdPrescription.Rows[row].Cells[3].Value = patientRow["frequency"].ToString();
                         grdPrescription.Rows[row].Cells[4].Value = patientRow["comment"].ToString();
+                        grdPrescription.Rows[row].Cells[5].Value = patientRow["id"].ToString(); // this is hidden
                         row++;
                     }
                 }
@@ -131,12 +140,7 @@ namespace ClinicSystem.Prescription
                 MessageBox.Show("Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                 func_LoadPrescription();
-
-                txtComment.Clear();
-                txtDosage.Clear();
-                txtFrequency.Clear();
-                txtMedicine.Clear();
-                txtQuantity.Clear();
+                func_ClearTextBox();
             }
             catch (Exception ex)
             {
@@ -144,18 +148,117 @@ namespace ClinicSystem.Prescription
             }
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void func_ClearTextBox()
         {
+            txtQuantity.Clear();
+            txtMedicine.Clear();
+            txtDosage.Clear();
+            txtFrequency.Clear();
+            txtComment.Clear();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        { 
+            DialogResult result = MessageBox.Show(
+                    "Are you sure you want to delete this row?",
+                    "Confirm Deletion",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+
+            if (result == DialogResult.No)
+            {
+                return;
+            }
+
+            try
+            {
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procDeletePrescriptionItem";
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", prescriptionitem_id);
+
+                g_proc.sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Record deleted successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                func_LoadPrescription();
+                func_ClearTextBox();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             btnDelete.Visible = false;
             btnSave.Visible = false;
             btnAdd.Visible = true;
+            func_ClearTextBox();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string quantity = txtQuantity.Text;
+                string medicine = txtMedicine.Text;
+                string dosage = txtDosage.Text;
+                string frequency = txtFrequency.Text;
+                string comment = txtComment.Text;
+
+                if (quantity == originalQuantity &&
+                    medicine == originalMedicine &&
+                    dosage == originalDosage &&
+                    frequency == originalFrequency &&
+                    comment == originalComment)
+                {
+                    MessageBox.Show("No changes detected in the fields.",
+                                    "No Changes",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+                    return;
+                }
+
+                if (string.IsNullOrWhiteSpace(quantity) ||
+                    string.IsNullOrWhiteSpace(medicine) ||
+                    string.IsNullOrWhiteSpace(dosage) ||
+                    string.IsNullOrWhiteSpace(frequency))
+                {
+                    MessageBox.Show("Please fill in all required fields (Quantity, Medicine, Dosage, Frequency).",
+                                    "Validation Error",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Warning);
+                    return;
+                }
+
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procEditPrescriptionItem";
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", prescriptionitem_id);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_prescription_id", prescription_id);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_quantity", txtQuantity.Text);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_medicine", txtMedicine.Text);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_dosage", txtDosage.Text);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_frequency", txtFrequency.Text);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_comment", txtComment.Text);
+
+                g_proc.sqlCommand.ExecuteNonQuery();
+
+                MessageBox.Show("Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                func_LoadPrescription();
+                func_ClearTextBox();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
             btnDelete.Visible = false;
             btnSave.Visible = false;
             btnAdd.Visible = true;
+            func_ClearTextBox();
         }
 
         private void txtQuantity_KeyPress(object sender, KeyPressEventArgs e)
@@ -172,13 +275,20 @@ namespace ClinicSystem.Prescription
             btnSave.Visible = true;
             btnAdd.Visible = false;
 
-            int row = Convert.ToInt32(grdPrescription.CurrentRow.Cells[0].Value);
+            prescriptionitem_id = Convert.ToInt32(grdPrescription.CurrentRow.Cells[5].Value);   // to avoid current row being alternated
+            txtQuantity.Text = grdPrescription.CurrentRow.Cells[0].Value.ToString();
+            txtMedicine.Text = grdPrescription.CurrentRow.Cells[1].Value.ToString();
+            txtDosage.Text = grdPrescription.CurrentRow.Cells[2].Value.ToString();
+            txtFrequency.Text = grdPrescription.CurrentRow.Cells[3].Value.ToString();
+            txtComment.Text = grdPrescription.CurrentRow.Cells[4].Value.ToString();
 
-            txtQuantity.Text = patientRow["quantity"].ToString();
-            txtMedicine.Text = patientRow["medicine"].ToString();
-            txtDosage.Text = patientRow["dosage"].ToString();
-            txtFrequency.Text = patientRow["frequency"].ToString();
-            txtComment.Text = patientRow["comment"].ToString();
+            originalQuantity = txtQuantity.Text;
+            originalMedicine = txtMedicine.Text;
+            originalDosage = txtDosage.Text;
+            originalFrequency = txtFrequency.Text;
+            originalComment = txtComment.Text;
+
+            txtQuantity.Focus();
         }
     }
 }
