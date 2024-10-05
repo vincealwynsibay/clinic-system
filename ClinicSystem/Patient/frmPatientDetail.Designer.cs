@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem
 {
-    partial class frmDoctorPatientDetail
+    partial class frmPatientDetail
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorPatientDetail));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientDetail));
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblTitleBirthdate = new Bunifu.UI.WinForms.BunifuLabel();
@@ -341,9 +341,9 @@
             this.btnAdd.Size = new System.Drawing.Size(262, 37);
             this.btnAdd.TabIndex = 118;
             this.btnAdd.Text = "Add Diagnosis";
-            this.btnAdd.Click += new System.EventHandler(this.btnEditPatient_Click);
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // frmDoctorPatientDetail
+            // frmPatientDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -366,7 +366,7 @@
             this.Controls.Add(this.lblBirthdate);
             this.Controls.Add(this.lblTitleBirthdate);
             this.Controls.Add(this.bunifuPanel1);
-            this.Name = "frmDoctorPatientDetail";
+            this.Name = "frmPatientDetail";
             this.Text = "frmDoctorPatientDetail";
             this.bunifuPanel1.ResumeLayout(false);
             this.ResumeLayout(false);

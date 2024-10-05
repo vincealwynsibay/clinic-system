@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem
 {
-    partial class frmDoctorPatientDiagnosis
+    partial class frmDiagnosis
     {
         /// <summary>
         /// Required designer variable.
@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorPatientDiagnosis));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiagnosis));
             this.grpDiagnosis = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.btnEdit = new Guna.UI2.WinForms.Guna2Button();
             this.btnPerscription = new Guna.UI2.WinForms.Guna2Button();
             this.lblCommentData = new Bunifu.UI.WinForms.BunifuLabel();
@@ -38,7 +39,6 @@
             this.lblDiagnosis = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblDiagnosisDate = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnDelete = new Guna.UI2.WinForms.Guna2Button();
             this.grpDiagnosis.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,19 @@
             this.grpDiagnosis.Size = new System.Drawing.Size(518, 132);
             this.grpDiagnosis.TabIndex = 0;
             this.grpDiagnosis.TabStop = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(1)))), ((int)(((byte)(28)))));
+            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Image = global::ClinicSystem.Properties.Resources.icnDelete;
+            this.btnDelete.Location = new System.Drawing.Point(434, 29);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 37);
+            this.btnDelete.TabIndex = 120;
+            this.btnDelete.Text = "Delete";
             // 
             // btnEdit
             // 
@@ -191,20 +204,7 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(541, 534);
             this.bunifuPanel1.TabIndex = 1;
             // 
-            // btnDelete
-            // 
-            this.btnDelete.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(1)))), ((int)(((byte)(28)))));
-            this.btnDelete.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Image = global::ClinicSystem.Properties.Resources.icnDelete;
-            this.btnDelete.Location = new System.Drawing.Point(434, 29);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 37);
-            this.btnDelete.TabIndex = 120;
-            this.btnDelete.Text = "Delete";
-            // 
-            // frmDoctorPatientDiagnosis
+            // frmDiagnosis
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -213,7 +213,7 @@
             this.ClientSize = new System.Drawing.Size(541, 534);
             this.Controls.Add(this.grpDiagnosis);
             this.Controls.Add(this.bunifuPanel1);
-            this.Name = "frmDoctorPatientDiagnosis";
+            this.Name = "frmDiagnosis";
             this.Text = "frmDoctorPatientDiagnosis";
             this.grpDiagnosis.ResumeLayout(false);
             this.grpDiagnosis.PerformLayout();

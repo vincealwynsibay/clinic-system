@@ -11,20 +11,20 @@ using System.Windows.Forms;
 
 namespace ClinicSystem
 {
-    public partial class frmDoctorPatientDiagnosisEdit : Form
+    public partial class frmDiagnosisEdit : Form
     {
         GlobalProcedure g_proc = new GlobalProcedure();
 
         private frmDoctorMain mainForm;
-        private int key_index;
+        private int doctor_id;
         private int patient_id;
         int v_DiagnosisID;
 
-        public frmDoctorPatientDiagnosisEdit(frmDoctorMain mainForm, int key_index, int patient_id, int v_DiagnosisID)
+        public frmDiagnosisEdit(frmDoctorMain mainForm, int doctor_id, int patient_id, int v_DiagnosisID)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
+            this.doctor_id = doctor_id;
             this.patient_id = patient_id;
             this.v_DiagnosisID = v_DiagnosisID;
             g_proc.fncConnectToDatabase();
@@ -60,7 +60,7 @@ namespace ClinicSystem
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.mainForm.NavigateToForm(new frmDoctorPatientDetail(mainForm, key_index, patient_id));
+            this.mainForm.NavigateToForm(new frmPatientDetail(mainForm, doctor_id, patient_id));
             this.Close();
         }
 
@@ -80,7 +80,7 @@ namespace ClinicSystem
 
                 MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.mainForm.NavigateToForm(new frmDoctorPatientDetail(mainForm, key_index, patient_id));
+                this.mainForm.NavigateToForm(new frmPatientDetail(mainForm, doctor_id, patient_id));
                 this.Close();
             }
             catch (Exception ex)

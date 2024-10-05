@@ -12,18 +12,18 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ClinicSystem.DoctorMain
 {
-    public partial class frmDoctorPatients : Form
+    public partial class frmPatients : Form
     {
         GlobalProcedure g_proc = new GlobalProcedure();
         private frmDoctorMain mainForm;
-        private int key_index;
+        private int doctor_id;
         private int row;
 
-        public frmDoctorPatients(frmDoctorMain mainForm, int key_index)
+        public frmPatients(frmDoctorMain mainForm, int doctor_id)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
+            this.doctor_id = doctor_id;
             g_proc.fncConnectToDatabase();
             func_Search("", "procSearchPatientID");     // displays customer
         }
@@ -40,7 +40,7 @@ namespace ClinicSystem.DoctorMain
 
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_search", v_search);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", key_index);               // checks the tbldiagnosis if patient and doctor is related
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);               // checks the tbldiagnosis if patient and doctor is related
 
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
                 g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
@@ -108,7 +108,7 @@ namespace ClinicSystem.DoctorMain
 
         private void grdPatients_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            this.mainForm.NavigateToForm(new frmDoctorPatientDetail(mainForm, key_index, Convert.ToInt32(grdPatients.CurrentRow.Cells[0].Value)));
+            this.mainForm.NavigateToForm(new frmPatientDetail(mainForm, doctor_id, Convert.ToInt32(grdPatients.CurrentRow.Cells[0].Value)));
             this.Close();
         }
     }

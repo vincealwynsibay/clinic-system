@@ -12,18 +12,19 @@ using System.Windows.Forms;
 
 namespace ClinicSystem
 {
-    public partial class frmDoctorPatientDiagnosis : Form
+    public partial class frmDiagnosis : Form
     {
         GlobalProcedure g_proc = new GlobalProcedure();
 
         private frmDoctorMain mainForm;
-        private int key_index;
+        private int doctor_id;
         private int patient_id;
-        public frmDoctorPatientDiagnosis(frmDoctorMain mainForm, int key_index, int patient_id)
+        private int prescription_id;
+        public frmDiagnosis(frmDoctorMain mainForm, int doctor_id, int patient_id)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
+            this.doctor_id = doctor_id;
             this.patient_id = patient_id;
             g_proc.fncConnectToDatabase();
             func_LoadPatientData();
@@ -39,7 +40,7 @@ namespace ClinicSystem
                 g_proc.sqlCommand.Parameters.Clear();
                 g_proc.sqlCommand.CommandText = "procGetPatientDiagnosis";
 
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", key_index);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_patient_id", patient_id);
 
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -47,6 +48,9 @@ namespace ClinicSystem
                 g_proc.datPatients.Clear();
                 g_proc.sqlClinicAdapter.Fill(g_proc.datPatients);
                 func_DynamicGroupBoxes(g_proc.datPatients);
+
+                g_proc.sqlClinicAdapter.Dispose();
+                g_proc.datPatients.Dispose();
             }
             catch (Exception ex)
             {
@@ -56,12 +60,35 @@ namespace ClinicSystem
 
         private void func_OpenPerscription(string v_diagnosisId)
         {
+            try
+            {
+                g_proc.sqlClinicAdapter = new MySqlDataAdapter();
+                g_proc.datPrescription = new DataTable();
 
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procGetPrescriptionId";
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_diagnosis_id", v_diagnosisId);
+                g_proc.sqlCommand.Parameters.Add("@p_prescription_id", MySqlDbType.Int32).Direction = ParameterDirection.Output;
+
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+                g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
+                g_proc.sqlClinicAdapter.Fill(g_proc.datPrescription);
+
+                prescription_id = Convert.ToInt32(g_proc.sqlCommand.Parameters["@p_prescription_id"].Value); // Getting the value of the output parameter
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            this.mainForm.NavigateToForm(new frmPrescription(mainForm, doctor_id, patient_id, prescription_id));
+            this.Close();
         }
 
         private void func_OpenEdit(string v_diagnosisId)
         {
-            this.mainForm.NavigateToForm(new frmDoctorPatientDiagnosisEdit(mainForm, key_index, patient_id, Convert.ToInt32(v_diagnosisId)));
+            this.mainForm.NavigateToForm(new frmDiagnosisEdit(mainForm, doctor_id, patient_id, Convert.ToInt32(v_diagnosisId)));
             this.Close();
         }
 

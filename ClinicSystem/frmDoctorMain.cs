@@ -54,7 +54,7 @@ namespace ClinicSystem
 
         private void btnPatients_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new frmDoctorPatients(this, key_index));
+            LoadFormIntoPanel(new frmPatients(this, key_index));
         }
 
         private void btnSettings_Click(object sender, EventArgs e)

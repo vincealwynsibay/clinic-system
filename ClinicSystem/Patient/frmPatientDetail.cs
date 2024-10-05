@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ClinicSystem.Diagnosis;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,23 +12,24 @@ using System.Windows.Forms;
 
 namespace ClinicSystem
 {
-    public partial class frmDoctorPatientDetail : Form
+    public partial class frmPatientDetail : Form
     {
         GlobalProcedure g_proc = new GlobalProcedure();
 
         private frmDoctorMain mainForm;
-        private int key_index;
+        private int doctor_id;
         private int patient_id;
 
-        public frmDoctorPatientDetail(frmDoctorMain mainForm, int key_index, int patient_id)
+        public frmPatientDetail(frmDoctorMain mainForm, int doctor_id, int patient_id)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
+            this.doctor_id = doctor_id;
             this.patient_id = patient_id;
             g_proc.fncConnectToDatabase();
             func_LoadPatientData();
-            LoadFormIntoPanel(new frmDoctorPatientDiagnosis(mainForm, key_index, patient_id));
+
+            LoadFormIntoPanel(new frmDiagnosis(mainForm, doctor_id, patient_id));   // adds the form into the panel to show the diagnosis
         }
 
         public void LoadFormIntoPanel(Form form)
@@ -73,9 +75,15 @@ namespace ClinicSystem
             g_proc.datPatients.Dispose();
         }
 
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.mainForm.NavigateToForm(new frmDiagnosisAdd(mainForm, doctor_id, patient_id));
+            this.Close();
+        }
+
         private void btnEditPatient_Click(object sender, EventArgs e)
         {
-            this.mainForm.NavigateToForm(new frmDoctorPatientEdit(mainForm, key_index, patient_id));
+            this.mainForm.NavigateToForm(new frmPatientEdit(mainForm, doctor_id, patient_id));
             this.Close();
         }
     }

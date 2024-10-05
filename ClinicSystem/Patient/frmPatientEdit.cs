@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ClinicSystem
 {
-    public partial class frmDoctorPatientEdit : Form
+    public partial class frmPatientEdit : Form
     {
         GlobalProcedure g_proc = new GlobalProcedure();
 
@@ -25,13 +25,15 @@ namespace ClinicSystem
         private string originalEmergencyNo;
         private string originalMaritalStatus;
 
-        public frmDoctorPatientEdit(frmDoctorMain mainForm, int key_index, int patient_id)
+        public frmPatientEdit(frmDoctorMain mainForm, int key_index, int patient_id)
         {
             InitializeComponent();
             this.mainForm = mainForm;
             this.key_index = key_index;
             this.patient_id = patient_id;
             g_proc.fncConnectToDatabase();
+
+            func_NavigationKeys();
             func_LoadPatientData();
         }
 
@@ -127,7 +129,7 @@ namespace ClinicSystem
 
                 MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                this.mainForm.NavigateToForm(new frmDoctorPatientDetail(mainForm, key_index, patient_id));
+                this.mainForm.NavigateToForm(new frmPatientDetail(mainForm, key_index, patient_id));
                 this.Close();
             }
             catch (Exception ex)
@@ -142,6 +144,65 @@ namespace ClinicSystem
                    txtMobileNo.Text != originalMobileNo ||
                    txtEmergency.Text != originalEmergencyNo ||
                    txtMarital.Text != originalMaritalStatus;
+        }
+
+
+        private void func_NavigationKeys()
+        {
+            txtEmail.KeyDown += Control_KeyDown;
+            txtMobileNo.KeyDown += Control_KeyDown;
+            txtEmergency.KeyDown += Control_KeyDown;
+            txtMarital.KeyDown += Control_KeyDown;
+            btnSaveEditPatient.KeyDown += Control_KeyDown;
+
+            txtEmail.TabIndex = 0;
+            txtMobileNo.TabIndex = 1;
+            txtEmergency.TabIndex = 2;
+            txtMarital.TabIndex = 3;
+            btnSaveEditPatient.TabIndex = 4;
+        }
+
+        private void Control_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Down)
+            {
+                if (sender == txtEmail)
+                {
+                    txtMobileNo.Focus();
+                }
+                else if (sender == txtMobileNo)
+                {
+                    txtEmergency.Focus();
+                }
+                else if (sender == txtEmergency)
+                {
+                    txtMarital.Focus();
+                }
+                else if (sender == txtMarital)
+                {
+                    btnSaveEditPatient.Focus();
+                }
+            }
+
+            else if (e.KeyCode == Keys.Up)
+            {
+                if (sender == btnSaveEditPatient)
+                {
+                    txtMarital.Focus();
+                }
+                else if (sender == txtMarital)
+                {
+                    txtEmergency.Focus();
+                }
+                else if (sender == txtEmergency)
+                {
+                    txtMobileNo.Focus();
+                }
+                else if (sender == txtMobileNo)
+                {
+                    txtEmail.Focus();
+                }
+            }
         }
     }
 }
