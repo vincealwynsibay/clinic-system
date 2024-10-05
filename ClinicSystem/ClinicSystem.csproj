@@ -156,6 +156,12 @@
     <Compile Include="frmAppointments.Designer.cs">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Patient\frmPatientAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Patient\frmPatientAdd.Designer.cs">
+      <DependentUpon>frmPatientAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient\frmPatientDetail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -309,6 +315,9 @@
     <EmbeddedResource Include="frmAppointments.resx">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Patient\frmPatientAdd.resx">
+      <DependentUpon>frmPatientAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient\frmPatientDetail.resx">
       <DependentUpon>frmPatientDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -407,6 +416,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="src\icnDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnAddUser.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

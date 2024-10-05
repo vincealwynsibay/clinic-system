@@ -50,6 +50,7 @@
             this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.lblFilter = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdPatients)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
@@ -322,6 +323,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.btnAdd);
             this.bunifuPanel1.Controls.Add(this.lblTotal);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 744);
@@ -329,6 +331,20 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(990, 46);
             this.bunifuPanel1.TabIndex = 95;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(126)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::ClinicSystem.Properties.Resources.icnAddUser;
+            this.btnAdd.Location = new System.Drawing.Point(861, 7);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 32);
+            this.btnAdd.TabIndex = 121;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblTotal
             // 
@@ -348,7 +364,7 @@
             this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // frmDoctorPatients
+            // frmPatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -360,7 +376,7 @@
             this.Controls.Add(this.cboSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grdPatients);
-            this.Name = "frmDoctorPatients";
+            this.Name = "frmPatients";
             this.Text = "frmPatients";
             ((System.ComponentModel.ISupportInitialize)(this.grdPatients)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
@@ -387,5 +403,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn maritalstatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn emergencyno;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

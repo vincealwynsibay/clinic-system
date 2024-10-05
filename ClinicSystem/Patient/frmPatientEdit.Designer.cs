@@ -812,7 +812,7 @@
             this.lblMaritalStatus.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblMaritalStatus.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // frmDoctorPatientEdit
+            // frmPatientEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -840,7 +840,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmDoctorPatientEdit";
+            this.Name = "frmPatientEdit";
             this.Text = "frmDoctorPatientDetail";
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();

@@ -216,6 +216,10 @@ namespace ClinicSystem.Prescription
                                     "No Changes",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Information);
+                    btnDelete.Visible = false;
+                    btnSave.Visible = false;
+                    btnAdd.Visible = true;
+                    func_ClearTextBox();
                     return;
                 }
 

@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ClinicSystem.Patient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -109,6 +110,12 @@ namespace ClinicSystem.DoctorMain
         private void grdPatients_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             this.mainForm.NavigateToForm(new frmPatientDetail(mainForm, doctor_id, Convert.ToInt32(grdPatients.CurrentRow.Cells[0].Value)));
+            this.Close();
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
             this.Close();
         }
     }
