@@ -1,6 +1,6 @@
 ﻿namespace ClinicSystem.DoctorMain
 {
-    partial class frmDoctorPatients
+    partial class frmPatients
     {
         /// <summary>
         /// Required designer variable.
@@ -31,18 +31,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorPatients));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatients));
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.grdPatients = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.cboSearch = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.lblFilter = new Bunifu.UI.WinForms.BunifuLabel();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.birthdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +45,13 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.maritalstatus = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.emergencyno = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.cboSearch = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.lblFilter = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
+            this.lblTotal = new Bunifu.UI.WinForms.BunifuLabel();
             ((System.ComponentModel.ISupportInitialize)(this.grdPatients)).BeginInit();
             this.bunifuPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -120,6 +121,58 @@
             this.grdPatients.ThemeStyle.RowsStyle.Height = 24;
             this.grdPatients.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.grdPatients.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.White;
+            this.grdPatients.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdPatients_CellContentDoubleClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Patient ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // fullname
+            // 
+            this.fullname.HeaderText = "Full Name";
+            this.fullname.MinimumWidth = 6;
+            this.fullname.Name = "fullname";
+            this.fullname.ReadOnly = true;
+            // 
+            // birthdate
+            // 
+            this.birthdate.HeaderText = "Birthdate";
+            this.birthdate.MinimumWidth = 6;
+            this.birthdate.Name = "birthdate";
+            this.birthdate.ReadOnly = true;
+            // 
+            // gender
+            // 
+            this.gender.HeaderText = "Gender";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            // 
+            // mobileno
+            // 
+            this.mobileno.HeaderText = "Mobile No.";
+            this.mobileno.Name = "mobileno";
+            this.mobileno.ReadOnly = true;
+            // 
+            // email
+            // 
+            this.email.HeaderText = "Email";
+            this.email.Name = "email";
+            this.email.ReadOnly = true;
+            // 
+            // maritalstatus
+            // 
+            this.maritalstatus.HeaderText = "Marital Status";
+            this.maritalstatus.Name = "maritalstatus";
+            this.maritalstatus.ReadOnly = true;
+            // 
+            // emergencyno
+            // 
+            this.emergencyno.HeaderText = "Emergency No.";
+            this.emergencyno.Name = "emergencyno";
+            this.emergencyno.ReadOnly = true;
             // 
             // txtSearch
             // 
@@ -244,6 +297,7 @@
             this.cboFilter.Size = new System.Drawing.Size(115, 36);
             this.cboFilter.StartIndex = 0;
             this.cboFilter.TabIndex = 9;
+            this.cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
             // 
             // lblFilter
             // 
@@ -269,6 +323,7 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
+            this.bunifuPanel1.Controls.Add(this.btnAdd);
             this.bunifuPanel1.Controls.Add(this.lblTotal);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 744);
@@ -276,6 +331,20 @@
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(990, 46);
             this.bunifuPanel1.TabIndex = 95;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(92)))), ((int)(((byte)(126)))));
+            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnAdd.ForeColor = System.Drawing.Color.White;
+            this.btnAdd.Image = global::ClinicSystem.Properties.Resources.icnAddUser;
+            this.btnAdd.Location = new System.Drawing.Point(861, 7);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 32);
+            this.btnAdd.TabIndex = 121;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // lblTotal
             // 
@@ -289,67 +358,17 @@
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTotal.Size = new System.Drawing.Size(126, 27);
+            this.lblTotal.Size = new System.Drawing.Size(126, 25);
             this.lblTotal.TabIndex = 39;
             this.lblTotal.Text = "Total Patients:";
             this.lblTotal.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblTotal.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // id
-            // 
-            this.id.HeaderText = "Patient ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // fullname
-            // 
-            this.fullname.HeaderText = "Full Name";
-            this.fullname.MinimumWidth = 6;
-            this.fullname.Name = "fullname";
-            this.fullname.ReadOnly = true;
-            // 
-            // birthdate
-            // 
-            this.birthdate.HeaderText = "Birthdate";
-            this.birthdate.MinimumWidth = 6;
-            this.birthdate.Name = "birthdate";
-            this.birthdate.ReadOnly = true;
-            // 
-            // gender
-            // 
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            // 
-            // mobileno
-            // 
-            this.mobileno.HeaderText = "Mobile No.";
-            this.mobileno.Name = "mobileno";
-            this.mobileno.ReadOnly = true;
-            // 
-            // email
-            // 
-            this.email.HeaderText = "Email";
-            this.email.Name = "email";
-            this.email.ReadOnly = true;
-            // 
-            // maritalstatus
-            // 
-            this.maritalstatus.HeaderText = "Marital Status";
-            this.maritalstatus.Name = "maritalstatus";
-            this.maritalstatus.ReadOnly = true;
-            // 
-            // emergencyno
-            // 
-            this.emergencyno.HeaderText = "Emergency No.";
-            this.emergencyno.Name = "emergencyno";
-            this.emergencyno.ReadOnly = true;
-            // 
-            // frmDoctorPatients
+            // frmPatients
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(990, 790);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.lblFilter);
@@ -357,7 +376,7 @@
             this.Controls.Add(this.cboSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grdPatients);
-            this.Name = "frmDoctorPatients";
+            this.Name = "frmPatients";
             this.Text = "frmPatients";
             ((System.ComponentModel.ISupportInitialize)(this.grdPatients)).EndInit();
             this.bunifuPanel1.ResumeLayout(false);
@@ -384,5 +403,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn maritalstatus;
         private System.Windows.Forms.DataGridViewTextBoxColumn emergencyno;
+        private Guna.UI2.WinForms.Guna2Button btnAdd;
     }
 }

@@ -61,6 +61,36 @@ namespace ClinicSystem.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnAddUser {
+            get {
+                object obj = ResourceManager.GetObject("icnAddUser", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnDelete {
+            get {
+                object obj = ResourceManager.GetObject("icnDelete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnEdit {
+            get {
+                object obj = ResourceManager.GetObject("icnEdit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to PGDEFZF�}� ?GPOS�����WbGSUBԘ�m� _�HVAR��?8.�+�MVAR�a� �OS/2qe�`STATl4V��&quot;avar�u��4cmapM����d�fvar	��|�gaspdglyf�-����gvarp�kj���head2�Z��6hhea�\�$hmtx���Z�-�loca;p�d-�maxp��l namek���	�post�k^�z@Hpreph��\�������n�p��t��h�n��@@�����
         ///&amp;f&quot;�330�@@B`^��_&lt;��v�� [rest of string was truncated]&quot;;.
         /// </summary>

@@ -33,9 +33,12 @@
             this.lblWelcome = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.picProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            this.lblPatients = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblPatientsNum = new Bunifu.UI.WinForms.BunifuLabel();
             this.bunifuPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
+            this.guna2ShadowPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblDoctorName
@@ -110,23 +113,55 @@
             this.picProfile.TabStop = false;
             this.picProfile.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
-            // bunifuLabel1
+            // guna2ShadowPanel1
             // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Hand;
-            this.bunifuLabel1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.bunifuLabel1.Location = new System.Drawing.Point(11, 105);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(352, 45);
-            this.bunifuLabel1.TabIndex = 43;
-            this.bunifuLabel1.Text = "Appointments Today: 3";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.guna2ShadowPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2ShadowPanel1.Controls.Add(this.lblPatients);
+            this.guna2ShadowPanel1.Controls.Add(this.lblPatientsNum);
+            this.guna2ShadowPanel1.FillColor = System.Drawing.Color.White;
+            this.guna2ShadowPanel1.Location = new System.Drawing.Point(18, 119);
+            this.guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            this.guna2ShadowPanel1.Radius = 5;
+            this.guna2ShadowPanel1.ShadowColor = System.Drawing.Color.DimGray;
+            this.guna2ShadowPanel1.ShadowDepth = 50;
+            this.guna2ShadowPanel1.Size = new System.Drawing.Size(311, 110);
+            this.guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // lblPatients
+            // 
+            this.lblPatients.AllowParentOverrides = false;
+            this.lblPatients.AutoEllipsis = false;
+            this.lblPatients.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblPatients.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblPatients.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold);
+            this.lblPatients.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(175)))), ((int)(((byte)(184)))), ((int)(((byte)(190)))));
+            this.lblPatients.Location = new System.Drawing.Point(17, 55);
+            this.lblPatients.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPatients.Name = "lblPatients";
+            this.lblPatients.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPatients.Size = new System.Drawing.Size(195, 33);
+            this.lblPatients.TabIndex = 56;
+            this.lblPatients.Text = "TOTAL PATIENTS";
+            this.lblPatients.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPatients.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblPatientsNum
+            // 
+            this.lblPatientsNum.AllowParentOverrides = false;
+            this.lblPatientsNum.AutoEllipsis = false;
+            this.lblPatientsNum.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lblPatientsNum.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lblPatientsNum.Font = new System.Drawing.Font("Segoe UI Semibold", 20.25F, System.Drawing.FontStyle.Bold);
+            this.lblPatientsNum.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.lblPatientsNum.Location = new System.Drawing.Point(17, 16);
+            this.lblPatientsNum.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPatientsNum.Name = "lblPatientsNum";
+            this.lblPatientsNum.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPatientsNum.Size = new System.Drawing.Size(162, 37);
+            this.lblPatientsNum.TabIndex = 56;
+            this.lblPatientsNum.Text = "patientCount";
+            this.lblPatientsNum.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblPatientsNum.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // frmDoctorDashboard
             // 
@@ -134,7 +169,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1006, 829);
-            this.Controls.Add(this.bunifuLabel1);
+            this.Controls.Add(this.guna2ShadowPanel1);
             this.Controls.Add(this.bunifuPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -143,8 +178,9 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
+            this.guna2ShadowPanel1.ResumeLayout(false);
+            this.guna2ShadowPanel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -153,6 +189,8 @@
         private Bunifu.UI.WinForms.BunifuLabel lblWelcome;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPictureBox picProfile;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Bunifu.UI.WinForms.BunifuLabel lblPatients;
+        private Bunifu.UI.WinForms.BunifuLabel lblPatientsNum;
     }
 }

@@ -30,6 +30,7 @@ namespace ClinicSystem
         public DataTable datSecretaries;
         public DataTable datUsers;
         public DataTable datPatients;
+        public DataTable datPrescription;
 
         public bool fncConnectToDatabase()
         {
@@ -38,7 +39,7 @@ namespace ClinicSystem
                 servername = "localhost";
                 databasename = "clinicsystem";
                 username = "root";
-                password = "vincealwyn.";
+                password = "Harmonize0805";
                 port = "3306";
 
                 strConnection = "Server=" + servername + ";" +
