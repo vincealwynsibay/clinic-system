@@ -17,7 +17,7 @@ namespace ClinicSystem
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frmLogin());
-            Application.Run(new frmDoctorMain(14)); // Just delete if I didn't delete it. This is just a placeholder to skip login
+            Application.Run(new frmAdminMain(16)); // Just delete if I didn't delete it. This is just a placeholder to skip login
         }
     }
 }

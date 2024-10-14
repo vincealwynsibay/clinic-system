@@ -37,14 +37,16 @@ namespace ClinicSystem
 
                 string username = "";
                 string password = "";
+                int id = -1;
                 int role = -1;
                 using (var reader = sqlCmd.ExecuteReader())
                 {
                     if (reader.Read())
                     {
-                        username = reader[0].ToString();
-                        password = reader[1].ToString();
-                        role = Int32.Parse(reader[2].ToString());
+                        id = Int32.Parse(reader[0].ToString());
+                        username = reader[1].ToString();
+                        password = reader[2].ToString();
+                        role = Int32.Parse(reader[3].ToString());
                     }
                 }
 
@@ -54,19 +56,19 @@ namespace ClinicSystem
                 {
                     if (role == 1)
                     {
-                        frmAdminMain frmAdmin = new frmAdminMain();
+                        frmAdminMain frmAdmin = new frmAdminMain(id);
                         frmAdmin.Show();
                         this.Hide();
                     }
                     else if (role == 2)
                     {
-                        frmDoctorMain frmDoctor = new frmDoctorMain(5);  // Replace '5' with the variable containing the id of the doctor logging in.
+                        frmDoctorMain frmDoctor = new frmDoctorMain(id);  // Replace '5' with the variable containing the id of the doctor logging in.
                         frmDoctor.Show();
                         this.Hide();
                     }
                     else if (role == 3)
                     {
-                        frmSecretaryMain frmSecretary = new frmSecretaryMain();
+                        frmSecretaryMain frmSecretary = new frmSecretaryMain(id);
                         frmSecretary.Show();
                         this.Hide();
                     }

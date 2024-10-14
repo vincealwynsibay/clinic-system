@@ -30,7 +30,8 @@ namespace ClinicSystem
             prcLoadUsers();
         }
 
-        private void prcLoadUsers()
+
+    private void prcLoadUsers()
         {
             try
             {
@@ -49,6 +50,7 @@ namespace ClinicSystem
                     row = 0;
                     //lblTotal.Text = "Total: " + Convert.ToString(globalProcedure.datUsers.Rows.Count);
                     grdUsers.RowCount = globalProcedure.datUsers.Rows.Count;
+                    
                     while (!(globalProcedure.datUsers.Rows.Count - 1 < row))
                     {
                         grdUsers.Rows[row].Cells[0].Value = globalProcedure.datUsers.Rows[row]["id"].ToString();

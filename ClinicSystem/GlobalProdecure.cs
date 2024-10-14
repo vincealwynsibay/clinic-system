@@ -39,7 +39,7 @@ namespace ClinicSystem
                 servername = "localhost";
                 databasename = "clinicsystem";
                 username = "root";
-                password = "Harmonize0805";
+                password = "vincealwyn.";
                 port = "3306";
 
                 strConnection = "Server=" + servername + ";" +

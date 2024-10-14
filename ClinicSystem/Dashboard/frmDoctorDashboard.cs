@@ -67,7 +67,7 @@ namespace ClinicSystem
             g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
 
             g_proc.datPatients.Clear();
-            lblPatientsNum.Text = (g_proc.sqlCommand.ExecuteScalar()).ToString();
+            //lblPatientsNum.Text = (g_proc.sqlCommand.ExecuteScalar()).ToString();
         }
     }
 }
