@@ -84,6 +84,5 @@ namespace ClinicSystem
                 MessageBox.Show("Invalid Credentials");
             }
         }
-
     }
 }

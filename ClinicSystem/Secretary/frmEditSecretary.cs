@@ -117,5 +117,11 @@ namespace ClinicSystem
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
+        }
     }
 }

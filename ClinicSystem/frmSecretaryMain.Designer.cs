@@ -31,28 +31,27 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSecretaryMain));
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.picProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.txtName = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtHi = new Bunifu.UI.WinForms.BunifuLabel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.Medi = new System.Windows.Forms.Label();
+            this.picProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnDoctors = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSecretaries = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMainParent = new Bunifu.UI.WinForms.BunifuPanel();
-            this.btnSecretaries = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuGroupBox1.SuspendLayout();
             this.bunifuGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.pnlMainParent.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGroupBox1
@@ -61,9 +60,8 @@
             this.bunifuGroupBox1.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.bunifuGroupBox1.BorderRadius = 18;
             this.bunifuGroupBox1.BorderThickness = 1;
-            this.bunifuGroupBox1.Controls.Add(this.bunifuGroupBox2);
             this.bunifuGroupBox1.Controls.Add(this.guna2PictureBox1);
-            this.bunifuGroupBox1.Controls.Add(this.Medi);
+            this.bunifuGroupBox1.Controls.Add(this.bunifuGroupBox2);
             this.bunifuGroupBox1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuGroupBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuGroupBox1.LabelAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -81,9 +79,9 @@
             this.bunifuGroupBox2.BorderColor = System.Drawing.Color.White;
             this.bunifuGroupBox2.BorderRadius = 1;
             this.bunifuGroupBox2.BorderThickness = 1;
-            this.bunifuGroupBox2.Controls.Add(this.picProfile);
             this.bunifuGroupBox2.Controls.Add(this.txtName);
             this.bunifuGroupBox2.Controls.Add(this.txtHi);
+            this.bunifuGroupBox2.Controls.Add(this.picProfile);
             this.bunifuGroupBox2.Dock = System.Windows.Forms.DockStyle.Right;
             this.bunifuGroupBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bunifuGroupBox2.LabelAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -95,29 +93,13 @@
             this.bunifuGroupBox2.TabIndex = 3;
             this.bunifuGroupBox2.TabStop = false;
             // 
-            // picProfile
-            // 
-            this.picProfile.AllowFocused = false;
-            this.picProfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.picProfile.AutoSizeHeight = true;
-            this.picProfile.BorderRadius = 28;
-            this.picProfile.Image = ((System.Drawing.Image)(resources.GetObject("picProfile.Image")));
-            this.picProfile.IsCircle = true;
-            this.picProfile.Location = new System.Drawing.Point(214, 3);
-            this.picProfile.Name = "picProfile";
-            this.picProfile.Size = new System.Drawing.Size(56, 56);
-            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picProfile.TabIndex = 0;
-            this.picProfile.TabStop = false;
-            this.picProfile.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
-            // 
             // txtName
             // 
             this.txtName.AllowParentOverrides = false;
             this.txtName.AutoEllipsis = false;
             this.txtName.CursorType = null;
             this.txtName.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(38, 17);
+            this.txtName.Location = new System.Drawing.Point(108, 20);
             this.txtName.Name = "txtName";
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtName.Size = new System.Drawing.Size(157, 27);
@@ -133,7 +115,7 @@
             this.txtHi.Cursor = System.Windows.Forms.Cursors.Default;
             this.txtHi.CursorType = System.Windows.Forms.Cursors.Default;
             this.txtHi.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtHi.Location = new System.Drawing.Point(6, 16);
+            this.txtHi.Location = new System.Drawing.Point(78, 20);
             this.txtHi.Name = "txtHi";
             this.txtHi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtHi.Size = new System.Drawing.Size(24, 27);
@@ -142,32 +124,21 @@
             this.txtHi.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.txtHi.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // guna2PictureBox1
+            // picProfile
             // 
-            this.guna2PictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.guna2PictureBox1.Image = global::ClinicSystem.Properties.Resources.logo_1_;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 31);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.guna2PictureBox1.TabIndex = 2;
-            this.guna2PictureBox1.TabStop = false;
-            // 
-            // Medi
-            // 
-            this.Medi.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left)));
-            this.Medi.AutoSize = true;
-            this.Medi.BackColor = System.Drawing.Color.White;
-            this.Medi.Font = new System.Drawing.Font("IBM Plex Sans", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Medi.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.Medi.Location = new System.Drawing.Point(68, 27);
-            this.Medi.Name = "Medi";
-            this.Medi.Size = new System.Drawing.Size(111, 43);
-            this.Medi.TabIndex = 1;
-            this.Medi.Text = "Medic";
+            this.picProfile.AllowFocused = false;
+            this.picProfile.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.picProfile.AutoSizeHeight = true;
+            this.picProfile.BorderRadius = 28;
+            this.picProfile.Image = ((System.Drawing.Image)(resources.GetObject("picProfile.Image")));
+            this.picProfile.IsCircle = true;
+            this.picProfile.Location = new System.Drawing.Point(6, 0);
+            this.picProfile.Name = "picProfile";
+            this.picProfile.Size = new System.Drawing.Size(56, 56);
+            this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picProfile.TabIndex = 0;
+            this.picProfile.TabStop = false;
+            this.picProfile.Type = Bunifu.UI.WinForms.BunifuPictureBox.Types.Circle;
             // 
             // bunifuPanel2
             // 
@@ -269,6 +240,28 @@
             this.btnDoctors.Text = "Appointments";
             this.btnDoctors.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
+            // btnSecretaries
+            // 
+            this.btnSecretaries.Animated = true;
+            this.btnSecretaries.BackColor = System.Drawing.Color.White;
+            this.btnSecretaries.BorderColor = System.Drawing.Color.Transparent;
+            this.btnSecretaries.BorderRadius = 12;
+            this.btnSecretaries.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnSecretaries.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSecretaries.FillColor = System.Drawing.Color.White;
+            this.btnSecretaries.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSecretaries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
+            this.btnSecretaries.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnSecretaries.Image = global::ClinicSystem.Properties.Resources.settings;
+            this.btnSecretaries.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnSecretaries.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnSecretaries.Location = new System.Drawing.Point(22, 181);
+            this.btnSecretaries.Name = "btnSecretaries";
+            this.btnSecretaries.Size = new System.Drawing.Size(294, 45);
+            this.btnSecretaries.TabIndex = 0;
+            this.btnSecretaries.Text = "Settings";
+            this.btnSecretaries.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
             // bunifuPanel1
             // 
             this.bunifuPanel1.BackgroundColor = System.Drawing.Color.WhiteSmoke;
@@ -317,27 +310,16 @@
             this.pnlMainParent.Size = new System.Drawing.Size(1195, 914);
             this.pnlMainParent.TabIndex = 9;
             // 
-            // btnSecretaries
+            // guna2PictureBox1
             // 
-            this.btnSecretaries.Animated = true;
-            this.btnSecretaries.BackColor = System.Drawing.Color.White;
-            this.btnSecretaries.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSecretaries.BorderRadius = 12;
-            this.btnSecretaries.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSecretaries.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSecretaries.FillColor = System.Drawing.Color.White;
-            this.btnSecretaries.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSecretaries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnSecretaries.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSecretaries.Image = global::ClinicSystem.Properties.Resources.settings;
-            this.btnSecretaries.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSecretaries.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSecretaries.Location = new System.Drawing.Point(22, 181);
-            this.btnSecretaries.Name = "btnSecretaries";
-            this.btnSecretaries.Size = new System.Drawing.Size(294, 45);
-            this.btnSecretaries.TabIndex = 0;
-            this.btnSecretaries.Text = "Settings";
-            this.btnSecretaries.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.guna2PictureBox1.Image = global::ClinicSystem.Properties.Resources.logo3;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 26);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(138, 42);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1.TabIndex = 56;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // frmSecretaryMain
             // 
@@ -356,11 +338,11 @@
             this.bunifuGroupBox2.ResumeLayout(false);
             this.bunifuGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.pnlMainParent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -372,8 +354,6 @@
         private Bunifu.UI.WinForms.BunifuPictureBox picProfile;
         private Bunifu.UI.WinForms.BunifuLabel txtName;
         private Bunifu.UI.WinForms.BunifuLabel txtHi;
-        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
-        private System.Windows.Forms.Label Medi;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel2;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
@@ -383,5 +363,6 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPanel pnlMain;
         private Bunifu.UI.WinForms.BunifuPanel pnlMainParent;
+        private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
     }
 }
