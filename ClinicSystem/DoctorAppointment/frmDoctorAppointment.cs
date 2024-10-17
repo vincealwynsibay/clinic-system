@@ -19,6 +19,7 @@ namespace ClinicSystem.DoctorAppointment
         private frmDoctorMain mainForm;
         private int doctor_id;
         private int row;
+        private string status = "pending";
 
         public frmDoctorAppointment(frmDoctorMain mainForm, int doctor_id)
         {
@@ -27,10 +28,19 @@ namespace ClinicSystem.DoctorAppointment
             this.doctor_id = doctor_id;
             g_proc.fncConnectToDatabase();
 
-            func_LoadDoctor();
+            func_LoadTable();
+            HighlightButton(btnPending);
+            btnPending_Click(null, null);
         }
 
-        private void func_LoadDoctor()
+        private void func_LoadTable()
+        {
+            func_LoadDoctor();
+            grdAppointment.CellClick += func_ApproveAppointment;
+            grdAppointment.CellPainting += func_ButtonStyleCell;
+        }
+
+            private void func_LoadDoctor()
         {
             try
             {
@@ -38,11 +48,12 @@ namespace ClinicSystem.DoctorAppointment
                 g_proc.datPatients = new DataTable();
 
                 g_proc.sqlCommand.Parameters.Clear();
-                g_proc.sqlCommand.CommandText = "procSearchPatientID";
+                g_proc.sqlCommand.CommandText = "procSearchAppointment";
 
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_search", "");
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);               // checks the tbldiagnosis if patient and doctor is related
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
 
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
                 g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
@@ -55,14 +66,11 @@ namespace ClinicSystem.DoctorAppointment
                     var patientRow = g_proc.datPatients.Rows[row];
 
                     grdAppointment.Rows[row].Cells[0].Value = patientRow["id"].ToString();
-                    grdAppointment.Rows[row].Cells[1].Value = patientRow["firstname"].ToString() + " " + (string.IsNullOrEmpty(patientRow["middlename"].ToString()) ? "" : patientRow["middlename"].ToString() + " ") + patientRow["lastname"].ToString();
+                    grdAppointment.Rows[row].Cells[1].Value = patientRow["name"].ToString();
                     grdAppointment.Rows[row].Cells[2].Value = patientRow["mobileno"].ToString();
-                    grdAppointment.Rows[row].Cells[3].Value = patientRow["gender"].ToString();
+                    grdAppointment.Rows[row].Cells[3].Value = patientRow["email"].ToString();
                     row++;
                 }
-
-                grdAppointment.CellClick += func_ApproveAppointment;
-                grdAppointment.CellPainting += func_ButtonStyleCell;
             }
             catch (Exception ex)
             {
@@ -72,6 +80,7 @@ namespace ClinicSystem.DoctorAppointment
             g_proc.datPatients.Dispose();
         }
 
+        // Event Handler for Datagrid Buttons
         private void func_ApproveAppointment(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == grdAppointment.Columns["btnApprove"].Index && e.RowIndex >= 0)
@@ -79,48 +88,17 @@ namespace ClinicSystem.DoctorAppointment
                 string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
                 MessageBox.Show($"Appointment for {fullName} approved!");
             }
-        }
 
-        private void func_ButtonStyleCell(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            // Approve Button
-            if (e.ColumnIndex == grdAppointment.Columns["btnApprove"].Index && e.RowIndex >= 0)
+            if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                if (e.State.HasFlag(DataGridViewElementStates.Selected))
-                {
-                    e.Handled = true;
+                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
+                MessageBox.Show($"Appointment for {fullName} edited!");
+            }
 
-                    using (Brush brush = new SolidBrush(Color.FromArgb(0, 55, 75)))
-                    {
-                        e.Graphics.FillRectangle(brush, e.CellBounds);
-                    }
-
-                    using (Pen pen = new Pen(Color.White, 2))
-                    {
-                        e.Graphics.DrawRectangle(pen, e.CellBounds);
-                    }
-
-                    TextRenderer.DrawText(e.Graphics, "Approve", e.CellStyle.Font,
-                        e.CellBounds, Color.White,
-                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
-                }
-                else
-                {
-                    e.CellStyle.BackColor = Color.FromArgb(0, 55, 75);
-                    e.CellStyle.ForeColor = Color.White;
-                    e.CellStyle.Font = new Font("IBM Plex Sans", 12, FontStyle.Regular);
-
-                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                    var textRect = new Rectangle(e.CellBounds.Left, e.CellBounds.Top,
-                                                 e.CellBounds.Width, e.CellBounds.Height);
-
-                    TextRenderer.DrawText(e.Graphics, "Approve", e.CellStyle.Font,
-                        textRect, e.CellStyle.ForeColor,
-                        TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
-
-                    e.Handled = true;
-                }
+            if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
+            {
+                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
+                MessageBox.Show($"Appointment for {fullName} deleted!");
             }
         }
 
@@ -156,23 +134,154 @@ namespace ClinicSystem.DoctorAppointment
         {
             ResetButtons();
             HighlightButton(btnPending);
+            grdAppointment.Columns["btnEdit"].Visible = true;
+            grdAppointment.Columns["btnDelete"].Visible = true;
+            status = "pending";
+            func_LoadTable();
         }
 
         private void btnCancelled_Click(object sender, EventArgs e)
         {
             ResetButtons();
             HighlightButton(btnCancelled);
+            grdAppointment.Columns["btnEdit"].Visible = false;
+            grdAppointment.Columns["btnDelete"].Visible = false;
+            grdAppointment.Columns["btnApprove"].Visible = false;
+            status = "cancelled";
+            func_LoadTable();
         }
 
         private void btnFilterApprove_Click(object sender, EventArgs e)
         {
             ResetButtons();
             HighlightButton(btnFilterApprove);
+            grdAppointment.Columns["btnEdit"].Visible = false;
+            grdAppointment.Columns["btnDelete"].Visible = false;
+            status = "approved";
+            func_LoadTable();
         }
 
         private void cboFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            func_LoadDoctor();
+            func_LoadTable();
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            func_LoadTable();
+        }
+
+        // Create Buttons inside the datagrid
+        private void func_ButtonStyleCell(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            // Approve Button
+            if (e.ColumnIndex == grdAppointment.Columns["btnApprove"].Index && e.RowIndex >= 0)
+            {
+                if (e.State.HasFlag(DataGridViewElementStates.Selected))
+                {
+                    e.Handled = true;
+                    using (Brush brush = new SolidBrush(Color.FromArgb(0, 55, 75)))
+                    {
+                        e.Graphics.FillRectangle(brush, e.CellBounds);
+                    }
+
+                    using (Pen pen = new Pen(Color.White, 2))
+                    {
+                        e.Graphics.DrawRectangle(pen, e.CellBounds);
+                    }
+
+                    TextRenderer.DrawText(e.Graphics, "Approve", e.CellStyle.Font, e.CellBounds, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.FromArgb(0, 55, 75);
+                    e.CellStyle.ForeColor = Color.White;
+                    e.CellStyle.Font = new Font("IBM Plex Sans", 12, FontStyle.Regular);
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                    var textRect = new Rectangle(e.CellBounds.Left, e.CellBounds.Top,
+                                                 e.CellBounds.Width, e.CellBounds.Height);
+
+                    TextRenderer.DrawText(e.Graphics, "Approve", e.CellStyle.Font, textRect, e.CellStyle.ForeColor, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                    e.Handled = true;
+                }
+            }
+
+            // Edit Button
+            if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
+            {
+                if (e.State.HasFlag(DataGridViewElementStates.Selected))
+                {
+                    e.Handled = true;
+
+                    using (Brush brush = new SolidBrush(Color.White))
+                    {
+                        e.Graphics.FillRectangle(brush, e.CellBounds);
+                    }
+
+                    Image editImage = Properties.Resources.icnColoredEdit;
+                    var imgRect = new Rectangle(e.CellBounds.Left + (e.CellBounds.Width - editImage.Height/2) / 2,
+                                                e.CellBounds.Top + (e.CellBounds.Height - editImage.Width/2) / 2,
+                                                editImage.Width/2, editImage.Height/2);
+
+                    e.Graphics.DrawImage(editImage, imgRect);
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.White;
+                    e.CellStyle.ForeColor = Color.FromArgb(0, 55, 75);
+                    e.CellStyle.Font = new Font("IBM Plex Sans", 12, FontStyle.Regular);
+
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                    Image editImage = Properties.Resources.icnColoredEdit;
+                    var imgRect = new Rectangle(e.CellBounds.Left + (e.CellBounds.Width - editImage.Height / 2) / 2,
+                                                e.CellBounds.Top + (e.CellBounds.Height - editImage.Width / 2) / 2,
+                                                editImage.Width / 2, editImage.Height / 2);
+
+                    e.Graphics.DrawImage(editImage, imgRect);
+                    e.Handled = true;
+                }
+            }
+
+            // Delete Button
+            if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
+            {
+                if (e.State.HasFlag(DataGridViewElementStates.Selected))
+                {
+                    e.Handled = true;
+
+                    using (Brush brush = new SolidBrush(Color.White))
+                    {
+                        e.Graphics.FillRectangle(brush, e.CellBounds);
+                    }
+
+                    Image deleteImage = Properties.Resources.icnColoredDelete;
+                    var imgRect = new Rectangle(e.CellBounds.Left + (e.CellBounds.Width - deleteImage.Height / 2) / 2,
+                                                e.CellBounds.Top + (e.CellBounds.Height - deleteImage.Width / 2) / 2,
+                                                deleteImage.Width / 2, deleteImage.Height / 2);
+
+                    e.Graphics.DrawImage(deleteImage, imgRect);
+                }
+                else
+                {
+                    e.CellStyle.BackColor = Color.White;
+                    e.CellStyle.ForeColor = Color.FromArgb(0, 55, 75);
+                    e.CellStyle.Font = new Font("IBM Plex Sans", 12, FontStyle.Regular);
+
+                    e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                    Image deleteImage = Properties.Resources.icnColoredDelete;
+                    var imgRect = new Rectangle(e.CellBounds.Left + (e.CellBounds.Width - deleteImage.Height / 2) / 2,
+                                                e.CellBounds.Top + (e.CellBounds.Height - deleteImage.Width / 2) / 2,
+                                                deleteImage.Width / 2, deleteImage.Height / 2);
+
+                    e.Graphics.DrawImage(deleteImage, imgRect);
+                    e.Handled = true;
+                }
+            }
+
         }
     }
 }

@@ -76,7 +76,7 @@
             this.btnAdd.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12F, System.Drawing.FontStyle.Bold);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
-            this.btnAdd.ImageOffset = new System.Drawing.Point(-10, 0);
+            this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
             this.btnAdd.Location = new System.Drawing.Point(641, 22);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
@@ -248,6 +248,7 @@
             this.txtSearch.SelectedText = "";
             this.txtSearch.Size = new System.Drawing.Size(308, 36);
             this.txtSearch.TabIndex = 150;
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
             // btnFilterApprove
             // 

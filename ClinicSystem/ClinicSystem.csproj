@@ -489,5 +489,11 @@
   <ItemGroup>
     <None Include="Resources\icnSearch.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnColoredDelete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnColoredEdit.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

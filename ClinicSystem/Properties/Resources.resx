@@ -124,11 +124,11 @@
   <data name="secretart" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\secretart.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Patient" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Patient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Appointments" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Appointments.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="secretart(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\secretart(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Frame(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Frame(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -145,6 +145,9 @@
   <data name="dashboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\dashboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="icnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -157,8 +160,8 @@
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="secretart(1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\secretart(1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Patient" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Patient.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Inter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Inter-VariableFont_opsz,wght.ttf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
@@ -172,7 +175,10 @@
   <data name="icnAddUser" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\icnAddUser.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="icnSearch" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\icnSearch.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="icnColoredDelete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnColoredDelete.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icnColoredEdit" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icnColoredEdit.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
