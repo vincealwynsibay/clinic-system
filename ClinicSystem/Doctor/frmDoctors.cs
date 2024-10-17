@@ -36,9 +36,10 @@ namespace ClinicSystem
                 globalProcedure.datDoctors = new DataTable();
 
                 globalProcedure.sqlCommand.Parameters.Clear();
-                globalProcedure.sqlCommand.CommandText = "procDisplayAllDoctors";
+                globalProcedure.sqlCommand.CommandText = "procSearchDoctorByName";
                 globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
                 globalProcedure.sqlClinicAdapter.SelectCommand = globalProcedure.sqlCommand;
+                globalProcedure.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
                 globalProcedure.datDoctors.Clear();
                 globalProcedure.sqlClinicAdapter.Fill(globalProcedure.datDoctors);
 
@@ -62,7 +63,8 @@ namespace ClinicSystem
                 }
                 else
                 {
-                    MessageBox.Show("Record not found!", "Records", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    globalProcedure.datDoctors.Clear();
+                    grdDoctors.Rows.Clear();
                 }
 
                 globalProcedure.sqlClinicAdapter.Dispose();
@@ -78,7 +80,7 @@ namespace ClinicSystem
 
         private void btnAddDoctor_Click(object sender, EventArgs e)
         {
-           this.mainForm.NavigateToForm(new frmAddDoctor(mainForm));
+           globalProcedure.displayFormAsModal(mainForm, new frmAddDoctor(mainForm));
         }
 
         private void grdDoctors_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -91,7 +93,8 @@ namespace ClinicSystem
             if (grdDoctors.SelectedRows.Count != 0)
             {
                 DataGridViewRow row = this.grdDoctors.SelectedRows[0];
-                mainForm.NavigateToForm(new frmEditDoctor(mainForm, row.Cells["id"].Value.ToString()));
+
+                globalProcedure.displayFormAsModal(mainForm, new frmEditDoctor(mainForm, row.Cells["id"].Value.ToString()));
             }
         }
 
@@ -115,6 +118,21 @@ namespace ClinicSystem
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void grdDoctors_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void grdDoctors_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            prcLoadDoctors();
         }
     }
 }

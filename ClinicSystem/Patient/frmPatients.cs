@@ -118,5 +118,15 @@ namespace ClinicSystem.DoctorMain
             this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
             this.Close();
         }
+
+        private void frmPatients_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cboSearch_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

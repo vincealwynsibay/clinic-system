@@ -56,7 +56,8 @@ namespace ClinicSystem
 
         private void frmAdminMain_Load(object sender, EventArgs e)
         {
-            btnDashboard.PerformClick();
+            LoadFormIntoPanel(new frmAddDoctor(this));
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -82,17 +83,22 @@ namespace ClinicSystem
         public void LoadFormIntoPanel(Form form)
         {
             this.pnlMain.Controls.Clear();
+
             form.TopLevel = false;
             form.FormBorderStyle = FormBorderStyle.None;
-            form.Dock = DockStyle.Fill;
+            //form.Dock = DockStyle.Fill;
+            //form.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             form.StartPosition = FormStartPosition.CenterParent;
-            
+
             this.pnlMain.Controls.Add(form);
             form.Show();
         }
 
         public void NavigateToForm(Form childForm)
         {
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
             LoadFormIntoPanel(childForm);
         }
 
@@ -119,6 +125,16 @@ namespace ClinicSystem
         }
 
         private void txtName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlMain_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlMainParent_Click(object sender, EventArgs e)
         {
 
         }

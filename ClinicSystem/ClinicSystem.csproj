@@ -168,6 +168,12 @@
     <Compile Include="frmAppointments.Designer.cs">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Misc\frmModalBackground.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Misc\frmModalBackground.Designer.cs">
+      <DependentUpon>frmModalBackground.cs</DependentUpon>
+    </Compile>
     <Compile Include="Patient\frmPatientAdd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -339,6 +345,9 @@
     <EmbeddedResource Include="frmAppointments.resx">
       <DependentUpon>frmAppointments.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Misc\frmModalBackground.resx">
+      <DependentUpon>frmModalBackground.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Patient\frmPatientAdd.resx">
       <DependentUpon>frmPatientAdd.cs</DependentUpon>
     </EmbeddedResource>
@@ -485,6 +494,30 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\edit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_medicine_b1ol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_medicine_b-1-ol 1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_medicine_b-1-ol 11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\undraw_medicine_b-1-ol 12.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search-line.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icnSearch.png" />

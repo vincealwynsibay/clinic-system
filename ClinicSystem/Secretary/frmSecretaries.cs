@@ -38,9 +38,10 @@ namespace ClinicSystem
                 globalProcedure.datSecretaries = new DataTable();
 
                 globalProcedure.sqlCommand.Parameters.Clear();
-                globalProcedure.sqlCommand.CommandText = "procDisplayAllSecretaries";
+                globalProcedure.sqlCommand.CommandText = "procSearchSecretaryByName";
                 globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
                 globalProcedure.sqlClinicAdapter.SelectCommand = globalProcedure.sqlCommand;
+                globalProcedure.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
                 globalProcedure.datSecretaries.Clear();
                 globalProcedure.sqlClinicAdapter.Fill(globalProcedure.datSecretaries);
 
@@ -64,7 +65,8 @@ namespace ClinicSystem
                 }
                 else
                 {
-                    MessageBox.Show("Record not found!", "Records", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    globalProcedure.datSecretaries.Clear();
+                    grdSecretaries.Rows.Clear();
                 }
 
                 globalProcedure.sqlClinicAdapter.Dispose();
@@ -80,7 +82,7 @@ namespace ClinicSystem
 
         private void btnAddSecretary_Click(object sender, EventArgs e)
         {
-            this.mainForm.NavigateToForm(new frmAddSecretary(mainForm));
+            globalProcedure.displayFormAsModal(mainForm, new frmAddSecretary(mainForm));
         }
 
         private void btnEditSecretary_Click(object sender, EventArgs e)
@@ -88,7 +90,7 @@ namespace ClinicSystem
             if (grdSecretaries.SelectedRows.Count != 0)
             {
                 DataGridViewRow row = this.grdSecretaries.SelectedRows[0];
-                this.mainForm.NavigateToForm(new frmEditSecretary(mainForm, row.Cells["id"].Value.ToString()));
+                globalProcedure.displayFormAsModal(mainForm, new frmEditSecretary(mainForm, row.Cells["id"].Value.ToString()));
             }
         }
 
@@ -112,6 +114,11 @@ namespace ClinicSystem
                     MessageBox.Show(ex.Message);
                 }
             }
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            prcLoadSecretaries();
         }
     }
 }

@@ -39,9 +39,11 @@ namespace ClinicSystem
                 globalProcedure.datUsers = new DataTable();
 
                 globalProcedure.sqlCommand.Parameters.Clear();
-                globalProcedure.sqlCommand.CommandText = "procDisplayAllUsers";
+                globalProcedure.sqlCommand.CommandText = "procSearchUserByUsername";
                 globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
                 globalProcedure.sqlClinicAdapter.SelectCommand = globalProcedure.sqlCommand;
+
+                globalProcedure.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
                 globalProcedure.datUsers.Clear();
                 globalProcedure.sqlClinicAdapter.Fill(globalProcedure.datUsers);
 
@@ -62,7 +64,8 @@ namespace ClinicSystem
                 }
                 else
                 {
-                    MessageBox.Show("Record not found!", "Records", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    globalProcedure.datUsers.Clear();
+                    grdUsers.Rows.Clear();
                 }
 
                 globalProcedure.sqlClinicAdapter.Dispose();
@@ -80,7 +83,7 @@ namespace ClinicSystem
             if (grdUsers.SelectedRows.Count != 0)
             {
                 DataGridViewRow row = this.grdUsers.SelectedRows[0];
-                mainForm.NavigateToForm(new frmEditUser(mainForm, row.Cells["id"].Value.ToString()));
+                globalProcedure.displayFormAsModal(mainForm, new frmEditUser(mainForm, row.Cells["id"].Value.ToString()));
             }
         }
 
@@ -108,7 +111,12 @@ namespace ClinicSystem
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            mainForm.NavigateToForm(new frmAddAdmin(mainForm));
+            globalProcedure.displayFormAsModal(mainForm, new frmAddAdmin(mainForm));
+        }
+
+        private void txtSearch_TextChanged(object sender, EventArgs e)
+        {
+            prcLoadUsers();
         }
     }
 }
