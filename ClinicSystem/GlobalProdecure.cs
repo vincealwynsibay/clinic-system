@@ -9,6 +9,8 @@ using System.Security.Cryptography;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data;
+using ClinicSystem.Misc;
+using System.Drawing;
 
 namespace ClinicSystem
 {
@@ -80,6 +82,41 @@ namespace ClinicSystem
             else
             {
             }
+        }
+
+        public void displayFormAsModal(Form frmParent, Form frmChild)
+        {
+            Form frmModalBackground = new Form();
+            frmModalBackground.ShowInTaskbar = false;
+            frmModalBackground.StartPosition = FormStartPosition.Manual;
+            frmModalBackground.FormBorderStyle = FormBorderStyle.None;
+            frmModalBackground.BackColor = Color.Black;
+            frmModalBackground.Opacity = 0.50d;
+            frmModalBackground.Location = frmParent.Location;
+            frmModalBackground.TopMost = false;
+            frmModalBackground.Owner = frmParent;
+            frmModalBackground.Size = frmParent.Size;
+            frmModalBackground.Show();
+
+            frmChild.ShowInTaskbar = false;
+            frmChild.TopMost = false;
+            frmChild.Owner = frmParent;
+            frmChild.StartPosition = FormStartPosition.CenterParent;
+
+            //MessageBox.Show((frmParent.Width * 0.8).ToString());
+            //MessageBox.Show((frmParent.Height * 0.8).ToString());
+            //MessageBox.Show((frmModalBackground.Width * 0.8).ToString());
+            //MessageBox.Show((frmModalBackground.Height * 0.8).ToString());
+            frmChild.Size = new System.Drawing.Size(
+            (int)(frmModalBackground.Width * 0.8),
+            (int)(frmModalBackground.Height * 0.8)
+        );
+            frmChild.ShowDialog();
+
+            frmModalBackground.Close();
+            frmModalBackground.Dispose();
+            frmParent.BringToFront();
+
         }
     }
 }

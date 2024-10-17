@@ -117,43 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="firstname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="lastname.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="gender.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="birthdate.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="email.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="mobileno.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="address.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtSearch.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAdUAAAAsCAYAAAAzUyKSAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAG0SURBVHhe7dkxbtNQHMdxjx17HEZGLtKRA7BxDi7ALVh7
-        BKQOjdT0OXaC4qaqEpraMX7Kk6oClVL0Z/t8pN9gP+9f2a4AgP9gPm/e1XX7ra6b1e3tYjQzM7M/lzuZ
-        e3lzU38oCX0ppcWnpll22+1u7Pt+BAD+Lncy93K5/NFNcf1aUno0ny/et+2qK88CACdar7u7lJqLktSq
-        mip7udv9LMcAwKn2+/2YUntdkpo//TbbYRjKMQDwFvk/a0lqVeULAODfiCoABBFVAAgiqgAQRFQBIIio
-        AkAQUQWAIKIKAEFEFQCCiCoABBFVAAgiqgAQRFQBIIioAkAQUQWAIKIKAEFEFQCCiCoABBFVAAgiqgAQ
-        RFQBIIioAkAQUQWAIKIKAEFEFQCCiCoABBFVAAgiqgAQRFQBIIioAkAQUQWAIKIKAEF+j+rT4XAoRwDA
-        W7yIal033x8f9+UIADhV3/fj1NFVSWpVpbT4uF7f3ZdzAOBEm839U123X0pSj6Ybl123eRiGoTwGALwm
-        9/IY1OZqNpudlZw+m95YP6fUbPO3YTMzM3t9uZf5DXUK6nnJKAAQo6p+AV4/8LEiUpu9AAAAAElFTkSu
-        QmCC
-</value>
-  </data>
 </root>
