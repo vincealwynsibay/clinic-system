@@ -1,4 +1,5 @@
-﻿using ClinicSystem.DoctorMain;
+﻿using ClinicSystem.DoctorAppointment;
+using ClinicSystem.DoctorMain;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
@@ -14,12 +15,12 @@ namespace ClinicSystem
 {
     public partial class frmDoctorMain : Form
     {
-        private int key_index;
+        private int doctor_id;
         GlobalProcedure g_proc = new GlobalProcedure();
-        public frmDoctorMain(int key_index)
+        public frmDoctorMain(int doctor_id)
         {
             InitializeComponent();
-            this.key_index = key_index;
+            this.doctor_id = doctor_id;
             g_proc.fncConnectToDatabase();
 
             func_LoadDoctor();
@@ -34,7 +35,7 @@ namespace ClinicSystem
 
                 g_proc.sqlCommand.Parameters.Clear();
                 g_proc.sqlCommand.CommandText = "procGetDoctorDetails";
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", key_index);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", doctor_id);
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
                 g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
 
@@ -71,7 +72,7 @@ namespace ClinicSystem
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new frmDoctorDashboard(this, key_index));
+            LoadFormIntoPanel(new frmDoctorDashboard(this, doctor_id));
         }
 
         public void LoadFormIntoPanel(Form form)
@@ -98,12 +99,12 @@ namespace ClinicSystem
 
         private void btnPatients_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new frmPatients(this, key_index));
+            LoadFormIntoPanel(new frmPatients(this, doctor_id));
         }
 
         private void btnSettings_Click(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new frmDoctorSetting(this, key_index));
+            LoadFormIntoPanel(new frmDoctorSetting(this, doctor_id));
         }
 
         private void bunifuPanel1_Click(object sender, EventArgs e)
@@ -114,6 +115,11 @@ namespace ClinicSystem
         private void txtName_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnAppointment_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new frmDoctorAppointment(this, doctor_id));
         }
     }
 }
