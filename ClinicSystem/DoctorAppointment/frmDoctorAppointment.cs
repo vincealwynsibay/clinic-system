@@ -35,12 +35,15 @@ namespace ClinicSystem.DoctorAppointment
 
         private void func_LoadTable()
         {
-            func_LoadDoctor();
-            grdAppointment.CellClick += func_ApproveAppointment;
+            grdAppointment.CellClick -= func_ApproveAppointment;
+            
             grdAppointment.CellPainting += func_ButtonStyleCell;
+            grdAppointment.CellClick += func_ApproveAppointment;
+
+            func_LoadDataFromDB();
         }
 
-            private void func_LoadDoctor()
+        private void func_LoadDataFromDB()
         {
             try
             {
@@ -85,17 +88,26 @@ namespace ClinicSystem.DoctorAppointment
         {
             if (e.ColumnIndex == grdAppointment.Columns["btnApprove"].Index && e.RowIndex >= 0)
             {
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procApproveAppointment";
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", grdAppointment.Rows[e.RowIndex].Cells["id"].Value);
+
+                g_proc.sqlCommand.ExecuteNonQuery();
+                g_proc.sqlClinicAdapter.Dispose();
+                g_proc.datPatients.Dispose();
+
                 string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
+                func_LoadTable();
                 MessageBox.Show($"Appointment for {fullName} approved!");
             }
-
-            if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
+            else if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
                 string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
                 MessageBox.Show($"Appointment for {fullName} edited!");
             }
-
-            if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
+            else if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {
                 string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
                 MessageBox.Show($"Appointment for {fullName} deleted!");
@@ -136,6 +148,7 @@ namespace ClinicSystem.DoctorAppointment
             HighlightButton(btnPending);
             grdAppointment.Columns["btnEdit"].Visible = true;
             grdAppointment.Columns["btnDelete"].Visible = true;
+            grdAppointment.Columns["btnApprove"].Visible = true;
             status = "pending";
             func_LoadTable();
         }

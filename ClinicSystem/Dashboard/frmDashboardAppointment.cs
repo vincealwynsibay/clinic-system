@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace ClinicSystem.Dashboard
 {
@@ -36,26 +37,27 @@ namespace ClinicSystem.Dashboard
                 g_proc.datPatients = new DataTable();
 
                 g_proc.sqlCommand.Parameters.Clear();
-                g_proc.sqlCommand.CommandText = "procSearchPatientID";
+                g_proc.sqlCommand.CommandText = "procSearchAppointment";
 
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_search", "");
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", 0);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", 1);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);               // checks the tbldiagnosis if patient and doctor is related
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_status", "PENDING");
 
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
                 g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
                 g_proc.datPatients.Clear();
                 g_proc.sqlClinicAdapter.Fill(g_proc.datPatients);
-
                 row = 0;
                 grdAppointment.RowCount = g_proc.datPatients.Rows.Count;
                 while (!(g_proc.datPatients.Rows.Count - 1 < row))
                 {
                     var patientRow = g_proc.datPatients.Rows[row];
+
                     grdAppointment.Rows[row].Cells[0].Value = patientRow["id"].ToString();
-                    grdAppointment.Rows[row].Cells[1].Value = patientRow["firstname"].ToString() + " " + (string.IsNullOrEmpty(patientRow["middlename"].ToString()) ? "" : patientRow["middlename"].ToString() + " ") + patientRow["lastname"].ToString();
+                    grdAppointment.Rows[row].Cells[1].Value = patientRow["name"].ToString();
                     grdAppointment.Rows[row].Cells[2].Value = patientRow["mobileno"].ToString();
-                    grdAppointment.Rows[row].Cells[3].Value = patientRow["gender"].ToString();
+                    grdAppointment.Rows[row].Cells[3].Value = patientRow["email"].ToString();
                     row++;
                 }
 
@@ -74,9 +76,19 @@ namespace ClinicSystem.Dashboard
         {
             if (e.ColumnIndex == grdAppointment.Columns["btnApprove"].Index && e.RowIndex >= 0)
             {
-                //TODO: ADD CODE WHEN APPOINTMENT IS APPROVED
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procApproveAppointment";
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", grdAppointment.Rows[e.RowIndex].Cells["id"].Value);
+
+                g_proc.sqlCommand.ExecuteNonQuery();
+                g_proc.sqlClinicAdapter.Dispose();
+                g_proc.datPatients.Dispose();
+
                 string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} approved!");
+                func_LoadDoctor();
+                MessageBox.Show($"Appointment for {fullName} has been approved!");
             }
         }
 

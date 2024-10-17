@@ -132,7 +132,7 @@
             // gender
             // 
             this.gender.FillWeight = 74.18671F;
-            this.gender.HeaderText = "Gender";
+            this.gender.HeaderText = "Email";
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 

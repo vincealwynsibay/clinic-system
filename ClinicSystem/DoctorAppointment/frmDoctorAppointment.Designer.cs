@@ -36,6 +36,11 @@
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.grdAppointment = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnFilterApprove = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPending = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelled = new Guna.UI2.WinForms.Guna2Button();
+            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,11 +48,6 @@
             this.btnEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnApprove = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnFilterApprove = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPending = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancelled = new Guna.UI2.WinForms.Guna2Button();
-            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdAppointment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -171,59 +171,6 @@
             this.grdAppointment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.grdAppointment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             // 
-            // id
-            // 
-            this.id.FillWeight = 74.18671F;
-            this.id.HeaderText = "Patient ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // fullname
-            // 
-            this.fullname.FillWeight = 74.18671F;
-            this.fullname.HeaderText = "Full Name";
-            this.fullname.MinimumWidth = 6;
-            this.fullname.Name = "fullname";
-            this.fullname.ReadOnly = true;
-            // 
-            // mobileno
-            // 
-            this.mobileno.FillWeight = 74.18671F;
-            this.mobileno.HeaderText = "Phone Number";
-            this.mobileno.Name = "mobileno";
-            this.mobileno.ReadOnly = true;
-            // 
-            // gender
-            // 
-            this.gender.FillWeight = 74.18671F;
-            this.gender.HeaderText = "Gender";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.FillWeight = 25F;
-            this.btnEdit.HeaderText = "";
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.ReadOnly = true;
-            this.btnEdit.Visible = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FillWeight = 25F;
-            this.btnDelete.HeaderText = "";
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ReadOnly = true;
-            this.btnDelete.Visible = false;
-            // 
-            // btnApprove
-            // 
-            this.btnApprove.FillWeight = 74.18671F;
-            this.btnApprove.HeaderText = "";
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.ReadOnly = true;
-            // 
             // txtSearch
             // 
             this.txtSearch.BackColor = System.Drawing.Color.White;
@@ -335,6 +282,59 @@
             this.cboFilter.TextOffset = new System.Drawing.Point(10, 2);
             this.cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
             // 
+            // id
+            // 
+            this.id.FillWeight = 74.18671F;
+            this.id.HeaderText = "Patient ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // fullname
+            // 
+            this.fullname.FillWeight = 74.18671F;
+            this.fullname.HeaderText = "Full Name";
+            this.fullname.MinimumWidth = 6;
+            this.fullname.Name = "fullname";
+            this.fullname.ReadOnly = true;
+            // 
+            // mobileno
+            // 
+            this.mobileno.FillWeight = 74.18671F;
+            this.mobileno.HeaderText = "Phone Number";
+            this.mobileno.Name = "mobileno";
+            this.mobileno.ReadOnly = true;
+            // 
+            // gender
+            // 
+            this.gender.FillWeight = 74.18671F;
+            this.gender.HeaderText = "Email";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.FillWeight = 25F;
+            this.btnEdit.HeaderText = "";
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ReadOnly = true;
+            this.btnEdit.Visible = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FillWeight = 25F;
+            this.btnDelete.HeaderText = "";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ReadOnly = true;
+            this.btnDelete.Visible = false;
+            // 
+            // btnApprove
+            // 
+            this.btnApprove.FillWeight = 74.18671F;
+            this.btnApprove.HeaderText = "";
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.ReadOnly = true;
+            // 
             // frmDoctorAppointment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,6 +365,11 @@
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Guna.UI2.WinForms.Guna2DataGridView grdAppointment;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btnFilterApprove;
+        private Guna.UI2.WinForms.Guna2Button btnPending;
+        private Guna.UI2.WinForms.Guna2Button btnCancelled;
+        private Guna.UI2.WinForms.Guna2ComboBox cboFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn mobileno;
@@ -372,10 +377,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn btnEdit;
         private System.Windows.Forms.DataGridViewTextBoxColumn btnDelete;
         private System.Windows.Forms.DataGridViewTextBoxColumn btnApprove;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearch;
-        private Guna.UI2.WinForms.Guna2Button btnFilterApprove;
-        private Guna.UI2.WinForms.Guna2Button btnPending;
-        private Guna.UI2.WinForms.Guna2Button btnCancelled;
-        private Guna.UI2.WinForms.Guna2ComboBox cboFilter;
     }
 }
