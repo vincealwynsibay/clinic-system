@@ -246,9 +246,9 @@
             this.lblEarningsCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblEarningsCount.Name = "lblEarningsCount";
             this.lblEarningsCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEarningsCount.Size = new System.Drawing.Size(75, 49);
+            this.lblEarningsCount.Size = new System.Drawing.Size(26, 49);
             this.lblEarningsCount.TabIndex = 144;
-            this.lblEarningsCount.Text = "PHP";
+            this.lblEarningsCount.Text = "₱";
             this.lblEarningsCount.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblEarningsCount.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

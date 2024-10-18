@@ -26,6 +26,8 @@ namespace ClinicSystem.Dashboard
             this.doctor_id = doctor_id;
             g_proc.fncConnectToDatabase();
 
+            grdAppointment.CellClick += func_ApproveAppointment;
+            grdAppointment.CellPainting += func_ButtonStyleCell;
             func_LoadDoctor();
         }
 
@@ -60,9 +62,6 @@ namespace ClinicSystem.Dashboard
                     grdAppointment.Rows[row].Cells[3].Value = patientRow["email"].ToString();
                     row++;
                 }
-
-                grdAppointment.CellClick += func_ApproveAppointment;
-                grdAppointment.CellPainting += func_ButtonStyleCell;
             }
             catch (Exception ex)
             {
@@ -132,6 +131,7 @@ namespace ClinicSystem.Dashboard
 
                     e.Handled = true;
                 }
+                func_LoadDoctor();
             }
         }
     }

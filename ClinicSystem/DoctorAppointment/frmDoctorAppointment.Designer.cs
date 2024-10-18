@@ -29,18 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorAppointment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.grdAppointment = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnFilterApprove = new Guna.UI2.WinForms.Guna2Button();
-            this.btnPending = new Guna.UI2.WinForms.Guna2Button();
-            this.btnCancelled = new Guna.UI2.WinForms.Guna2Button();
-            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileno = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +43,11 @@
             this.btnEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnDelete = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnApprove = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnFilterApprove = new Guna.UI2.WinForms.Guna2Button();
+            this.btnPending = new Guna.UI2.WinForms.Guna2Button();
+            this.btnCancelled = new Guna.UI2.WinForms.Guna2Button();
+            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdAppointment)).BeginInit();
             this.SuspendLayout();
             // 
@@ -107,18 +107,18 @@
             // 
             this.grdAppointment.AllowUserToAddRows = false;
             this.grdAppointment.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.grdAppointment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("IBM Plex Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAppointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.grdAppointment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("IBM Plex Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAppointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdAppointment.ColumnHeadersHeight = 24;
             this.grdAppointment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -128,14 +128,14 @@
             this.btnEdit,
             this.btnDelete,
             this.btnApprove});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAppointment.DefaultCellStyle = dataGridViewCellStyle6;
             this.grdAppointment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.grdAppointment.Location = new System.Drawing.Point(28, 337);
             this.grdAppointment.Margin = new System.Windows.Forms.Padding(2);
@@ -170,6 +170,59 @@
             this.grdAppointment.ThemeStyle.RowsStyle.Height = 40;
             this.grdAppointment.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.grdAppointment.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // id
+            // 
+            this.id.FillWeight = 74.18671F;
+            this.id.HeaderText = "Patient ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // fullname
+            // 
+            this.fullname.FillWeight = 74.18671F;
+            this.fullname.HeaderText = "Full Name";
+            this.fullname.MinimumWidth = 6;
+            this.fullname.Name = "fullname";
+            this.fullname.ReadOnly = true;
+            // 
+            // mobileno
+            // 
+            this.mobileno.FillWeight = 74.18671F;
+            this.mobileno.HeaderText = "Phone Number";
+            this.mobileno.Name = "mobileno";
+            this.mobileno.ReadOnly = true;
+            // 
+            // gender
+            // 
+            this.gender.FillWeight = 74.18671F;
+            this.gender.HeaderText = "Email";
+            this.gender.Name = "gender";
+            this.gender.ReadOnly = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.FillWeight = 25F;
+            this.btnEdit.HeaderText = "";
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ReadOnly = true;
+            this.btnEdit.Visible = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.FillWeight = 25F;
+            this.btnDelete.HeaderText = "";
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.ReadOnly = true;
+            this.btnDelete.Visible = false;
+            // 
+            // btnApprove
+            // 
+            this.btnApprove.FillWeight = 74.18671F;
+            this.btnApprove.HeaderText = "";
+            this.btnApprove.Name = "btnApprove";
+            this.btnApprove.ReadOnly = true;
             // 
             // txtSearch
             // 
@@ -268,72 +321,20 @@
             this.cboFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.cboFilter.ItemHeight = 30;
             this.cboFilter.Items.AddRange(new object[] {
+            "(None)",
             "Today",
             "This Week",
             "This Month",
             "This Year"});
             this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("IBM Plex Sans Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(779, 224);
+            this.cboFilter.Location = new System.Drawing.Point(675, 190);
             this.cboFilter.Name = "cboFilter";
             this.cboFilter.Size = new System.Drawing.Size(118, 36);
             this.cboFilter.StartIndex = 0;
             this.cboFilter.TabIndex = 152;
             this.cboFilter.TextOffset = new System.Drawing.Point(10, 2);
             this.cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
-            // 
-            // id
-            // 
-            this.id.FillWeight = 74.18671F;
-            this.id.HeaderText = "Patient ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // fullname
-            // 
-            this.fullname.FillWeight = 74.18671F;
-            this.fullname.HeaderText = "Full Name";
-            this.fullname.MinimumWidth = 6;
-            this.fullname.Name = "fullname";
-            this.fullname.ReadOnly = true;
-            // 
-            // mobileno
-            // 
-            this.mobileno.FillWeight = 74.18671F;
-            this.mobileno.HeaderText = "Phone Number";
-            this.mobileno.Name = "mobileno";
-            this.mobileno.ReadOnly = true;
-            // 
-            // gender
-            // 
-            this.gender.FillWeight = 74.18671F;
-            this.gender.HeaderText = "Email";
-            this.gender.Name = "gender";
-            this.gender.ReadOnly = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.FillWeight = 25F;
-            this.btnEdit.HeaderText = "";
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.ReadOnly = true;
-            this.btnEdit.Visible = false;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.FillWeight = 25F;
-            this.btnDelete.HeaderText = "";
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.ReadOnly = true;
-            this.btnDelete.Visible = false;
-            // 
-            // btnApprove
-            // 
-            this.btnApprove.FillWeight = 74.18671F;
-            this.btnApprove.HeaderText = "";
-            this.btnApprove.Name = "btnApprove";
-            this.btnApprove.ReadOnly = true;
             // 
             // frmDoctorAppointment
             // 

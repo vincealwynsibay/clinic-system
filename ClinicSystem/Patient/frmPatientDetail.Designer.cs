@@ -63,7 +63,7 @@
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(990, 100);
+            this.bunifuPanel1.Size = new System.Drawing.Size(921, 100);
             this.bunifuPanel1.TabIndex = 96;
             // 
             // lblName
@@ -80,7 +80,7 @@
             this.lblName.Margin = new System.Windows.Forms.Padding(2);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblName.Size = new System.Drawing.Size(990, 100);
+            this.lblName.Size = new System.Drawing.Size(921, 100);
             this.lblName.TabIndex = 39;
             this.lblName.Text = "*Patient name*";
             this.lblName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -304,7 +304,7 @@
             this.lblDiagnosis.CursorType = null;
             this.lblDiagnosis.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDiagnosis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.lblDiagnosis.Location = new System.Drawing.Point(421, 118);
+            this.lblDiagnosis.Location = new System.Drawing.Point(321, 105);
             this.lblDiagnosis.Margin = new System.Windows.Forms.Padding(2);
             this.lblDiagnosis.Name = "lblDiagnosis";
             this.lblDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -323,7 +323,7 @@
             this.pnlDiagnosis.BorderRadius = 3;
             this.pnlDiagnosis.BorderThickness = 1;
             this.pnlDiagnosis.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.pnlDiagnosis.Location = new System.Drawing.Point(421, 160);
+            this.pnlDiagnosis.Location = new System.Drawing.Point(321, 183);
             this.pnlDiagnosis.Name = "pnlDiagnosis";
             this.pnlDiagnosis.Padding = new System.Windows.Forms.Padding(1);
             this.pnlDiagnosis.ShowBorders = true;
@@ -335,7 +335,7 @@
             this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(716, 742);
+            this.btnAdd.Location = new System.Drawing.Point(616, 771);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(262, 37);
@@ -348,7 +348,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(990, 790);
+            this.ClientSize = new System.Drawing.Size(921, 695);
             this.Controls.Add(this.pnlDiagnosis);
             this.Controls.Add(this.lblDiagnosis);
             this.Controls.Add(this.btnAdd);
