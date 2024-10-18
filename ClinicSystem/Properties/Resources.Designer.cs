@@ -123,6 +123,26 @@ namespace ClinicSystem.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icnColoredDelete {
+            get {
+                object obj = ResourceManager.GetObject("icnColoredDelete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnColoredEdit {
+            get {
+                object obj = ResourceManager.GetObject("icnColoredEdit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icnDelete {
             get {
                 object obj = ResourceManager.GetObject("icnDelete", resourceCulture);
@@ -136,6 +156,16 @@ namespace ClinicSystem.Properties {
         internal static System.Drawing.Bitmap icnEdit {
             get {
                 object obj = ResourceManager.GetObject("icnEdit", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icnSearch {
+            get {
+                object obj = ResourceManager.GetObject("icnSearch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

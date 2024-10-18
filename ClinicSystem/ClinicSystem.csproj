@@ -132,6 +132,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dashboard\frmDashboardAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboardAppointment.Designer.cs">
+      <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmDoctorDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +156,7 @@
     <Compile Include="Diagnosis\frmDiagnosisAdd.Designer.cs">
       <DependentUpon>frmDiagnosisAdd.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="DoctorForm\frmAssignSecretary.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -157,10 +164,13 @@
       <DependentUpon>frmAssignSecretary.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAppointments.cs">
+=======
+    <Compile Include="DoctorAppointment\frmDoctorAppointment.cs">
+>>>>>>> 75aa898b7144e6795e25c42409cb849f75e9e4b7
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAppointments.Designer.cs">
-      <DependentUpon>frmAppointments.cs</DependentUpon>
+    <Compile Include="DoctorAppointment\frmDoctorAppointment.Designer.cs">
+      <DependentUpon>frmDoctorAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\frmModalBackground.cs">
       <SubType>Form</SubType>
@@ -321,6 +331,9 @@
     <Compile Include="GlobalProdecure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Dashboard\frmDashboardAppointment.resx">
+      <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDoctorDashboard.resx">
       <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -330,11 +343,16 @@
     <EmbeddedResource Include="Diagnosis\frmDiagnosisAdd.resx">
       <DependentUpon>frmDiagnosisAdd.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="DoctorForm\frmAssignSecretary.resx">
       <DependentUpon>frmAssignSecretary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAppointments.resx">
       <DependentUpon>frmAppointments.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="DoctorAppointment\frmDoctorAppointment.resx">
+      <DependentUpon>frmDoctorAppointment.cs</DependentUpon>
+>>>>>>> 75aa898b7144e6795e25c42409cb849f75e9e4b7
     </EmbeddedResource>
     <EmbeddedResource Include="Misc\frmModalBackground.resx">
       <DependentUpon>frmModalBackground.cs</DependentUpon>
@@ -509,6 +527,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnColoredDelete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnColoredEdit1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icnSearch1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

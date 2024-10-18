@@ -16,8 +16,8 @@ namespace ClinicSystem
 {
     internal class GlobalProcedure
     {
-        public string servername;
-        public string databasename;
+        public string server;
+        public string database;
         public string username;
         public string password;
         public string port;
@@ -38,14 +38,14 @@ namespace ClinicSystem
         {
             try
             {
-                servername = "localhost";
-                databasename = "clinicsystem";
+                server = "localhost";
+                database = "clinicsystem";
                 username = "root";
-                password = "vincealwyn.";
+                password = "Harmonize0805";
                 port = "3306";
 
-                strConnection = "Server=" + servername + ";" +
-                        "Database=" + databasename + ";" +
+                strConnection = "Server=" + server + ";" +
+                        "Database=" + database + ";" +
                         "User=" + username + ";" +
                         "Password=" + password + ";" +
                         "Port=" + port + ";" +
