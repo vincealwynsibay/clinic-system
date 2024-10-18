@@ -18,5 +18,23 @@ namespace ClinicSystem.DoctorMain
             InitializeComponent();
             this.mainForm = mainForm;
         }
+
+        private void InitializeComponent()
+        {
+            this.SuspendLayout();
+            // 
+            // frmAppointments
+            // 
+            this.ClientSize = new System.Drawing.Size(282, 253);
+            this.Name = "frmAppointments";
+            this.Load += new System.EventHandler(this.frmAppointments_Load);
+            this.ResumeLayout(false);
+
+        }
+
+        private void frmAppointments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
