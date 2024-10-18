@@ -107,10 +107,10 @@ namespace ClinicSystem
             //MessageBox.Show((frmParent.Height * 0.8).ToString());
             //MessageBox.Show((frmModalBackground.Width * 0.8).ToString());
             //MessageBox.Show((frmModalBackground.Height * 0.8).ToString());
-            frmChild.Size = new System.Drawing.Size(
-            (int)(frmModalBackground.Width * 0.8),
-            (int)(frmModalBackground.Height * 0.8)
-        );
+        //    frmChild.Size = new System.Drawing.Size(
+        //    (int)(frmModalBackground.Width * 0.8),
+        //    (int)(frmModalBackground.Height * 0.8)
+        //);
             frmChild.ShowDialog();
 
             frmModalBackground.Close();

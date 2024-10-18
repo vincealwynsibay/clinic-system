@@ -50,8 +50,8 @@
             this.bunifuLabel9 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btnAddAdmin = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.SuspendLayout();
             // 
             // bunifuLabel4
@@ -357,20 +357,6 @@
             this.btnAddAdmin.Text = "Add Admin";
             this.btnAddAdmin.Click += new System.EventHandler(this.btnAddAdmin_Click);
             // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 80;
-            this.guna2BorderlessForm1.BorderRadius = 12;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockForm = false;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragForm = false;
-            this.guna2BorderlessForm1.HasFormShadow = false;
-            this.guna2BorderlessForm1.ResizeForm = false;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // btnCancel
             // 
             this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
@@ -387,13 +373,27 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 80;
+            this.guna2BorderlessForm1.BorderRadius = 12;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockForm = false;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragForm = false;
+            this.guna2BorderlessForm1.HasFormShadow = false;
+            this.guna2BorderlessForm1.ResizeForm = false;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // frmAddAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 857);
+            this.ClientSize = new System.Drawing.Size(1123, 777);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnAddAdmin);
             this.Controls.Add(this.bunifuLabel4);
@@ -423,7 +423,7 @@
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel9;
         private Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         private Guna.UI2.WinForms.Guna2Button btnAddAdmin;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }
