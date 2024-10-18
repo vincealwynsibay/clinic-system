@@ -83,6 +83,7 @@ namespace ClinicSystem
         private void btnAddSecretary_Click(object sender, EventArgs e)
         {
             globalProcedure.displayFormAsModal(mainForm, new frmAddSecretary(mainForm));
+            prcLoadSecretaries();
         }
 
         private void btnEditSecretary_Click(object sender, EventArgs e)
@@ -91,6 +92,7 @@ namespace ClinicSystem
             {
                 DataGridViewRow row = this.grdSecretaries.SelectedRows[0];
                 globalProcedure.displayFormAsModal(mainForm, new frmEditSecretary(mainForm, row.Cells["id"].Value.ToString()));
+                prcLoadSecretaries();
             }
         }
 

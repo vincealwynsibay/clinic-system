@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorMain));
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.txtName = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtHi = new Bunifu.UI.WinForms.BunifuLabel();
@@ -44,15 +45,14 @@
             this.btnSecretaries = new Guna.UI2.WinForms.Guna2Button();
             this.pnlMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMainParent = new Bunifu.UI.WinForms.BunifuPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.bunifuGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.pnlMainParent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGroupBox1
@@ -73,6 +73,17 @@
             this.bunifuGroupBox1.Size = new System.Drawing.Size(1641, 96);
             this.bunifuGroupBox1.TabIndex = 0;
             this.bunifuGroupBox1.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::ClinicSystem.Properties.Resources.logo3;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(25, 24);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(138, 42);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1.TabIndex = 57;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // bunifuGroupBox2
             // 
@@ -179,7 +190,7 @@
             this.bunifuPanel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel3.BackgroundImage")));
             this.bunifuPanel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel3.BorderRadius = 18;
+            this.bunifuPanel3.BorderRadius = 20;
             this.bunifuPanel3.BorderThickness = 1;
             this.bunifuPanel3.Controls.Add(this.btnDashboard);
             this.bunifuPanel3.Controls.Add(this.btnUsers);
@@ -315,8 +326,8 @@
             this.pnlMain.BorderRadius = 18;
             this.pnlMain.BorderThickness = 1;
             this.pnlMain.Location = new System.Drawing.Point(27, 5);
+            this.pnlMain.Margin = new System.Windows.Forms.Padding(0);
             this.pnlMain.Name = "pnlMain";
-            this.pnlMain.Padding = new System.Windows.Forms.Padding(10);
             this.pnlMain.ShowBorders = true;
             this.pnlMain.Size = new System.Drawing.Size(1249, 904);
             this.pnlMain.TabIndex = 0;
@@ -338,17 +349,6 @@
             this.pnlMainParent.Size = new System.Drawing.Size(1303, 914);
             this.pnlMainParent.TabIndex = 8;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::ClinicSystem.Properties.Resources.logo3;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(25, 24);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(138, 42);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1.TabIndex = 57;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // frmDoctorMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -365,6 +365,7 @@
             this.Load += new System.EventHandler(this.frmDoctorMain_Load);
             this.bunifuGroupBox1.ResumeLayout(false);
             this.bunifuGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.bunifuGroupBox2.ResumeLayout(false);
             this.bunifuGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
@@ -372,7 +373,6 @@
             this.bunifuPanel1.ResumeLayout(false);
             this.bunifuPanel3.ResumeLayout(false);
             this.pnlMainParent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }

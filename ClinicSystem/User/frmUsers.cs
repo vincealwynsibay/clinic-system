@@ -84,6 +84,7 @@ namespace ClinicSystem
             {
                 DataGridViewRow row = this.grdUsers.SelectedRows[0];
                 globalProcedure.displayFormAsModal(mainForm, new frmEditUser(mainForm, row.Cells["id"].Value.ToString()));
+                prcLoadUsers();
             }
         }
 
@@ -112,6 +113,7 @@ namespace ClinicSystem
         private void btnAddUser_Click(object sender, EventArgs e)
         {
             globalProcedure.displayFormAsModal(mainForm, new frmAddAdmin(mainForm));
+            prcLoadUsers();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

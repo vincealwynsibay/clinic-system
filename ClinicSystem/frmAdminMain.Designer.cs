@@ -336,7 +336,6 @@
             this.pnlMainParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainParent.Location = new System.Drawing.Point(350, 106);
             this.pnlMainParent.Name = "pnlMainParent";
-            this.pnlMainParent.Padding = new System.Windows.Forms.Padding(27, 5, 27, 100);
             this.pnlMainParent.ShowBorders = true;
             this.pnlMainParent.Size = new System.Drawing.Size(1183, 914);
             this.pnlMainParent.TabIndex = 6;
@@ -351,11 +350,11 @@
             this.pnlMain.BorderColor = System.Drawing.Color.WhiteSmoke;
             this.pnlMain.BorderRadius = 18;
             this.pnlMain.BorderThickness = 1;
-            this.pnlMain.Location = new System.Drawing.Point(27, 5);
+            this.pnlMain.Location = new System.Drawing.Point(18, 6);
             this.pnlMain.Name = "pnlMain";
             this.pnlMain.Padding = new System.Windows.Forms.Padding(5);
             this.pnlMain.ShowBorders = true;
-            this.pnlMain.Size = new System.Drawing.Size(1141, 904);
+            this.pnlMain.Size = new System.Drawing.Size(1140, 915);
             this.pnlMain.TabIndex = 0;
             this.pnlMain.Click += new System.EventHandler(this.pnlMain_Click);
             // 

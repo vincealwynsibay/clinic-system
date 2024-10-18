@@ -1,4 +1,5 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ClinicSystem.DoctorForm;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,7 +25,7 @@ namespace ClinicSystem
 
         private void frmDoctors_Load(object sender, EventArgs e)
         {
-            this.globalProcedure.checkDatabaseConnection();
+            globalProcedure.checkDatabaseConnection();
             prcLoadDoctors();
         }
 
@@ -34,7 +35,6 @@ namespace ClinicSystem
             {
                 globalProcedure.sqlClinicAdapter = new MySqlDataAdapter();
                 globalProcedure.datDoctors = new DataTable();
-
                 globalProcedure.sqlCommand.Parameters.Clear();
                 globalProcedure.sqlCommand.CommandText = "procSearchDoctorByName";
                 globalProcedure.sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -46,8 +46,7 @@ namespace ClinicSystem
                 if (globalProcedure.datDoctors.Rows.Count > 0)
                 {
                     row = 0;
-                    //lblTotal.Text = "Total: " + Convert.ToString(globalProcedure.datDoctors.Rows.Count);
-                    grdDoctors.RowCount = globalProcedure.datDoctors.Rows.Count;
+                    grdDoctors.RowCount = globalProcedure.datDoctors.Rows.Count;    
                     while (!(globalProcedure.datDoctors.Rows.Count - 1 < row))
                     {
                         grdDoctors.Rows[row].Cells[0].Value = globalProcedure.datDoctors.Rows[row]["id"].ToString();
@@ -58,6 +57,7 @@ namespace ClinicSystem
                         grdDoctors.Rows[row].Cells[5].Value = globalProcedure.datDoctors.Rows[row]["email"].ToString();
                         grdDoctors.Rows[row].Cells[6].Value = globalProcedure.datDoctors.Rows[row]["mobileno"].ToString();
                         grdDoctors.Rows[row].Cells[7].Value = globalProcedure.datDoctors.Rows[row]["address"].ToString();
+                        grdDoctors.Rows[row].Cells[8].Value = globalProcedure.datDoctors.Rows[row]["secretary"].ToString();
                         row++;
                     }
                 }
@@ -81,6 +81,7 @@ namespace ClinicSystem
         private void btnAddDoctor_Click(object sender, EventArgs e)
         {
            globalProcedure.displayFormAsModal(mainForm, new frmAddDoctor(mainForm));
+            prcLoadDoctors();
         }
 
         private void grdDoctors_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -95,6 +96,7 @@ namespace ClinicSystem
                 DataGridViewRow row = this.grdDoctors.SelectedRows[0];
 
                 globalProcedure.displayFormAsModal(mainForm, new frmEditDoctor(mainForm, row.Cells["id"].Value.ToString()));
+                prcLoadDoctors();
             }
         }
 
@@ -127,11 +129,21 @@ namespace ClinicSystem
 
         private void grdDoctors_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
+            prcLoadDoctors();
+        }
+
+        private void frmDoctors_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAssignSecretary_Click(object sender, EventArgs e)
+        {
+            globalProcedure.displayFormAsModal(mainForm, new frmAssignSecretary(mainForm, Int32.Parse(this.grdDoctors.SelectedRows[0].Cells["id"].Value.ToString())));
             prcLoadDoctors();
         }
     }

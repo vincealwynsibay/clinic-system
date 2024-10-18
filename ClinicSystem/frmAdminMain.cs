@@ -56,7 +56,7 @@ namespace ClinicSystem
 
         private void frmAdminMain_Load(object sender, EventArgs e)
         {
-            LoadFormIntoPanel(new frmAddDoctor(this));
+            btnDashboard.PerformClick();
 
         }
 
