@@ -79,5 +79,15 @@ namespace ClinicSystem
             this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
             this.Close();
         }
+
+        private void frmDoctorDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlAppointmentTable_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
