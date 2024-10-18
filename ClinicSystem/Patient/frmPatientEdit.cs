@@ -102,7 +102,6 @@ namespace ClinicSystem
 
         private void btnSaveEditPatient_Click(object sender, EventArgs e)
         {
-
             try
             {
                 if (!func_HasDataChanged())
@@ -203,6 +202,11 @@ namespace ClinicSystem
                     txtEmail.Focus();
                 }
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

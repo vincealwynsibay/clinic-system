@@ -34,7 +34,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
             this.grdAppointment = new Guna.UI2.WinForms.Guna2DataGridView();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -85,24 +84,6 @@
             this.btnAdd.Text = "Add New Appointment";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
-            // bunifuLabel1
-            // 
-            this.bunifuLabel1.AllowParentOverrides = false;
-            this.bunifuLabel1.AutoEllipsis = false;
-            this.bunifuLabel1.Cursor = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.CursorType = System.Windows.Forms.Cursors.Default;
-            this.bunifuLabel1.Font = new System.Drawing.Font("IBM Plex Sans", 18F, System.Drawing.FontStyle.Bold);
-            this.bunifuLabel1.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel1.Location = new System.Drawing.Point(28, 297);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
-            this.bunifuLabel1.Name = "bunifuLabel1";
-            this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(159, 33);
-            this.bunifuLabel1.TabIndex = 148;
-            this.bunifuLabel1.Text = "Appointments";
-            this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuLabel1.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // grdAppointment
             // 
             this.grdAppointment.AllowUserToAddRows = false;
@@ -137,7 +118,7 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdAppointment.DefaultCellStyle = dataGridViewCellStyle6;
             this.grdAppointment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.grdAppointment.Location = new System.Drawing.Point(28, 337);
+            this.grdAppointment.Location = new System.Drawing.Point(28, 287);
             this.grdAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.grdAppointment.Name = "grdAppointment";
             this.grdAppointment.ReadOnly = true;
@@ -146,7 +127,7 @@
             this.grdAppointment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdAppointment.RowTemplate.Height = 40;
             this.grdAppointment.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.Size = new System.Drawing.Size(869, 331);
+            this.grdAppointment.Size = new System.Drawing.Size(869, 386);
             this.grdAppointment.TabIndex = 149;
             this.grdAppointment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdAppointment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -241,7 +222,7 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = global::ClinicSystem.Properties.Resources.icnSearch;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSearch.Location = new System.Drawing.Point(28, 162);
+            this.txtSearch.Location = new System.Drawing.Point(28, 112);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search Appoinments";
@@ -262,7 +243,7 @@
             this.btnFilterApprove.FillColor = System.Drawing.Color.White;
             this.btnFilterApprove.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnFilterApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnFilterApprove.Location = new System.Drawing.Point(28, 236);
+            this.btnFilterApprove.Location = new System.Drawing.Point(28, 186);
             this.btnFilterApprove.Name = "btnFilterApprove";
             this.btnFilterApprove.Size = new System.Drawing.Size(109, 33);
             this.btnFilterApprove.TabIndex = 151;
@@ -281,7 +262,7 @@
             this.btnPending.FillColor = System.Drawing.Color.White;
             this.btnPending.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnPending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnPending.Location = new System.Drawing.Point(152, 236);
+            this.btnPending.Location = new System.Drawing.Point(152, 186);
             this.btnPending.Name = "btnPending";
             this.btnPending.Size = new System.Drawing.Size(109, 33);
             this.btnPending.TabIndex = 151;
@@ -300,7 +281,7 @@
             this.btnCancelled.FillColor = System.Drawing.Color.White;
             this.btnCancelled.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnCancelled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnCancelled.Location = new System.Drawing.Point(275, 236);
+            this.btnCancelled.Location = new System.Drawing.Point(275, 186);
             this.btnCancelled.Name = "btnCancelled";
             this.btnCancelled.Size = new System.Drawing.Size(109, 33);
             this.btnCancelled.TabIndex = 151;
@@ -317,7 +298,7 @@
             this.cboFilter.FillColor = System.Drawing.Color.WhiteSmoke;
             this.cboFilter.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.cboFilter.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.cboFilter.Font = new System.Drawing.Font("IBM Plex Sans", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFilter.Font = new System.Drawing.Font("IBM Plex Sans", 9.75F, System.Drawing.FontStyle.Bold);
             this.cboFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.cboFilter.ItemHeight = 30;
             this.cboFilter.Items.AddRange(new object[] {
@@ -328,10 +309,10 @@
             "This Year"});
             this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("IBM Plex Sans Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(675, 190);
+            this.cboFilter.Location = new System.Drawing.Point(753, 170);
             this.cboFilter.Name = "cboFilter";
             this.cboFilter.Size = new System.Drawing.Size(118, 36);
-            this.cboFilter.StartIndex = 0;
+            this.cboFilter.StartIndex = 1;
             this.cboFilter.TabIndex = 152;
             this.cboFilter.TextOffset = new System.Drawing.Point(10, 2);
             this.cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
@@ -340,6 +321,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(937, 734);
             this.Controls.Add(this.cboFilter);
@@ -348,7 +330,6 @@
             this.Controls.Add(this.btnFilterApprove);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.grdAppointment);
-            this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -364,7 +345,6 @@
         #endregion
         private Bunifu.UI.WinForms.BunifuLabel lblReport;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;
         private Guna.UI2.WinForms.Guna2DataGridView grdAppointment;
         private Guna.UI2.WinForms.Guna2TextBox txtSearch;
         private Guna.UI2.WinForms.Guna2Button btnFilterApprove;

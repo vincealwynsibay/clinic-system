@@ -80,11 +80,5 @@ namespace ClinicSystem
             this.mainForm.NavigateToForm(new frmDiagnosisAdd(mainForm, doctor_id, patient_id));
             this.Close();
         }
-
-        private void btnEditPatient_Click(object sender, EventArgs e)
-        {
-            this.mainForm.NavigateToForm(new frmPatientEdit(mainForm, doctor_id, patient_id));
-            this.Close();
-        }
     }
 }

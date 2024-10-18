@@ -74,7 +74,6 @@ namespace ClinicSystem.Patient
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-            this.mainForm.NavigateToForm(new frmPatients(mainForm, doctor_id));
             this.Close();
         }
     }

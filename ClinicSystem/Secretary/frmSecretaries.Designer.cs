@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -51,6 +52,7 @@
             this.btnDeleteDoctor = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditDoctor = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdSecretaries)).BeginInit();
             this.SuspendLayout();
             // 
@@ -308,6 +310,20 @@
             this.txtSearch.WordWrap = true;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 80;
+            this.guna2BorderlessForm1.BorderRadius = 12;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockForm = false;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragForm = false;
+            this.guna2BorderlessForm1.HasFormShadow = false;
+            this.guna2BorderlessForm1.ResizeForm = false;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // frmSecretaries
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,6 +336,7 @@
             this.Controls.Add(this.btnEditDoctor);
             this.Controls.Add(this.grdSecretaries);
             this.Controls.Add(this.btnAddDoctor);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmSecretaries";
             this.Text = "frmSecretaries";
@@ -343,5 +360,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDeleteDoctor;
         private Guna.UI2.WinForms.Guna2Button btnEditDoctor;
         private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

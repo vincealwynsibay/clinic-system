@@ -3,37 +3,45 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicSystem
+namespace ClinicSystem.DoctorForm
 {
-    public partial class frmSecretaries : Form
+    public partial class frmAssignSecretary : Form
     {
+
         private frmAdminMain mainForm;
         private GlobalProcedure globalProcedure = new GlobalProcedure();
         int row = 0;
-
-        public frmSecretaries(frmAdminMain form)
+        int doctorId = 0;
+        public frmAssignSecretary(frmAdminMain form, int doctorId)
         {
             InitializeComponent();
-            mainForm = form;
+            this.mainForm = form;
+            this.doctorId = doctorId;
         }
 
-
-        private void frmSecretaries_Load(object sender, EventArgs e)
+        private void frmAssignSecretary_Load(object sender, EventArgs e)
         {
             globalProcedure.checkDatabaseConnection();
-            prcLoadSecretaries();
         }
 
         private void prcLoadSecretaries()
         {
             try
             {
+
+                if (txtSearch.Text.Length < 1)
+                {
+                    grdSecretaries.Rows.Clear();
+                    return;
+                }
+
                 globalProcedure.sqlClinicAdapter = new MySqlDataAdapter();
                 globalProcedure.datSecretaries = new DataTable();
 
@@ -51,16 +59,20 @@ namespace ClinicSystem
                     //lblTotal.Text = "Total: " + Convert.ToString(globalProcedure.datSecretaries.Rows.Count);
                     grdSecretaries.RowCount = globalProcedure.datSecretaries.Rows.Count;
                     while (!(globalProcedure.datSecretaries.Rows.Count - 1 < row))
-                    {
+                    { 
+                        string fullname = globalProcedure.datSecretaries.Rows[row]["firstname"].ToString() + " " + globalProcedure.datSecretaries.Rows[row]["lastname"].ToString();
                         grdSecretaries.Rows[row].Cells[0].Value = globalProcedure.datSecretaries.Rows[row]["id"].ToString();
-                        grdSecretaries.Rows[row].Cells[1].Value = globalProcedure.datSecretaries.Rows[row]["firstname"].ToString();
-                        grdSecretaries.Rows[row].Cells[2].Value = globalProcedure.datSecretaries.Rows[row]["lastname"].ToString();
-                        grdSecretaries.Rows[row].Cells[3].Value = globalProcedure.datSecretaries.Rows[row]["gender"].ToString();
-                        grdSecretaries.Rows[row].Cells[4].Value = globalProcedure.datSecretaries.Rows[row]["birthdate"].ToString();
-                        grdSecretaries.Rows[row].Cells[5].Value = globalProcedure.datSecretaries.Rows[row]["email"].ToString();
-                        grdSecretaries.Rows[row].Cells[6].Value = globalProcedure.datSecretaries.Rows[row]["mobileno"].ToString();
-                        grdSecretaries.Rows[row].Cells[7].Value = globalProcedure.datSecretaries.Rows[row]["address"].ToString();
+                        grdSecretaries.Rows[row].Cells[1].Value = fullname;
                         row++;
+                    }
+
+                    if (globalProcedure.datSecretaries.Rows.Count > 3)
+                    {
+                        grdSecretaries.Height = 50 * 3;
+
+                    } else
+                    {
+                        grdSecretaries.Height = 50 * globalProcedure.datSecretaries.Rows.Count;
                     }
                 }
                 else
@@ -78,49 +90,64 @@ namespace ClinicSystem
             {
                 MessageBox.Show(ex.ToString());
             }
+            this.Close();
+            this.Dispose();
         }
 
-        private void btnAddSecretary_Click(object sender, EventArgs e)
+        private void txtSearch_TextChanged(object sender, EventArgs e)
         {
-            globalProcedure.displayFormAsModal(mainForm, new frmAddSecretary(mainForm));
-            prcLoadSecretaries();
+            if (txtSearch.TextLength > 1)
+            {
+                prcLoadSecretaries();
+            } else
+            {
+                grdSecretaries.Rows.Clear();
+            }
         }
 
-        private void btnEditSecretary_Click(object sender, EventArgs e)
+        private void grdSecretaries_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (grdSecretaries.SelectedRows.Count != 0)
             {
                 DataGridViewRow row = this.grdSecretaries.SelectedRows[0];
-                globalProcedure.displayFormAsModal(mainForm, new frmEditSecretary(mainForm, row.Cells["id"].Value.ToString()));
-                prcLoadSecretaries();
+                txtSearch.Text = row.Cells["fullname"].Value.ToString();
+                txtSearch.Focus();
             }
         }
 
-        private void btnDeleteSecretary_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
+            this.Close();
+            this.Dispose();
+        }
+
+        private void btnAssignSecretary_Click(object sender, EventArgs e)
+        {
+            MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
+
             if (grdSecretaries.SelectedRows.Count != 0)
             {
-                MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
+                DataGridViewRow row = this.grdSecretaries.SelectedRows[0];
                 try
                 {
+
                     sqlCmd.Parameters.Clear();
-                    sqlCmd.CommandText = "procDeleteSecretaryByID";
+                    sqlCmd.CommandText = "procAssignSecretaryToDoctor";
                     sqlCmd.CommandType = CommandType.StoredProcedure;
-                    DataGridViewRow row = this.grdSecretaries.SelectedRows[0];
-                    sqlCmd.Parameters.AddWithValue("@p_id", grdSecretaries.CurrentRow.Cells["id"].Value.ToString());
+                    sqlCmd.Parameters.AddWithValue("@p_doctorId", this.doctorId);
+                    sqlCmd.Parameters.AddWithValue("@p_secretaryId", row.Cells["id"].Value.ToString());
                     sqlCmd.ExecuteNonQuery();
-                    prcLoadSecretaries();
+
+                    MessageBox.Show("Secretary Assigned Successfully");
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
-            }
-        }
 
-        private void txtSearch_TextChanged(object sender, EventArgs e)
-        {
-            prcLoadSecretaries();
+                this.Close();
+                this.Dispose();
+            }
         }
     }
 }

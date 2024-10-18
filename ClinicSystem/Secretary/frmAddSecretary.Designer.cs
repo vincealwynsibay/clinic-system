@@ -98,12 +98,12 @@
             this.txtUsername = new Bunifu.UI.WinForms.BunifuTextBox();
             this.picProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
-            this.btnAddDoctor = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddSecretary = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuTextBox1 = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuTextBox2 = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.bunifuGroupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -1033,19 +1033,20 @@
             this.bunifuGroupBox1.TabIndex = 56;
             this.bunifuGroupBox1.TabStop = false;
             // 
-            // btnAddDoctor
+            // btnAddSecretary
             // 
-            this.btnAddDoctor.BorderRadius = 6;
-            this.btnAddDoctor.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnAddDoctor.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAddDoctor.ForeColor = System.Drawing.Color.White;
-            this.btnAddDoctor.Image = global::ClinicSystem.Properties.Resources.icnAddUser;
-            this.btnAddDoctor.Location = new System.Drawing.Point(559, 1132);
-            this.btnAddDoctor.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
-            this.btnAddDoctor.Name = "btnAddDoctor";
-            this.btnAddDoctor.Size = new System.Drawing.Size(365, 45);
-            this.btnAddDoctor.TabIndex = 80;
-            this.btnAddDoctor.Text = "Add Doctor";
+            this.btnAddSecretary.BorderRadius = 6;
+            this.btnAddSecretary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnAddSecretary.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSecretary.ForeColor = System.Drawing.Color.White;
+            this.btnAddSecretary.Image = global::ClinicSystem.Properties.Resources.icnAddUser;
+            this.btnAddSecretary.Location = new System.Drawing.Point(559, 1132);
+            this.btnAddSecretary.Margin = new System.Windows.Forms.Padding(3, 3, 3, 100);
+            this.btnAddSecretary.Name = "btnAddSecretary";
+            this.btnAddSecretary.Size = new System.Drawing.Size(365, 45);
+            this.btnAddSecretary.TabIndex = 80;
+            this.btnAddSecretary.Text = "Add Secretary";
+            this.btnAddSecretary.Click += new System.EventHandler(this.btnAddSecretary_Click);
             // 
             // bunifuTextBox1
             // 
@@ -1199,20 +1200,6 @@
             this.bunifuTextBox2.UseSystemPasswordChar = false;
             this.bunifuTextBox2.WordWrap = true;
             // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 80;
-            this.guna2BorderlessForm1.BorderRadius = 12;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockForm = false;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragForm = false;
-            this.guna2BorderlessForm1.HasFormShadow = false;
-            this.guna2BorderlessForm1.ResizeForm = false;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
             // btnCancel
             // 
             this.btnCancel.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
@@ -1244,16 +1231,30 @@
             this.bunifuPanel1.Size = new System.Drawing.Size(200, 100);
             this.bunifuPanel1.TabIndex = 100;
             // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 80;
+            this.guna2BorderlessForm1.BorderRadius = 12;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockForm = false;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragForm = false;
+            this.guna2BorderlessForm1.HasFormShadow = false;
+            this.guna2BorderlessForm1.ResizeForm = false;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // frmAddSecretary
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1102, 953);
+            this.ClientSize = new System.Drawing.Size(1102, 777);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAddDoctor);
+            this.Controls.Add(this.btnAddSecretary);
             this.Controls.Add(this.bunifuGroupBox1);
             this.Controls.Add(this.dtBirthdate);
             this.Controls.Add(this.gender2);
@@ -1323,11 +1324,11 @@
         private Bunifu.UI.WinForms.BunifuTextBox txtUsername;
         private Bunifu.UI.WinForms.BunifuGroupBox bunifuGroupBox1;
         private Bunifu.UI.WinForms.BunifuPictureBox picProfile;
-        private Guna.UI2.WinForms.Guna2Button btnAddDoctor;
+        private Guna.UI2.WinForms.Guna2Button btnAddSecretary;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox1;
         private Bunifu.UI.WinForms.BunifuTextBox bunifuTextBox2;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

@@ -27,6 +27,13 @@ namespace ClinicSystem
         {
             MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
 
+            // validate inputs
+            if (txtUsername.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Username is required");
+                return;
+            }
+
             try
             {
                 sqlCmd.Parameters.Clear();
@@ -53,13 +60,14 @@ namespace ClinicSystem
                 sqlCmd.ExecuteNonQuery();
 
                 MessageBox.Show("User updated Succesfully");
-                this.mainForm.NavigateToForm(new frmUsers(mainForm));
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.Close();
+            this.Dispose();
         }
 
         private void frmEditUser_Load(object sender, EventArgs e)

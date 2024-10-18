@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -47,10 +48,13 @@
             this.email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.address = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.secretary = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnAddDoctor = new Guna.UI2.WinForms.Guna2Button();
             this.btnDeleteDoctor = new Guna.UI2.WinForms.Guna2Button();
             this.btnEditDoctor = new Guna.UI2.WinForms.Guna2Button();
             this.txtSearch = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.btnAssignSecretary = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.grdDoctors)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,7 +86,8 @@
             this.birthdate,
             this.email,
             this.mobileno,
-            this.address});
+            this.address,
+            this.secretary});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("IBM Plex Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -181,6 +186,12 @@
             this.address.HeaderText = "Address";
             this.address.MinimumWidth = 6;
             this.address.Name = "address";
+            // 
+            // secretary
+            // 
+            this.secretary.HeaderText = "Secretary";
+            this.secretary.MinimumWidth = 6;
+            this.secretary.Name = "secretary";
             // 
             // btnAddDoctor
             // 
@@ -309,6 +320,38 @@
             this.txtSearch.WordWrap = true;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
+            // btnAssignSecretary
+            // 
+            this.btnAssignSecretary.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnAssignSecretary.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnAssignSecretary.BorderRadius = 6;
+            this.btnAssignSecretary.BorderThickness = 2;
+            this.btnAssignSecretary.FillColor = System.Drawing.Color.White;
+            this.btnAssignSecretary.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAssignSecretary.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnAssignSecretary.Image = global::ClinicSystem.Properties.Resources.edit2;
+            this.btnAssignSecretary.Location = new System.Drawing.Point(695, 11);
+            this.btnAssignSecretary.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAssignSecretary.Name = "btnAssignSecretary";
+            this.btnAssignSecretary.Size = new System.Drawing.Size(202, 51);
+            this.btnAssignSecretary.TabIndex = 15;
+            this.btnAssignSecretary.Text = "Assign Secretary";
+            this.btnAssignSecretary.Click += new System.EventHandler(this.btnAssignSecretary_Click);
+            // 
+            // guna2BorderlessForm1
+            // 
+            this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 80;
+            this.guna2BorderlessForm1.BorderRadius = 12;
+            this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockForm = false;
+            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
+            this.guna2BorderlessForm1.DragForm = false;
+            this.guna2BorderlessForm1.HasFormShadow = false;
+            this.guna2BorderlessForm1.ResizeForm = false;
+            this.guna2BorderlessForm1.TransparentWhileDrag = true;
+            // 
             // frmDoctors
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -318,9 +361,11 @@
             this.ClientSize = new System.Drawing.Size(1123, 857);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnDeleteDoctor);
+            this.Controls.Add(this.btnAssignSecretary);
             this.Controls.Add(this.btnEditDoctor);
             this.Controls.Add(this.btnAddDoctor);
             this.Controls.Add(this.grdDoctors);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDoctors";
             this.Text = "s";
@@ -335,6 +380,8 @@
         private Guna.UI2.WinForms.Guna2Button btnAddDoctor;
         private Guna.UI2.WinForms.Guna2Button btnDeleteDoctor;
         private Guna.UI2.WinForms.Guna2Button btnEditDoctor;
+        private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
+        private Guna.UI2.WinForms.Guna2Button btnAssignSecretary;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn firstname;
         private System.Windows.Forms.DataGridViewTextBoxColumn lastname;
@@ -343,6 +390,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn email;
         private System.Windows.Forms.DataGridViewTextBoxColumn mobileno;
         private System.Windows.Forms.DataGridViewTextBoxColumn address;
-        private Bunifu.UI.WinForms.BunifuTextBox txtSearch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn secretary;
+        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
     }
 }

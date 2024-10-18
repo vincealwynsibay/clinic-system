@@ -30,6 +30,19 @@ namespace ClinicSystem
         {
             MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
 
+            // validate 
+            if (txtUsername.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Username is required");
+                return;
+            }
+
+            if (txtPassword.Text.Trim().Length == 0)
+            {
+                MessageBox.Show("Password is required");
+                return;
+            }
+
             if (!txtPassword.Text.Equals(txtConfirmPassword.Text))
             {
                 MessageBox.Show("Password and Confirm Password is not Equal");
@@ -51,13 +64,14 @@ namespace ClinicSystem
                 sqlCmd.ExecuteNonQuery();
 
                 MessageBox.Show("User added Succesfully");
-                this.mainForm.NavigateToForm(new frmUsers(mainForm));
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.Close();
+            this.Dispose();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

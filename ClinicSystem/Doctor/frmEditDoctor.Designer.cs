@@ -706,9 +706,9 @@
             this.btnEditDoctor.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditDoctor.ForeColor = System.Drawing.Color.White;
             this.btnEditDoctor.Image = global::ClinicSystem.Properties.Resources.icnEdit;
-            this.btnEditDoctor.Location = new System.Drawing.Point(562, 797);
+            this.btnEditDoctor.Location = new System.Drawing.Point(570, 797);
             this.btnEditDoctor.Name = "btnEditDoctor";
-            this.btnEditDoctor.Size = new System.Drawing.Size(372, 45);
+            this.btnEditDoctor.Size = new System.Drawing.Size(364, 45);
             this.btnEditDoctor.TabIndex = 75;
             this.btnEditDoctor.Text = "Edit Doctor";
             this.btnEditDoctor.Click += new System.EventHandler(this.btnEditDoctor_Click);
@@ -738,7 +738,7 @@
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.btnCancel.Location = new System.Drawing.Point(189, 797);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(372, 45);
+            this.btnCancel.Size = new System.Drawing.Size(365, 45);
             this.btnCancel.TabIndex = 76;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
@@ -763,7 +763,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1123, 857);
+            this.ClientSize = new System.Drawing.Size(1123, 777);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEditDoctor);
@@ -788,7 +788,7 @@
             this.Controls.Add(this.txtFirstName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmEditDoctor";
-            this.Text = "frmEditDoctor";
+            this.Text = "s";
             this.Load += new System.EventHandler(this.frmEditDoctor_Load);
             this.bunifuGroupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();

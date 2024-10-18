@@ -80,6 +80,12 @@ namespace ClinicSystem
         {
             MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
 
+            // validate inputs
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtEmail.Text == "" || txtMobileNo.Text == "" || txtAddress.Text == "")
+            {
+                MessageBox.Show("Please fill up all fields");
+                return;
+            }
             string gender = "";
 
             if (rdoGender1.Checked)
@@ -109,13 +115,14 @@ namespace ClinicSystem
                 sqlCmd.ExecuteNonQuery();
                
                 MessageBox.Show("Doctor updated Succesfully");
-                this.mainForm.NavigateToForm(new frmDoctors(mainForm));
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.Close();
+            this.Dispose();
         }
 
         private void btnCancel_Click(object sender, EventArgs e)

@@ -26,6 +26,12 @@ namespace ClinicSystem
         private void btnAddDoctor_Click(object sender, EventArgs e)
         {
             MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
+            // validate inputs
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtEmail.Text == "" || txtMobileNo.Text == "" || txtAddress.Text == "" || txtUsername.Text == "" || txtPassword.Text == "" || txtConfirmPassword.Text == "")
+            {
+                MessageBox.Show("Please fill up all fields");
+                return;
+            }
 
             string gender = "";
 
@@ -74,13 +80,14 @@ namespace ClinicSystem
                 sqlCmd.ExecuteNonQuery();
 
                 MessageBox.Show("Doctor added Succesfully");
-                this.mainForm.NavigateToForm(new frmDoctors(mainForm));
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.Close();
+            this.Dispose();
         }
 
         private void frmAddDoctor_Load(object sender, EventArgs e)

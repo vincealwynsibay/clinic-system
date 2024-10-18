@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -23,6 +24,32 @@ namespace ClinicSystem
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
             globalProcedures.displayFormAsModal(mainForm, new frmAddDoctor(mainForm));
+        }
+
+        private void func_LoadAnalytics()
+        {
+
+            globalProcedures.sqlClinicAdapter = new MySqlDataAdapter();
+            MySqlCommand sqlCmd = globalProcedures.sqlCommand;
+            sqlCmd.Parameters.Clear();
+            sqlCmd.CommandText = "procGetAllDataAnalytics";
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+
+            using (var reader = sqlCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    lblDoctorCount.Text = reader.GetInt32(reader.GetOrdinal("DoctorCount")).ToString();
+                    lblPatientsCount.Text = reader.GetInt32(reader.GetOrdinal("PatientCount")).ToString(); // based on total appoinments this month
+                    lblSecretaryCount.Text = reader.GetInt32(reader.GetOrdinal("SecretaryCount")).ToString();
+                }
+            }
+        }
+
+        private void frmAdminDashboard_Load(object sender, EventArgs e)
+        {
+            globalProcedures.checkDatabaseConnection();
+            func_LoadAnalytics();
         }
     }
 }

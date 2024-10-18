@@ -26,6 +26,12 @@ namespace ClinicSystem
         {
             MySqlCommand sqlCmd = this.globalProcedure.sqlCommand;
 
+            // validate inputs
+            if (txtFirstName.Text == "" || txtLastName.Text == "" || txtEmail.Text == "" || txtMobileNo.Text == "" || txtAddress.Text == "" || txtUsername.Text == "" || txtPassword.Text == "" || txtConfirmPassword.Text == "")
+            {
+                MessageBox.Show("Please fill up all fields");
+                return;
+            }
             string gender = "";
 
             if (rdoGender1.Checked)
@@ -73,13 +79,14 @@ namespace ClinicSystem
                 sqlCmd.ExecuteNonQuery();
 
                 MessageBox.Show("Secretary added Succesfully");
-                this.mainForm.NavigateToForm(new frmSecretaries(mainForm));
 
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+            this.Close();
+            this.Dispose();
         }
 
         private void picProfile_Click(object sender, EventArgs e)
