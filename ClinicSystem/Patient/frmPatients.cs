@@ -192,7 +192,6 @@ namespace ClinicSystem.DoctorMain
                     e.Handled = true;
                 }
             }
-
         }
     }
 }

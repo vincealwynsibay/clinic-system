@@ -229,6 +229,12 @@
     <Compile Include="Patient\frmPatients.Designer.cs">
       <DependentUpon>frmPatients.cs</DependentUpon>
     </Compile>
+    <Compile Include="Prescription\frmPrescriptionAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prescription\frmPrescriptionAdd.Designer.cs">
+      <DependentUpon>frmPrescriptionAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prescription\frmPrescriptionModify.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -375,6 +381,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Patient\frmPatients.resx">
       <DependentUpon>frmPatients.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prescription\frmPrescriptionAdd.resx">
+      <DependentUpon>frmPrescriptionAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prescription\frmPrescriptionModify.resx">
       <DependentUpon>frmPrescriptionModify.cs</DependentUpon>
@@ -528,6 +537,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icnSearch1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icn_print.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

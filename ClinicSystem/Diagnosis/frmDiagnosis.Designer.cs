@@ -75,9 +75,9 @@
             this.lblDiagnosisData.Margin = new System.Windows.Forms.Padding(2);
             this.lblDiagnosisData.Name = "lblDiagnosisData";
             this.lblDiagnosisData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDiagnosisData.Size = new System.Drawing.Size(170, 37);
+            this.lblDiagnosisData.Size = new System.Drawing.Size(102, 35);
             this.lblDiagnosisData.TabIndex = 122;
-            this.lblDiagnosisData.Text = "Uruha Rushia";
+            this.lblDiagnosisData.Text = "Diagnos";
             this.lblDiagnosisData.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblDiagnosisData.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

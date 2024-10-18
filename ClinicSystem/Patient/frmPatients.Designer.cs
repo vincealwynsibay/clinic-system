@@ -76,6 +76,7 @@
             this.cboFilter.StartIndex = 0;
             this.cboFilter.TabIndex = 9;
             this.cboFilter.TextOffset = new System.Drawing.Point(10, 2);
+            this.cboFilter.Visible = false;
             this.cboFilter.SelectedIndexChanged += new System.EventHandler(this.cboFilter_SelectedIndexChanged);
             // 
             // lblFilter
@@ -93,6 +94,7 @@
             this.lblFilter.Text = "Filter Date:";
             this.lblFilter.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblFilter.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.lblFilter.Visible = false;
             // 
             // lblPatient
             // 

@@ -150,14 +150,15 @@
   </data>
   <data name="txtComment.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFoSURBVHhe7d2/TcNAFMBhl5SMQ0nJIpQMQMccLMAWtIyA
-        REEkgi92QHGCUAIhf8iRkxA8iQHw90mviC7t/WS7eRXAn4bD5iil9jql5unxcbQ1xvzvyXc93/mHh3RS
-        MvBTXY/Om2bczeeL7Wq12gL/X77r+c6Px8/dLhBXJQd7w+HouG2fuvJfoIcmk25a181pyUJV7Upxs1i8
-        lWOgj5bL5bau2/uShfwa0czX63U5Bvoqf3coWaiq/ANAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBA
-        GIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIDgdxg+NptNOQL66kcYUmpu
-        39+X5Qjoo7z5Oq/FL1n4WoF/NplMX8o50EOz2ctHSu1lycJe3njddbNXy22hX/Kd30ehuRsMBgclCd92
-        Tw4XefN1fs8wxvRj8p3PTwq7KByWFAD8VlWfGSnF1Ns+umkAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAAi4AAAAlCAYAAABlEmI1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGoSURBVHhe7dq9bdtQFIZhlikzjsuUWSRlBnCXObJAtkjr
+        EQK4iADLlz9SIFpGIMUyKYYXukDgLCAe4HmAr5AOB3ghqgIACGm9bm/quvte1+328bGZzMzMzK6x3CK5
+        SR4e6o8lU95Kqblt201/OBynYRgmAIBryS2Sm2Sz+dXPAfOt5MrFet186LptX54FAFiM3a5/Sqn9VLKl
+        quaSuTse/5QzAMBynE6nKaXuZ8mW/JqoPYzjWM4AAMuS//dSsqWq8gcAgKUSLgBAGMIFAAhDuAAAYQgX
+        ACAM4QIAhCFcAIAwhAsAEIZwAQDCEC4AQBjCBQAIQ7gAAGEIFwAgDOECAIQhXACAMIQLABCGcAEAwhAu
+        AEAYwgUACEO4AABhCBcAIAzhAgCEIVwAgDCECwAQhnABAML4P1xez+dzOQEALMubcKnr9sfLy6mcAACW
+        YxiGaW6VbcmWqkqp+bzbPT2XOwDAYuz3z6913X0t2XIxf3HX9/vf4ziWxwAAric3ySVa2vvVavWuJMs/
+        KTVfUmoP+T2SmZmZ2TWXmyT/0jJHy/uSKgAAUVTVX6JRWQOyWdIbAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="txtMedicine.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

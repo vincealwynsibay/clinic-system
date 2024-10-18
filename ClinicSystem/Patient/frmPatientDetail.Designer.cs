@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientDetail));
             this.lblTitleBirthdate = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblBirthdate = new Bunifu.UI.WinForms.BunifuLabel();
@@ -38,7 +37,6 @@
             this.lblEmergencyNo = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblMaritalStat = new Bunifu.UI.WinForms.BunifuLabel();
             this.pnlDiagnosis = new Bunifu.UI.WinForms.BunifuPanel();
-            this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.lblName = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuLabel1 = new Bunifu.UI.WinForms.BunifuLabel();
@@ -79,7 +77,7 @@
             this.lblBirthdate.Margin = new System.Windows.Forms.Padding(2);
             this.lblBirthdate.Name = "lblBirthdate";
             this.lblBirthdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblBirthdate.Size = new System.Drawing.Size(85, 23);
+            this.lblBirthdate.Size = new System.Drawing.Size(85, 21);
             this.lblBirthdate.TabIndex = 98;
             this.lblBirthdate.Text = "Add Admin";
             this.lblBirthdate.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,7 +94,7 @@
             this.lblGender.Margin = new System.Windows.Forms.Padding(2);
             this.lblGender.Name = "lblGender";
             this.lblGender.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblGender.Size = new System.Drawing.Size(85, 25);
+            this.lblGender.Size = new System.Drawing.Size(85, 21);
             this.lblGender.TabIndex = 100;
             this.lblGender.Text = "Add Admin";
             this.lblGender.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -113,7 +111,7 @@
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmail.Size = new System.Drawing.Size(85, 25);
+            this.lblEmail.Size = new System.Drawing.Size(85, 21);
             this.lblEmail.TabIndex = 102;
             this.lblEmail.Text = "Add Admin";
             this.lblEmail.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,7 +128,7 @@
             this.lblMobileNo.Margin = new System.Windows.Forms.Padding(2);
             this.lblMobileNo.Name = "lblMobileNo";
             this.lblMobileNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblMobileNo.Size = new System.Drawing.Size(85, 25);
+            this.lblMobileNo.Size = new System.Drawing.Size(85, 21);
             this.lblMobileNo.TabIndex = 104;
             this.lblMobileNo.Text = "Add Admin";
             this.lblMobileNo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -147,7 +145,7 @@
             this.lblEmergencyNo.Margin = new System.Windows.Forms.Padding(2);
             this.lblEmergencyNo.Name = "lblEmergencyNo";
             this.lblEmergencyNo.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEmergencyNo.Size = new System.Drawing.Size(85, 25);
+            this.lblEmergencyNo.Size = new System.Drawing.Size(85, 21);
             this.lblEmergencyNo.TabIndex = 106;
             this.lblEmergencyNo.Text = "Add Admin";
             this.lblEmergencyNo.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -164,7 +162,7 @@
             this.lblMaritalStat.Margin = new System.Windows.Forms.Padding(2);
             this.lblMaritalStat.Name = "lblMaritalStat";
             this.lblMaritalStat.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblMaritalStat.Size = new System.Drawing.Size(85, 25);
+            this.lblMaritalStat.Size = new System.Drawing.Size(85, 21);
             this.lblMaritalStat.TabIndex = 108;
             this.lblMaritalStat.Text = "Add Admin";
             this.lblMaritalStat.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -183,22 +181,8 @@
             this.pnlDiagnosis.Name = "pnlDiagnosis";
             this.pnlDiagnosis.Padding = new System.Windows.Forms.Padding(1);
             this.pnlDiagnosis.ShowBorders = true;
-            this.pnlDiagnosis.Size = new System.Drawing.Size(580, 342);
+            this.pnlDiagnosis.Size = new System.Drawing.Size(869, 342);
             this.pnlDiagnosis.TabIndex = 120;
-            // 
-            // guna2BorderlessForm1
-            // 
-            this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.AnimationInterval = 80;
-            this.guna2BorderlessForm1.BorderRadius = 12;
-            this.guna2BorderlessForm1.ContainerControl = this;
-            this.guna2BorderlessForm1.DockForm = false;
-            this.guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragEndTransparencyValue = 0.6D;
-            this.guna2BorderlessForm1.DragForm = false;
-            this.guna2BorderlessForm1.HasFormShadow = false;
-            this.guna2BorderlessForm1.ResizeForm = false;
-            this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
             // lblName
             // 
@@ -212,9 +196,9 @@
             this.lblName.Margin = new System.Windows.Forms.Padding(2);
             this.lblName.Name = "lblName";
             this.lblName.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblName.Size = new System.Drawing.Size(202, 43);
+            this.lblName.Size = new System.Drawing.Size(109, 43);
             this.lblName.TabIndex = 121;
-            this.lblName.Text = "Uruha Rushia";
+            this.lblName.Text = "Patient";
             this.lblName.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
             this.lblName.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -245,7 +229,7 @@
             this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.bunifuLabel1.Size = new System.Drawing.Size(106, 24);
+            this.bunifuLabel1.Size = new System.Drawing.Size(106, 25);
             this.bunifuLabel1.TabIndex = 142;
             this.bunifuLabel1.Text = "Patient Data";
             this.bunifuLabel1.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -421,7 +405,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lblEmergencyNo;
         private Bunifu.UI.WinForms.BunifuLabel lblMaritalStat;
         private Bunifu.UI.WinForms.BunifuPanel pnlDiagnosis;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Bunifu.UI.WinForms.BunifuLabel lblName;
         private Guna.UI2.WinForms.Guna2Button btnAdd;
         private Bunifu.UI.WinForms.BunifuLabel bunifuLabel1;

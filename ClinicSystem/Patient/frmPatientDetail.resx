@@ -121,62 +121,78 @@
     <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
   </data>
   <data name="lblBirthdate.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 3px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
   </data>
   <data name="lblGender.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 5px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
   </data>
   <data name="lblEmail.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 5px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
   </data>
   <data name="lblMobileNo.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 5px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
   </data>
   <data name="lblEmergencyNo.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 5px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
   </data>
   <data name="lblMaritalStat.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 5px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="pnlDiagnosis.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        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
-        zMwau4yn9bTXEABA2Rg/SHrB8r9/EaMAAAAASUVORK5CYII=
+        iVBORw0KGgoAAAANSUhEUgAAA2UAAAFWCAYAAADpBzV5AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAfOSURBVHhe7dexTcNQAEXRP0qWwKakS2QvwRhsQ0nJKBmB
+        MmOAiSwk6M1tzpFe8Ua4AwAAgNp8Po1pfR3z+mlmZmZmZmYHb1re7h32Y17fx7y87A8AAIAjzcvz1mHX
+        /W2+Sw0AAID/86vDRBkAAMD/EmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYA
+        ABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUA
+        AAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEG
+        AAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJl
+        AAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFR
+        BgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABAS
+        ZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAh
+        UQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQ
+        EmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAA
+        IVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAA
+        EBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAA
+        ACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYA
+        ABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUA
+        AAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEG
+        AAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJl
+        AAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFR
+        BgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABAS
+        ZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAh
+        UQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQ
+        EmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAA
+        IVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAA
+        EBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAA
+        ACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYA
+        ABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUA
+        AAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEG
+        AAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJl
+        AAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFR
+        BgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABAS
+        ZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAh
+        UQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQ
+        EmUAAAAhUQYAABASZQAAACFRBgAAEBJlAAAAIVEGAAAQEmUAAAAhUQYAABASZQAAACFRBgAAEPoTZdcx
+        XR73BwAAwJHm82nrsNv+NvP6NKb1415qZmZmZmZmdvRu42G57EUGAABAY4wvDowncKxIdkMAAAAASUVO
+        RK5CYII=
 </value>
   </data>
-  <metadata name="guna2BorderlessForm1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <data name="bunifuLabel7.BaseStylesheet" xml:space="preserve">
+  <data name="lblName.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+  </data>
+  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 14pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
+  </data>
+  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
+  </data>
+  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
   </data>
   <data name="bunifuLabel5.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
@@ -184,19 +200,7 @@
   <data name="bunifuLabel6.BaseStylesheet" xml:space="preserve">
     <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
   </data>
-  <data name="bunifuLabel4.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
-  </data>
-  <data name="bunifuLabel3.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
-  </data>
-  <data name="bunifuLabel2.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 12pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(145, 150, 170); text-align: left; }</value>
-  </data>
-  <data name="bunifuLabel1.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 0px;font-family: 'IBM Plex Sans'; font-size: 14pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
-  </data>
-  <data name="lblName.BaseStylesheet" xml:space="preserve">
-    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 24pt; width: 100%; height: 100%; font-style: normal; font-weight: bold; text-decoration: none; color: rgb(41, 43, 42); text-align: center; }</value>
+  <data name="bunifuLabel7.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; margin: auto; padding-top: 1px;font-family: 'IBM Plex Sans'; font-size: 14pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: center; }</value>
   </data>
 </root>
