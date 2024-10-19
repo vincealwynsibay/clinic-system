@@ -29,87 +29,54 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiagnosisAdd));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties33 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties34 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties35 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties36 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties37 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties38 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties39 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties40 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
-            this.lblEditDetails = new Bunifu.UI.WinForms.BunifuLabel();
-            this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            this.lblComment = new Bunifu.UI.WinForms.BunifuLabel();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties25 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties26 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties27 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties28 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties29 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties30 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties31 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties32 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.bunifuLabel15 = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtComment = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
-            this.lblDiagnosis = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtDiagnosis = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuPanel1.SuspendLayout();
+            this.bunifuLabel19 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAddSecretary = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
-            // bunifuPanel1
+            // bunifuLabel14
             // 
-            this.bunifuPanel1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.bunifuPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuPanel1.BackgroundImage")));
-            this.bunifuPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
-            this.bunifuPanel1.BorderRadius = 3;
-            this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Controls.Add(this.lblEditDetails);
-            this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.bunifuPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel1.Name = "bunifuPanel1";
-            this.bunifuPanel1.ShowBorders = true;
-            this.bunifuPanel1.Size = new System.Drawing.Size(1006, 100);
-            this.bunifuPanel1.TabIndex = 95;
+            this.bunifuLabel14.AllowParentOverrides = false;
+            this.bunifuLabel14.AutoEllipsis = false;
+            this.bunifuLabel14.CursorType = null;
+            this.bunifuLabel14.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel14.Location = new System.Drawing.Point(135, 192);
+            this.bunifuLabel14.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuLabel14.Name = "bunifuLabel14";
+            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel14.Size = new System.Drawing.Size(96, 15);
+            this.bunifuLabel14.TabIndex = 208;
+            this.bunifuLabel14.Text = "Recommendation";
+            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
-            // lblEditDetails
+            // bunifuLabel15
             // 
-            this.lblEditDetails.AllowParentOverrides = false;
-            this.lblEditDetails.AutoEllipsis = false;
-            this.lblEditDetails.Cursor = System.Windows.Forms.Cursors.Default;
-            this.lblEditDetails.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lblEditDetails.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold);
-            this.lblEditDetails.ForeColor = System.Drawing.Color.White;
-            this.lblEditDetails.Location = new System.Drawing.Point(411, 32);
-            this.lblEditDetails.Margin = new System.Windows.Forms.Padding(2);
-            this.lblEditDetails.Name = "lblEditDetails";
-            this.lblEditDetails.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEditDetails.Size = new System.Drawing.Size(185, 37);
-            this.lblEditDetails.TabIndex = 39;
-            this.lblEditDetails.Text = "Add Diagnosis";
-            this.lblEditDetails.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblEditDetails.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
-            // btnCancel
-            // 
-            this.btnCancel.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnCancel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnCancel.ForeColor = System.Drawing.Color.White;
-            this.btnCancel.Location = new System.Drawing.Point(224, 557);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(262, 37);
-            this.btnCancel.TabIndex = 108;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // lblComment
-            // 
-            this.lblComment.AllowParentOverrides = false;
-            this.lblComment.AutoEllipsis = false;
-            this.lblComment.CursorType = null;
-            this.lblComment.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblComment.Location = new System.Drawing.Point(224, 367);
-            this.lblComment.Margin = new System.Windows.Forms.Padding(2);
-            this.lblComment.Name = "lblComment";
-            this.lblComment.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblComment.Size = new System.Drawing.Size(54, 15);
-            this.lblComment.TabIndex = 107;
-            this.lblComment.Text = "Comment";
-            this.lblComment.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblComment.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            this.bunifuLabel15.AllowParentOverrides = false;
+            this.bunifuLabel15.AutoEllipsis = false;
+            this.bunifuLabel15.CursorType = null;
+            this.bunifuLabel15.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel15.Location = new System.Drawing.Point(135, 120);
+            this.bunifuLabel15.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuLabel15.Name = "bunifuLabel15";
+            this.bunifuLabel15.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel15.Size = new System.Drawing.Size(52, 15);
+            this.bunifuLabel15.TabIndex = 207;
+            this.bunifuLabel15.Text = "Diagnosis";
+            this.bunifuLabel15.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel15.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtComment
             // 
@@ -124,13 +91,13 @@
             this.txtComment.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.txtComment.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtComment.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
-            this.txtComment.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtComment.BorderRadius = 1;
+            this.txtComment.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(231)))));
+            this.txtComment.BorderRadius = 8;
             this.txtComment.BorderThickness = 1;
             this.txtComment.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtComment.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtComment.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtComment.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtComment.DefaultFont = new System.Drawing.Font("IBM Plex Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComment.DefaultText = "";
             this.txtComment.FillColor = System.Drawing.Color.White;
             this.txtComment.HideSelection = true;
@@ -140,36 +107,36 @@
             this.txtComment.IconRight = null;
             this.txtComment.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtComment.Lines = new string[0];
-            this.txtComment.Location = new System.Drawing.Point(224, 394);
+            this.txtComment.Location = new System.Drawing.Point(135, 213);
             this.txtComment.Margin = new System.Windows.Forms.Padding(2);
             this.txtComment.MaxLength = 32767;
             this.txtComment.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtComment.Modified = false;
             this.txtComment.Multiline = true;
             this.txtComment.Name = "txtComment";
-            stateProperties33.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            stateProperties33.FillColor = System.Drawing.Color.Empty;
-            stateProperties33.ForeColor = System.Drawing.Color.Empty;
-            stateProperties33.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtComment.OnActiveState = stateProperties33;
-            stateProperties34.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties34.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties34.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties34.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtComment.OnDisabledState = stateProperties34;
-            stateProperties35.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
-            stateProperties35.FillColor = System.Drawing.Color.Empty;
-            stateProperties35.ForeColor = System.Drawing.Color.Empty;
-            stateProperties35.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtComment.OnHoverState = stateProperties35;
-            stateProperties36.BorderColor = System.Drawing.Color.Silver;
-            stateProperties36.FillColor = System.Drawing.Color.White;
-            stateProperties36.ForeColor = System.Drawing.Color.Empty;
-            stateProperties36.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtComment.OnIdleState = stateProperties36;
+            stateProperties25.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            stateProperties25.FillColor = System.Drawing.Color.Empty;
+            stateProperties25.ForeColor = System.Drawing.Color.Empty;
+            stateProperties25.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtComment.OnActiveState = stateProperties25;
+            stateProperties26.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties26.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties26.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtComment.OnDisabledState = stateProperties26;
+            stateProperties27.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
+            stateProperties27.FillColor = System.Drawing.Color.Empty;
+            stateProperties27.ForeColor = System.Drawing.Color.Empty;
+            stateProperties27.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtComment.OnHoverState = stateProperties27;
+            stateProperties28.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(231)))));
+            stateProperties28.FillColor = System.Drawing.Color.White;
+            stateProperties28.ForeColor = System.Drawing.Color.Empty;
+            stateProperties28.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtComment.OnIdleState = stateProperties28;
             this.txtComment.Padding = new System.Windows.Forms.Padding(2);
             this.txtComment.PasswordChar = '\0';
-            this.txtComment.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtComment.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
             this.txtComment.PlaceholderText = "Enter text";
             this.txtComment.ReadOnly = false;
             this.txtComment.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -177,9 +144,9 @@
             this.txtComment.SelectionLength = 0;
             this.txtComment.SelectionStart = 0;
             this.txtComment.ShortcutsEnabled = true;
-            this.txtComment.Size = new System.Drawing.Size(559, 116);
+            this.txtComment.Size = new System.Drawing.Size(558, 235);
             this.txtComment.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtComment.TabIndex = 106;
+            this.txtComment.TabIndex = 206;
             this.txtComment.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtComment.TextMarginBottom = 0;
             this.txtComment.TextMarginLeft = 3;
@@ -187,35 +154,6 @@
             this.txtComment.TextPlaceholder = "Enter text";
             this.txtComment.UseSystemPasswordChar = false;
             this.txtComment.WordWrap = true;
-            // 
-            // btnAdd
-            // 
-            this.btnAdd.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnAdd.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnAdd.ForeColor = System.Drawing.Color.White;
-            this.btnAdd.Location = new System.Drawing.Point(521, 557);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(262, 37);
-            this.btnAdd.TabIndex = 105;
-            this.btnAdd.Text = "Add Diagnosis";
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // lblDiagnosis
-            // 
-            this.lblDiagnosis.AllowParentOverrides = false;
-            this.lblDiagnosis.AutoEllipsis = false;
-            this.lblDiagnosis.CursorType = null;
-            this.lblDiagnosis.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblDiagnosis.Location = new System.Drawing.Point(224, 205);
-            this.lblDiagnosis.Margin = new System.Windows.Forms.Padding(2);
-            this.lblDiagnosis.Name = "lblDiagnosis";
-            this.lblDiagnosis.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDiagnosis.Size = new System.Drawing.Size(51, 15);
-            this.lblDiagnosis.TabIndex = 104;
-            this.lblDiagnosis.Text = "Diagnosis";
-            this.lblDiagnosis.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
-            this.lblDiagnosis.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
             // txtDiagnosis
             // 
@@ -230,13 +168,13 @@
             this.txtDiagnosis.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
             this.txtDiagnosis.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
             this.txtDiagnosis.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
-            this.txtDiagnosis.BorderColorIdle = System.Drawing.Color.Silver;
-            this.txtDiagnosis.BorderRadius = 1;
+            this.txtDiagnosis.BorderColorIdle = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(231)))));
+            this.txtDiagnosis.BorderRadius = 8;
             this.txtDiagnosis.BorderThickness = 1;
             this.txtDiagnosis.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
             this.txtDiagnosis.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txtDiagnosis.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtDiagnosis.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtDiagnosis.DefaultFont = new System.Drawing.Font("IBM Plex Sans", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDiagnosis.DefaultText = "";
             this.txtDiagnosis.FillColor = System.Drawing.Color.White;
             this.txtDiagnosis.HideSelection = true;
@@ -246,36 +184,36 @@
             this.txtDiagnosis.IconRight = null;
             this.txtDiagnosis.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txtDiagnosis.Lines = new string[0];
-            this.txtDiagnosis.Location = new System.Drawing.Point(224, 232);
+            this.txtDiagnosis.Location = new System.Drawing.Point(135, 141);
             this.txtDiagnosis.Margin = new System.Windows.Forms.Padding(2);
             this.txtDiagnosis.MaxLength = 32767;
             this.txtDiagnosis.MinimumSize = new System.Drawing.Size(1, 1);
             this.txtDiagnosis.Modified = false;
-            this.txtDiagnosis.Multiline = true;
+            this.txtDiagnosis.Multiline = false;
             this.txtDiagnosis.Name = "txtDiagnosis";
-            stateProperties37.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            stateProperties37.FillColor = System.Drawing.Color.Empty;
-            stateProperties37.ForeColor = System.Drawing.Color.Empty;
-            stateProperties37.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDiagnosis.OnActiveState = stateProperties37;
-            stateProperties38.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            stateProperties38.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
-            stateProperties38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties38.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txtDiagnosis.OnDisabledState = stateProperties38;
-            stateProperties39.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
-            stateProperties39.FillColor = System.Drawing.Color.Empty;
-            stateProperties39.ForeColor = System.Drawing.Color.Empty;
-            stateProperties39.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDiagnosis.OnHoverState = stateProperties39;
-            stateProperties40.BorderColor = System.Drawing.Color.Silver;
-            stateProperties40.FillColor = System.Drawing.Color.White;
-            stateProperties40.ForeColor = System.Drawing.Color.Empty;
-            stateProperties40.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txtDiagnosis.OnIdleState = stateProperties40;
+            stateProperties29.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            stateProperties29.FillColor = System.Drawing.Color.Empty;
+            stateProperties29.ForeColor = System.Drawing.Color.Empty;
+            stateProperties29.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDiagnosis.OnActiveState = stateProperties29;
+            stateProperties30.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties30.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties30.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtDiagnosis.OnDisabledState = stateProperties30;
+            stateProperties31.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
+            stateProperties31.FillColor = System.Drawing.Color.Empty;
+            stateProperties31.ForeColor = System.Drawing.Color.Empty;
+            stateProperties31.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDiagnosis.OnHoverState = stateProperties31;
+            stateProperties32.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(228)))), ((int)(((byte)(231)))));
+            stateProperties32.FillColor = System.Drawing.Color.White;
+            stateProperties32.ForeColor = System.Drawing.Color.Empty;
+            stateProperties32.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtDiagnosis.OnIdleState = stateProperties32;
             this.txtDiagnosis.Padding = new System.Windows.Forms.Padding(2);
             this.txtDiagnosis.PasswordChar = '\0';
-            this.txtDiagnosis.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtDiagnosis.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(113)))), ((int)(((byte)(122)))));
             this.txtDiagnosis.PlaceholderText = "Enter text";
             this.txtDiagnosis.ReadOnly = false;
             this.txtDiagnosis.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -283,9 +221,9 @@
             this.txtDiagnosis.SelectionLength = 0;
             this.txtDiagnosis.SelectionStart = 0;
             this.txtDiagnosis.ShortcutsEnabled = true;
-            this.txtDiagnosis.Size = new System.Drawing.Size(559, 116);
+            this.txtDiagnosis.Size = new System.Drawing.Size(262, 37);
             this.txtDiagnosis.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
-            this.txtDiagnosis.TabIndex = 103;
+            this.txtDiagnosis.TabIndex = 205;
             this.txtDiagnosis.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtDiagnosis.TextMarginBottom = 0;
             this.txtDiagnosis.TextMarginLeft = 3;
@@ -294,24 +232,70 @@
             this.txtDiagnosis.UseSystemPasswordChar = false;
             this.txtDiagnosis.WordWrap = true;
             // 
+            // bunifuLabel19
+            // 
+            this.bunifuLabel19.AllowParentOverrides = false;
+            this.bunifuLabel19.AutoEllipsis = false;
+            this.bunifuLabel19.CursorType = null;
+            this.bunifuLabel19.Font = new System.Drawing.Font("IBM Plex Sans", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuLabel19.Location = new System.Drawing.Point(332, 42);
+            this.bunifuLabel19.Margin = new System.Windows.Forms.Padding(2);
+            this.bunifuLabel19.Name = "bunifuLabel19";
+            this.bunifuLabel19.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel19.Size = new System.Drawing.Size(162, 33);
+            this.bunifuLabel19.TabIndex = 204;
+            this.bunifuLabel19.Text = "Add Diagnosis";
+            this.bunifuLabel19.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuLabel19.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.guna2Button1.BorderRadius = 6;
+            this.guna2Button1.BorderThickness = 2;
+            this.guna2Button1.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.guna2Button1.FillColor = System.Drawing.Color.White;
+            this.guna2Button1.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.guna2Button1.Location = new System.Drawing.Point(128, 478);
+            this.guna2Button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 81);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.Size = new System.Drawing.Size(274, 37);
+            this.guna2Button1.TabIndex = 210;
+            this.guna2Button1.Text = "Cancel";
+            this.guna2Button1.Click += new System.EventHandler(this.btnCancel_Click);
+            // 
+            // btnAddSecretary
+            // 
+            this.btnAddSecretary.BorderRadius = 6;
+            this.btnAddSecretary.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.btnAddSecretary.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
+            this.btnAddSecretary.ForeColor = System.Drawing.Color.White;
+            this.btnAddSecretary.Image = global::ClinicSystem.Properties.Resources.plus;
+            this.btnAddSecretary.Location = new System.Drawing.Point(431, 478);
+            this.btnAddSecretary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 81);
+            this.btnAddSecretary.Name = "btnAddSecretary";
+            this.btnAddSecretary.Size = new System.Drawing.Size(274, 37);
+            this.btnAddSecretary.TabIndex = 209;
+            this.btnAddSecretary.Text = "Add Diagnosis";
+            this.btnAddSecretary.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
             // frmDiagnosisAdd
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1006, 829);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.lblComment);
+            this.ClientSize = new System.Drawing.Size(826, 631);
+            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnAddSecretary);
+            this.Controls.Add(this.bunifuLabel14);
+            this.Controls.Add(this.bunifuLabel15);
             this.Controls.Add(this.txtComment);
-            this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.lblDiagnosis);
             this.Controls.Add(this.txtDiagnosis);
-            this.Controls.Add(this.bunifuPanel1);
+            this.Controls.Add(this.bunifuLabel19);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDiagnosisAdd";
             this.Text = "frmDiagnosisAdd";
-            this.bunifuPanel1.ResumeLayout(false);
-            this.bunifuPanel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -319,13 +303,12 @@
 
         #endregion
 
-        private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
-        private Bunifu.UI.WinForms.BunifuLabel lblEditDetails;
-        private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Bunifu.UI.WinForms.BunifuLabel lblComment;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel15;
         private Bunifu.UI.WinForms.BunifuTextBox txtComment;
-        private Guna.UI2.WinForms.Guna2Button btnAdd;
-        private Bunifu.UI.WinForms.BunifuLabel lblDiagnosis;
         private Bunifu.UI.WinForms.BunifuTextBox txtDiagnosis;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel19;
+        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnAddSecretary;
     }
 }

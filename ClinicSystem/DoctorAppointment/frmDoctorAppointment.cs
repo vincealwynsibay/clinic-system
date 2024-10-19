@@ -83,34 +83,40 @@ namespace ClinicSystem.DoctorAppointment
             g_proc.datPatients.Dispose();
         }
 
+        private void func_ChangeAppointmentStatus(DataGridViewCellEventArgs e, string v_proc, string v_message)
+        {
+            g_proc.sqlCommand.Parameters.Clear();
+            g_proc.sqlCommand.CommandText = v_proc;
+            g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+
+            g_proc.sqlCommand.Parameters.AddWithValue("@p_id", grdAppointment.Rows[e.RowIndex].Cells["id"].Value);
+
+            g_proc.sqlCommand.ExecuteNonQuery();
+            g_proc.sqlClinicAdapter.Dispose();
+            g_proc.datPatients.Dispose();
+
+            string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
+            func_LoadTable();
+            MessageBox.Show($"Appointment for {fullName} " + v_message);
+        }
         // Event Handler for Datagrid Buttons
         private void func_ApproveAppointment(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == grdAppointment.Columns["btnApprove"].Index && e.RowIndex >= 0)
             {
-                g_proc.sqlCommand.Parameters.Clear();
-                g_proc.sqlCommand.CommandText = "procApproveAppointment";
-                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
-
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", grdAppointment.Rows[e.RowIndex].Cells["id"].Value);
-
-                g_proc.sqlCommand.ExecuteNonQuery();
-                g_proc.sqlClinicAdapter.Dispose();
-                g_proc.datPatients.Dispose();
-
-                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                func_LoadTable();
-                MessageBox.Show($"Appointment for {fullName} approved!");
+                func_ChangeAppointmentStatus(e, "procApproveAppointment", "approved!");
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} edited!");
+                //func_ChangeAppointmentStatus(e, "procApproveAppointment", "edited!");
+                MessageBox.Show($"Appointment for edited, idk what the form look like but button works yey");
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {
-                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} deleted!");
+                DialogResult dialogConfirmDelete = MessageBox.Show("Are you sure you want to cancel this appointment permanently?",
+                                                        "Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogConfirmDelete == DialogResult.No) { return; }
+                func_ChangeAppointmentStatus(e, "procCancelAppointment", "cancelled!");
             }
         }
 
@@ -168,7 +174,8 @@ namespace ClinicSystem.DoctorAppointment
             ResetButtons();
             HighlightButton(btnFilterApprove);
             grdAppointment.Columns["btnEdit"].Visible = false;
-            grdAppointment.Columns["btnDelete"].Visible = false;
+            grdAppointment.Columns["btnDelete"].Visible = true;
+            grdAppointment.Columns["btnApprove"].Visible = false;
             status = "approved";
             func_LoadTable();
         }

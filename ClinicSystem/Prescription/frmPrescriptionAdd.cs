@@ -63,8 +63,6 @@ namespace ClinicSystem.Prescription
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_comment", txtComment.Text);
 
                 g_proc.sqlCommand.ExecuteNonQuery();
-
-                MessageBox.Show("Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

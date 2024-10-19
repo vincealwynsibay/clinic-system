@@ -133,10 +133,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Dashboard\frmDashboardAppointment.cs">
+    <Compile Include="DoctorAppointment\frmDashboardAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard\frmDashboardAppointment.Designer.cs">
+    <Compile Include="DoctorAppointment\frmDashboardAppointment.Designer.cs">
       <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\frmDoctorDashboard.cs">
@@ -334,7 +334,7 @@
     <Compile Include="GlobalProdecure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Dashboard\frmDashboardAppointment.resx">
+    <EmbeddedResource Include="DoctorAppointment\frmDashboardAppointment.resx">
       <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDoctorDashboard.resx">

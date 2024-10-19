@@ -44,8 +44,6 @@ namespace ClinicSystem.Diagnosis
 
                 g_proc.sqlCommand.ExecuteNonQuery();
 
-                MessageBox.Show("Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
                 this.mainForm.NavigateToForm(new frmPatientDetail(mainForm, doctor_id, patient_id));
                 this.Close();
             }
