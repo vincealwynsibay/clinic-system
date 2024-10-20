@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Globalization;
 using System.Linq;
@@ -146,8 +147,13 @@ namespace ClinicSystem
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_mobile", txtMobileNo.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_email", txtEmail.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_photo", imgProfile);
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_amount", txtConsultation.Text);     // tbldoctorconsultationfee
+                g_proc.sqlCommand.ExecuteNonQuery();
 
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procAddDoctorConsultationFee";
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", key_index);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_fee_amount", txtConsultation.Text);
                 g_proc.sqlCommand.ExecuteNonQuery();
 
                 MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);

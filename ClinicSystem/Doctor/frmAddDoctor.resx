@@ -368,4 +368,20 @@
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
   </metadata>
+  <data name="bunifuLabel14.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 8.25pt; width: 100%; height: 100%; font-style: italic; font-weight: normal; text-decoration: none; color: rgb(160, 160, 160); text-align: left; }</value>
+  </data>
+  <data name="lblConsultation.BaseStylesheet" xml:space="preserve">
+    <value>#bunifu-label { padding: 0px; font-family: 'Segoe UI'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
+  </data>
+  <data name="txtConsultation.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAV0AAAArCAYAAADbhFvfAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADQSURBVHhe7dQxDQMxAARB80fll2EERgDkZclNAHirGema
+        A7ADgNha6zPn/JmZ2Z3tzp7kjrEPAO7ZnT3JFV2A20QXICS6ACHRBQiJLkBIdAFCogsQEl2AkOgChEQX
+        ICS6ACHRBQiJLkBIdAFCogsQEl2AkOgChEQXICS6ACHRBQiJLkBIdAFCogsQEl2AkOgChEQXICS6ACHR
+        BQiJLkBIdAFCogsQEl2AkOgChEQXICS6ACHRBQiJLkBIdAFCf9F9nue7DzMzu7Pd2ZNcABpjvNiFQE7s
+        93oqAAAAAElFTkSuQmCC
+</value>
+  </data>
 </root>

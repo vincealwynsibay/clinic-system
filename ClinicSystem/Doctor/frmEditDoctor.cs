@@ -62,6 +62,20 @@ namespace ClinicSystem
                     } 
                 }
             }
+
+
+            sqlCmd.Parameters.Clear();
+            sqlCmd.CommandText = "procGetDoctorConsultationFee";
+            sqlCmd.CommandType = CommandType.StoredProcedure;
+            sqlCmd.Parameters.AddWithValue("@p_doctor_id", id);
+
+            using (var reader = sqlCmd.ExecuteReader())
+            {
+                if (reader.Read())
+                {
+                    txtConsultation.Text = reader.GetInt32(reader.GetOrdinal("amount")).ToString();
+                }
+            }
         }
 
         private void picProfile_Click(object sender, EventArgs e)

@@ -79,7 +79,15 @@ namespace ClinicSystem
                 sqlCmd.Parameters.AddWithValue("@p_secretaryId", null);
                 sqlCmd.ExecuteNonQuery();
 
+                sqlCmd.Parameters.Clear();
+                sqlCmd.CommandText = "procAddDoctorConsultationFee";
+                sqlCmd.CommandType = CommandType.StoredProcedure;
+                sqlCmd.Parameters.AddWithValue("@p_doctor_id", doctor_id);
+                sqlCmd.Parameters.AddWithValue("@p_fee_amount", txtConsultation.Text);
+                sqlCmd.ExecuteNonQuery();
+
                 MessageBox.Show("Doctor added Succesfully");
+
 
             }
             catch (Exception ex)

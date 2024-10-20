@@ -50,6 +50,10 @@
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties21 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties22 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties23 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties24 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.picProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.dtBirthdate = new Bunifu.UI.WinForms.BunifuDatePicker();
@@ -74,6 +78,9 @@
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.btnCancel = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.bunifuLabel14 = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lblConsultation = new Bunifu.UI.WinForms.BunifuLabel();
+            this.txtConsultation = new Bunifu.UI.WinForms.BunifuTextBox();
             this.bunifuGroupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.SuspendLayout();
@@ -706,7 +713,7 @@
             this.btnEditDoctor.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditDoctor.ForeColor = System.Drawing.Color.White;
             this.btnEditDoctor.Image = global::ClinicSystem.Properties.Resources.icnEdit;
-            this.btnEditDoctor.Location = new System.Drawing.Point(570, 797);
+            this.btnEditDoctor.Location = new System.Drawing.Point(570, 878);
             this.btnEditDoctor.Name = "btnEditDoctor";
             this.btnEditDoctor.Size = new System.Drawing.Size(364, 45);
             this.btnEditDoctor.TabIndex = 75;
@@ -736,7 +743,7 @@
             this.btnCancel.FillColor = System.Drawing.Color.White;
             this.btnCancel.Font = new System.Drawing.Font("IBM Plex Sans", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.btnCancel.Location = new System.Drawing.Point(189, 797);
+            this.btnCancel.Location = new System.Drawing.Point(189, 878);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(365, 45);
             this.btnCancel.TabIndex = 76;
@@ -751,11 +758,122 @@
             this.bunifuPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel1.BorderRadius = 3;
             this.bunifuPanel1.BorderThickness = 1;
-            this.bunifuPanel1.Location = new System.Drawing.Point(455, 848);
+            this.bunifuPanel1.Location = new System.Drawing.Point(455, 929);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(200, 100);
             this.bunifuPanel1.TabIndex = 98;
+            // 
+            // bunifuLabel14
+            // 
+            this.bunifuLabel14.AllowParentOverrides = false;
+            this.bunifuLabel14.AutoEllipsis = false;
+            this.bunifuLabel14.CursorType = null;
+            this.bunifuLabel14.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Italic);
+            this.bunifuLabel14.ForeColor = System.Drawing.SystemColors.ControlDark;
+            this.bunifuLabel14.Location = new System.Drawing.Point(195, 836);
+            this.bunifuLabel14.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.bunifuLabel14.Name = "bunifuLabel14";
+            this.bunifuLabel14.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel14.Size = new System.Drawing.Size(514, 19);
+            this.bunifuLabel14.TabIndex = 101;
+            this.bunifuLabel14.Text = "Note: If you want to enable FREE appointments, enter appointment fee as 0 (Zero)." +
+    "";
+            this.bunifuLabel14.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.bunifuLabel14.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lblConsultation
+            // 
+            this.lblConsultation.AllowParentOverrides = false;
+            this.lblConsultation.AutoEllipsis = false;
+            this.lblConsultation.CursorType = null;
+            this.lblConsultation.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.lblConsultation.Location = new System.Drawing.Point(195, 762);
+            this.lblConsultation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.lblConsultation.Name = "lblConsultation";
+            this.lblConsultation.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblConsultation.Size = new System.Drawing.Size(110, 20);
+            this.lblConsultation.TabIndex = 100;
+            this.lblConsultation.Text = "Consultation Fee";
+            this.lblConsultation.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
+            this.lblConsultation.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // txtConsultation
+            // 
+            this.txtConsultation.AcceptsReturn = false;
+            this.txtConsultation.AcceptsTab = false;
+            this.txtConsultation.AnimationSpeed = 200;
+            this.txtConsultation.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txtConsultation.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txtConsultation.AutoSizeHeight = true;
+            this.txtConsultation.BackColor = System.Drawing.Color.Transparent;
+            this.txtConsultation.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txtConsultation.BackgroundImage")));
+            this.txtConsultation.BorderColorActive = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            this.txtConsultation.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txtConsultation.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
+            this.txtConsultation.BorderColorIdle = System.Drawing.Color.Silver;
+            this.txtConsultation.BorderRadius = 1;
+            this.txtConsultation.BorderThickness = 1;
+            this.txtConsultation.CharacterCase = Bunifu.UI.WinForms.BunifuTextBox.CharacterCases.Normal;
+            this.txtConsultation.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txtConsultation.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConsultation.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txtConsultation.DefaultText = "";
+            this.txtConsultation.FillColor = System.Drawing.Color.White;
+            this.txtConsultation.HideSelection = true;
+            this.txtConsultation.IconLeft = null;
+            this.txtConsultation.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConsultation.IconPadding = 10;
+            this.txtConsultation.IconRight = null;
+            this.txtConsultation.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtConsultation.Lines = new string[0];
+            this.txtConsultation.Location = new System.Drawing.Point(195, 788);
+            this.txtConsultation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConsultation.MaxLength = 32767;
+            this.txtConsultation.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txtConsultation.Modified = false;
+            this.txtConsultation.Multiline = false;
+            this.txtConsultation.Name = "txtConsultation";
+            stateProperties21.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
+            stateProperties21.FillColor = System.Drawing.Color.Empty;
+            stateProperties21.ForeColor = System.Drawing.Color.Empty;
+            stateProperties21.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtConsultation.OnActiveState = stateProperties21;
+            stateProperties22.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties22.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties22.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txtConsultation.OnDisabledState = stateProperties22;
+            stateProperties23.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
+            stateProperties23.FillColor = System.Drawing.Color.Empty;
+            stateProperties23.ForeColor = System.Drawing.Color.Empty;
+            stateProperties23.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtConsultation.OnHoverState = stateProperties23;
+            stateProperties24.BorderColor = System.Drawing.Color.Silver;
+            stateProperties24.FillColor = System.Drawing.Color.White;
+            stateProperties24.ForeColor = System.Drawing.Color.Empty;
+            stateProperties24.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txtConsultation.OnIdleState = stateProperties24;
+            this.txtConsultation.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtConsultation.PasswordChar = '\0';
+            this.txtConsultation.PlaceholderForeColor = System.Drawing.Color.Silver;
+            this.txtConsultation.PlaceholderText = "Enter text";
+            this.txtConsultation.ReadOnly = false;
+            this.txtConsultation.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtConsultation.SelectedText = "";
+            this.txtConsultation.SelectionLength = 0;
+            this.txtConsultation.SelectionStart = 0;
+            this.txtConsultation.ShortcutsEnabled = true;
+            this.txtConsultation.Size = new System.Drawing.Size(349, 43);
+            this.txtConsultation.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txtConsultation.TabIndex = 99;
+            this.txtConsultation.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txtConsultation.TextMarginBottom = 0;
+            this.txtConsultation.TextMarginLeft = 3;
+            this.txtConsultation.TextMarginTop = 1;
+            this.txtConsultation.TextPlaceholder = "Enter text";
+            this.txtConsultation.UseSystemPasswordChar = false;
+            this.txtConsultation.WordWrap = true;
             // 
             // frmEditDoctor
             // 
@@ -764,6 +882,9 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1123, 777);
+            this.Controls.Add(this.bunifuLabel14);
+            this.Controls.Add(this.lblConsultation);
+            this.Controls.Add(this.txtConsultation);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnEditDoctor);
@@ -823,5 +944,8 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
+        private Bunifu.UI.WinForms.BunifuLabel bunifuLabel14;
+        private Bunifu.UI.WinForms.BunifuLabel lblConsultation;
+        private Bunifu.UI.WinForms.BunifuTextBox txtConsultation;
     }
 }
