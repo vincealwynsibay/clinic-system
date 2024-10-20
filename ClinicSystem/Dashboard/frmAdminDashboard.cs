@@ -57,7 +57,8 @@ namespace ClinicSystem
                     Name = "Profits",
                     XValueType = ChartValueType.String,
                     YValueType = ChartValueType.Double,
-                    ChartType = SeriesChartType.Column
+                    ChartType = SeriesChartType.Column,
+                    Color = Color.FromArgb(0, 55, 75)
                 };
                 chartMonthlyProfits.Series.Add(series);
 
