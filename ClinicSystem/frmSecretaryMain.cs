@@ -1,4 +1,6 @@
-﻿using MySql.Data.MySqlClient;
+﻿using ClinicSystem.Appointment;
+using ClinicSystem.Patient;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -72,7 +74,7 @@ namespace ClinicSystem
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-                LoadFormIntoPanel(new frmSecretaryDashboard(this));
+                LoadFormIntoPanel(new frmSecretaryDashboard(this, key_index));
         }
 
         public void LoadFormIntoPanel(Form form)
@@ -95,6 +97,16 @@ namespace ClinicSystem
             frmLogin frmLogin = new frmLogin();
             frmLogin.Show();
             this.Hide();
+        }
+
+        private void btnUsers_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new frmPatientPayments(this, key_index));
+        }
+
+        private void btnAppointments_Click(object sender, EventArgs e)
+        {
+            LoadFormIntoPanel(new frmSecretaryAppointment(this, key_index));
         }
     }
 }

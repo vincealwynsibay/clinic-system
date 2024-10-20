@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorMain));
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.txtName = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtHi = new Bunifu.UI.WinForms.BunifuLabel();
@@ -47,7 +46,6 @@
             this.pnlMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMainParent = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuGroupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.bunifuGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();

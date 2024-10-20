@@ -30,28 +30,29 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmSecretaryMain));
             this.bunifuGroupBox1 = new Bunifu.UI.WinForms.BunifuGroupBox();
+            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuGroupBox2 = new Bunifu.UI.WinForms.BunifuGroupBox();
             this.txtName = new Bunifu.UI.WinForms.BunifuLabel();
             this.txtHi = new Bunifu.UI.WinForms.BunifuLabel();
             this.picProfile = new Bunifu.UI.WinForms.BunifuPictureBox();
             this.bunifuPanel2 = new Bunifu.UI.WinForms.BunifuPanel();
             this.bunifuPanel3 = new Bunifu.UI.WinForms.BunifuPanel();
+            this.btnUsers = new Guna.UI2.WinForms.Guna2Button();
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
-            this.btnDoctors = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAppointments = new Guna.UI2.WinForms.Guna2Button();
             this.btnSecretaries = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMainParent = new Bunifu.UI.WinForms.BunifuPanel();
-            this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.bunifuGroupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.bunifuGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).BeginInit();
             this.bunifuPanel2.SuspendLayout();
             this.bunifuPanel3.SuspendLayout();
             this.bunifuPanel1.SuspendLayout();
             this.pnlMainParent.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // bunifuGroupBox1
@@ -72,6 +73,17 @@
             this.bunifuGroupBox1.Size = new System.Drawing.Size(1533, 96);
             this.bunifuGroupBox1.TabIndex = 0;
             this.bunifuGroupBox1.TabStop = false;
+            // 
+            // guna2PictureBox1
+            // 
+            this.guna2PictureBox1.Image = global::ClinicSystem.Properties.Resources.logo3;
+            this.guna2PictureBox1.ImageRotate = 0F;
+            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 26);
+            this.guna2PictureBox1.Name = "guna2PictureBox1";
+            this.guna2PictureBox1.Size = new System.Drawing.Size(138, 42);
+            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.guna2PictureBox1.TabIndex = 56;
+            this.guna2PictureBox1.TabStop = false;
             // 
             // bunifuGroupBox2
             // 
@@ -164,15 +176,40 @@
             this.bunifuPanel3.BorderColor = System.Drawing.Color.Transparent;
             this.bunifuPanel3.BorderRadius = 18;
             this.bunifuPanel3.BorderThickness = 1;
+            this.bunifuPanel3.Controls.Add(this.btnUsers);
             this.bunifuPanel3.Controls.Add(this.btnDashboard);
             this.bunifuPanel3.Controls.Add(this.btnLogout);
-            this.bunifuPanel3.Controls.Add(this.btnDoctors);
+            this.bunifuPanel3.Controls.Add(this.btnAppointments);
             this.bunifuPanel3.Controls.Add(this.btnSecretaries);
             this.bunifuPanel3.Location = new System.Drawing.Point(0, 6);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(347, 956);
             this.bunifuPanel3.TabIndex = 0;
+            // 
+            // btnUsers
+            // 
+            this.btnUsers.Animated = true;
+            this.btnUsers.BackColor = System.Drawing.Color.White;
+            this.btnUsers.BorderColor = System.Drawing.Color.Transparent;
+            this.btnUsers.BorderRadius = 12;
+            this.btnUsers.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnUsers.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUsers.FillColor = System.Drawing.Color.White;
+            this.btnUsers.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsers.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
+            this.btnUsers.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnUsers.Image = global::ClinicSystem.Properties.Resources.Patient;
+            this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnUsers.Location = new System.Drawing.Point(25, 118);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnUsers.Name = "btnUsers";
+            this.btnUsers.Size = new System.Drawing.Size(291, 46);
+            this.btnUsers.TabIndex = 1;
+            this.btnUsers.Text = "Payments";
+            this.btnUsers.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnUsers.Click += new System.EventHandler(this.btnUsers_Click);
             // 
             // btnDashboard
             // 
@@ -211,34 +248,35 @@
             this.btnLogout.Image = global::ClinicSystem.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnLogout.Location = new System.Drawing.Point(22, 247);
+            this.btnLogout.Location = new System.Drawing.Point(22, 307);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(294, 45);
             this.btnLogout.TabIndex = 0;
             this.btnLogout.Text = "Logout";
             this.btnLogout.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // btnDoctors
+            // btnAppointments
             // 
-            this.btnDoctors.Animated = true;
-            this.btnDoctors.BackColor = System.Drawing.Color.White;
-            this.btnDoctors.BorderColor = System.Drawing.Color.Transparent;
-            this.btnDoctors.BorderRadius = 12;
-            this.btnDoctors.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnDoctors.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDoctors.FillColor = System.Drawing.Color.White;
-            this.btnDoctors.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDoctors.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnDoctors.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnDoctors.Image = global::ClinicSystem.Properties.Resources.Appointments;
-            this.btnDoctors.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnDoctors.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnDoctors.Location = new System.Drawing.Point(22, 114);
-            this.btnDoctors.Name = "btnDoctors";
-            this.btnDoctors.Size = new System.Drawing.Size(294, 45);
-            this.btnDoctors.TabIndex = 0;
-            this.btnDoctors.Text = "Appointments";
-            this.btnDoctors.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAppointments.Animated = true;
+            this.btnAppointments.BackColor = System.Drawing.Color.White;
+            this.btnAppointments.BorderColor = System.Drawing.Color.Transparent;
+            this.btnAppointments.BorderRadius = 12;
+            this.btnAppointments.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
+            this.btnAppointments.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAppointments.FillColor = System.Drawing.Color.White;
+            this.btnAppointments.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAppointments.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
+            this.btnAppointments.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
+            this.btnAppointments.Image = global::ClinicSystem.Properties.Resources.Appointments;
+            this.btnAppointments.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAppointments.ImageSize = new System.Drawing.Size(24, 24);
+            this.btnAppointments.Location = new System.Drawing.Point(25, 180);
+            this.btnAppointments.Name = "btnAppointments";
+            this.btnAppointments.Size = new System.Drawing.Size(294, 45);
+            this.btnAppointments.TabIndex = 0;
+            this.btnAppointments.Text = "Appointments";
+            this.btnAppointments.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
             // 
             // btnSecretaries
             // 
@@ -255,7 +293,7 @@
             this.btnSecretaries.Image = global::ClinicSystem.Properties.Resources.settings;
             this.btnSecretaries.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSecretaries.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSecretaries.Location = new System.Drawing.Point(22, 181);
+            this.btnSecretaries.Location = new System.Drawing.Point(22, 241);
             this.btnSecretaries.Name = "btnSecretaries";
             this.btnSecretaries.Size = new System.Drawing.Size(294, 45);
             this.btnSecretaries.TabIndex = 0;
@@ -310,17 +348,6 @@
             this.pnlMainParent.Size = new System.Drawing.Size(1195, 914);
             this.pnlMainParent.TabIndex = 9;
             // 
-            // guna2PictureBox1
-            // 
-            this.guna2PictureBox1.Image = global::ClinicSystem.Properties.Resources.logo3;
-            this.guna2PictureBox1.ImageRotate = 0F;
-            this.guna2PictureBox1.Location = new System.Drawing.Point(22, 26);
-            this.guna2PictureBox1.Name = "guna2PictureBox1";
-            this.guna2PictureBox1.Size = new System.Drawing.Size(138, 42);
-            this.guna2PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.guna2PictureBox1.TabIndex = 56;
-            this.guna2PictureBox1.TabStop = false;
-            // 
             // frmSecretaryMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -335,6 +362,7 @@
             this.Load += new System.EventHandler(this.frmSecretaryMain_Load);
             this.bunifuGroupBox1.ResumeLayout(false);
             this.bunifuGroupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.bunifuGroupBox2.ResumeLayout(false);
             this.bunifuGroupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picProfile)).EndInit();
@@ -342,7 +370,6 @@
             this.bunifuPanel3.ResumeLayout(false);
             this.bunifuPanel1.ResumeLayout(false);
             this.pnlMainParent.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -358,11 +385,12 @@
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel3;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
-        private Guna.UI2.WinForms.Guna2Button btnDoctors;
+        private Guna.UI2.WinForms.Guna2Button btnAppointments;
         private Guna.UI2.WinForms.Guna2Button btnSecretaries;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPanel pnlMain;
         private Bunifu.UI.WinForms.BunifuPanel pnlMainParent;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
+        private Guna.UI2.WinForms.Guna2Button btnUsers;
     }
 }

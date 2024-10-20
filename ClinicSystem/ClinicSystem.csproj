@@ -133,6 +133,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment\frmAddAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\frmAddAppointment.Designer.cs">
+      <DependentUpon>frmAddAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment\frmSecretaryAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\frmSecretaryAppointment.Designer.cs">
+      <DependentUpon>frmSecretaryAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\frmDashboardAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,6 +180,18 @@
     </Compile>
     <Compile Include="DoctorAppointment\frmDoctorAppointment.Designer.cs">
       <DependentUpon>frmDoctorAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmEditPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmEditPayment.Designer.cs">
+      <DependentUpon>frmEditPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payments\frmPaymentForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmPaymentForm.Designer.cs">
+      <DependentUpon>frmPaymentForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Misc\frmModalBackground.cs">
       <SubType>Form</SubType>
@@ -205,6 +229,12 @@
     <Compile Include="Patient\frmPatientEdit.Designer.cs">
       <DependentUpon>frmPatientEdit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payments\frmPatientPayments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payments\frmPatientPayments.Designer.cs">
+      <DependentUpon>frmPatientPayments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Prescription\frmPrescription.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -240,12 +270,6 @@
     </Compile>
     <Compile Include="Prescription\frmPrescriptionModify.Designer.cs">
       <DependentUpon>frmPrescriptionModify.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Test.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <DependentUpon>Test.cs</DependentUpon>
     </Compile>
     <Compile Include="User\frmAddAdmin.cs">
       <SubType>Form</SubType>
@@ -334,6 +358,12 @@
     <Compile Include="GlobalProdecure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Appointment\frmAddAppointment.resx">
+      <DependentUpon>frmAddAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment\frmSecretaryAppointment.resx">
+      <DependentUpon>frmSecretaryAppointment.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDashboardAppointment.resx">
       <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
     </EmbeddedResource>
@@ -351,6 +381,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DoctorAppointment\frmDoctorAppointment.resx">
       <DependentUpon>frmDoctorAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmEditPayment.resx">
+      <DependentUpon>frmEditPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmPaymentForm.resx">
+      <DependentUpon>frmPaymentForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Misc\frmModalBackground.resx">
       <DependentUpon>frmModalBackground.cs</DependentUpon>
@@ -370,6 +406,9 @@
     <EmbeddedResource Include="Patient\frmPatientEdit.resx">
       <DependentUpon>frmPatientEdit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payments\frmPatientPayments.resx">
+      <DependentUpon>frmPatientPayments.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prescription\frmPrescription.resx">
       <DependentUpon>frmPrescription.cs</DependentUpon>
     </EmbeddedResource>
@@ -387,9 +426,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prescription\frmPrescriptionModify.resx">
       <DependentUpon>frmPrescriptionModify.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Test.resx">
-      <DependentUpon>Test.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="User\frmAddAdmin.resx">
       <DependentUpon>frmAddAdmin.cs</DependentUpon>
@@ -540,6 +576,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icn_print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewFolder2\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
