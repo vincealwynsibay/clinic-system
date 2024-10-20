@@ -225,7 +225,7 @@ namespace ClinicSystem.Patient
             }
             else if (e.ColumnIndex == grdBillings.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                g_proc.displayFormAsModal(mainForm, new frmEditPayment(mainForm, (int)grdBillings.Rows[e.RowIndex].Cells["id"].Value)));
+                g_proc.displayFormAsModal(mainForm, new frmEditPayment(mainForm, (int)grdBillings.Rows[e.RowIndex].Cells["id"].Value));
                 string fullName = grdBillings.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
             }
         }

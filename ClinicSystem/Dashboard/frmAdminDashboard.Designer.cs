@@ -30,6 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAdminDashboard));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.pnlSecretary = new Bunifu.UI.WinForms.BunifuPanel();
             this.lblSecretaryCount = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblSecretary = new Bunifu.UI.WinForms.BunifuLabel();
@@ -41,9 +44,11 @@
             this.lblDoctor = new Bunifu.UI.WinForms.BunifuLabel();
             this.lblReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
+            this.chartMonthlyProfits = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pnlSecretary.SuspendLayout();
             this.pnlPatients.SuspendLayout();
             this.pnlDoctors.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMonthlyProfits)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlSecretary
@@ -240,12 +245,29 @@
             this.guna2BorderlessForm1.ResizeForm = false;
             this.guna2BorderlessForm1.TransparentWhileDrag = true;
             // 
+            // chartMonthlyProfits
+            // 
+            chartArea1.Name = "ChartArea1";
+            this.chartMonthlyProfits.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.chartMonthlyProfits.Legends.Add(legend1);
+            this.chartMonthlyProfits.Location = new System.Drawing.Point(30, 362);
+            this.chartMonthlyProfits.Name = "chartMonthlyProfits";
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartMonthlyProfits.Series.Add(series1);
+            this.chartMonthlyProfits.Size = new System.Drawing.Size(1045, 340);
+            this.chartMonthlyProfits.TabIndex = 152;
+            this.chartMonthlyProfits.Text = "chart1";
+            // 
             // frmAdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1105, 810);
+            this.Controls.Add(this.chartMonthlyProfits);
             this.Controls.Add(this.pnlSecretary);
             this.Controls.Add(this.pnlPatients);
             this.Controls.Add(this.pnlDoctors);
@@ -260,6 +282,7 @@
             this.pnlPatients.PerformLayout();
             this.pnlDoctors.ResumeLayout(false);
             this.pnlDoctors.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chartMonthlyProfits)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,5 +301,6 @@
         private Bunifu.UI.WinForms.BunifuLabel lblDoctor;
         private Bunifu.UI.WinForms.BunifuLabel lblReport;
         private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chartMonthlyProfits;
     }
 }

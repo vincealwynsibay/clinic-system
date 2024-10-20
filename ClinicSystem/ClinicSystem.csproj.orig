@@ -133,9 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoctorAppointment\frmDashboardAppointment.cs">
-      <SubType>Form</SubType>
-    </Compile>
+<<<<<<< HEAD
     <Compile Include="Appointment\frmAddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +145,12 @@
     </Compile>
     <Compile Include="Appointment\frmSecretaryAppointment.Designer.cs">
       <DependentUpon>frmSecretaryAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmDashboardAppointment.cs">
+=======
+    <Compile Include="DoctorAppointment\frmDashboardAppointment.cs">
+>>>>>>> 9e264118bfa72e0a8b4b58c21fadbe86dc989227
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="DoctorAppointment\frmDashboardAppointment.Designer.cs">
       <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
@@ -358,11 +362,18 @@
     <Compile Include="GlobalProdecure.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <EmbeddedResource Include="Appointment\frmAddAppointment.resx">
       <DependentUpon>frmAddAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointment\frmSecretaryAppointment.resx">
       <DependentUpon>frmSecretaryAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmDashboardAppointment.resx">
+=======
+    <EmbeddedResource Include="DoctorAppointment\frmDashboardAppointment.resx">
+>>>>>>> 9e264118bfa72e0a8b4b58c21fadbe86dc989227
+      <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDoctorDashboard.resx">
       <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
