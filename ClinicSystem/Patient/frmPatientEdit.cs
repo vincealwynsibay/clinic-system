@@ -61,7 +61,17 @@ namespace ClinicSystem
                 txtEmail.Text = row["email"].ToString();
                 txtMobileNo.Text = row["mobileno"].ToString();
                 txtEmergency.Text = row["emergencyno"].ToString();
-                txtMarital.Text = row["maritalstatus"].ToString();
+                switch (row["maritalstatus"].ToString())
+                {
+                    case "Single":
+                        cboMarital.SelectedIndex = 0; break;
+                    case "Married":
+                        cboMarital.SelectedIndex = 1; break;
+                    case "Divorced":
+                        cboMarital.SelectedIndex = 2; break;
+                    case "Widow":
+                        cboMarital.SelectedIndex = 3; break;
+                }
 
                 originalEmail = row["email"].ToString();
                 originalMobileNo = row["mobileno"].ToString();
@@ -121,7 +131,7 @@ namespace ClinicSystem
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_gender", func_GetSelectedGender());
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_mobile", txtMobileNo.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_email", txtEmail.Text);
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_marital", txtMarital.Text);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_marital", cboMarital.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_emergency", txtEmergency.Text);
 
                 g_proc.sqlCommand.ExecuteNonQuery();
@@ -142,7 +152,7 @@ namespace ClinicSystem
             return txtEmail.Text != originalEmail ||
                    txtMobileNo.Text != originalMobileNo ||
                    txtEmergency.Text != originalEmergencyNo ||
-                   txtMarital.Text != originalMaritalStatus;
+                   cboMarital.Text != originalMaritalStatus;
         }
 
 
@@ -151,13 +161,13 @@ namespace ClinicSystem
             txtEmail.KeyDown += Control_KeyDown;
             txtMobileNo.KeyDown += Control_KeyDown;
             txtEmergency.KeyDown += Control_KeyDown;
-            txtMarital.KeyDown += Control_KeyDown;
+            cboMarital.KeyDown += Control_KeyDown;
             btnSaveEditPatient.KeyDown += Control_KeyDown;
 
             txtEmail.TabIndex = 0;
             txtMobileNo.TabIndex = 1;
             txtEmergency.TabIndex = 2;
-            txtMarital.TabIndex = 3;
+            cboMarital.TabIndex = 3;
             btnSaveEditPatient.TabIndex = 4;
         }
 
@@ -175,9 +185,9 @@ namespace ClinicSystem
                 }
                 else if (sender == txtEmergency)
                 {
-                    txtMarital.Focus();
+                    cboMarital.Focus();
                 }
-                else if (sender == txtMarital)
+                else if (sender == cboMarital)
                 {
                     btnSaveEditPatient.Focus();
                 }
@@ -187,9 +197,9 @@ namespace ClinicSystem
             {
                 if (sender == btnSaveEditPatient)
                 {
-                    txtMarital.Focus();
+                    cboMarital.Focus();
                 }
-                else if (sender == txtMarital)
+                else if (sender == cboMarital)
                 {
                     txtEmergency.Focus();
                 }

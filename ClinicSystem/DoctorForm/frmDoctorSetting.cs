@@ -27,6 +27,7 @@ namespace ClinicSystem
         private string originalMobileNo;
         private string originalAddress;
         private string originalConsultationAmount;
+        private string originalProfile;
 
         public frmDoctorSetting(frmDoctorMain mainForm, int key_index)
         {
@@ -61,14 +62,24 @@ namespace ClinicSystem
                 txtEmail.Text = row["email"].ToString();
                 txtMobileNo.Text = row["mobileno"].ToString();
                 txtAddress.Text = row["address"].ToString();
-                txtConsultation.Text = row["amount"].ToString(); // tbldoctorconsultationfee
+                txtConsultation.Text = row["amount"].ToString();
 
-                //picProfile.Image = Image.FromFile("photo"); not working
+                using (var reader = g_proc.sqlCommand.ExecuteReader())
+                {
+                    if (reader.Read())
+                    {
+                        if (reader["photo"] != DBNull.Value && reader["photo"].ToString() != "")
+                        {
+                            picProfile.Image = new Bitmap(reader.GetString("photo"));
+                        }
+                    }
+                }
 
                 originalEmail = row["email"].ToString();
                 originalMobileNo = row["mobileno"].ToString();
                 originalAddress = row["address"].ToString();
                 originalConsultationAmount = row["amount"].ToString();
+                originalProfile = row["photo"].ToString();
             }
             catch (Exception ex)
             {
@@ -104,16 +115,13 @@ namespace ClinicSystem
 
         private void picProfile_Click(object sender, EventArgs e)
         {
-            filedialogueProfilePic.InitialDirectory = "c:\\";
-            filedialogueProfilePic.Filter = "Image files (*.png;*.jpg;*.jpeg)|*.png;*.jpg;*.jpeg";
-            filedialogueProfilePic.FilterIndex = 2;
-            filedialogueProfilePic.RestoreDirectory = true;
-
-            if (filedialogueProfilePic.ShowDialog() == DialogResult.OK)
+            OpenFileDialog fileDialogProfilePic = new OpenFileDialog();
+            fileDialogProfilePic.Filter = "Image Files(*.jpeg;*.bmp;*.png;*.jpg)|*.jpeg;*.bmp;*.png;*.jpg"; ;
+            if (fileDialogProfilePic.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                picProfile.Image = new Bitmap(filedialogueProfilePic.FileName);
-                picProfile.Image = new Bitmap(filedialogueProfilePic.FileName);
-                imgProfile = filedialogueProfilePic.FileName;
+                picProfile.BackgroundImage = new Bitmap(fileDialogProfilePic.FileName);
+                picProfile.Image = new Bitmap(fileDialogProfilePic.FileName);
+                imgProfile = fileDialogProfilePic.FileName;
             }
         }
 
@@ -170,6 +178,7 @@ namespace ClinicSystem
             return txtEmail.Text != originalEmail ||
                    txtMobileNo.Text != originalMobileNo ||
                    txtAddress.Text != originalAddress ||
+                   imgProfile != originalProfile ||
                    txtConsultation.Text != originalConsultationAmount;
         }
     }

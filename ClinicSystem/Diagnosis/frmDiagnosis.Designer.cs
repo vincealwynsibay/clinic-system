@@ -66,7 +66,7 @@
             // lblDiagnosisData
             // 
             this.lblDiagnosisData.AllowParentOverrides = false;
-            this.lblDiagnosisData.AutoEllipsis = false;
+            this.lblDiagnosisData.AutoEllipsis = true;
             this.lblDiagnosisData.Cursor = System.Windows.Forms.Cursors.Default;
             this.lblDiagnosisData.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblDiagnosisData.Font = new System.Drawing.Font("IBM Plex Sans", 20.25F, System.Drawing.FontStyle.Bold);
@@ -121,17 +121,16 @@
             // lblCommentData
             // 
             this.lblCommentData.AllowParentOverrides = false;
-            this.lblCommentData.AutoEllipsis = false;
-            this.lblCommentData.AutoSize = false;
+            this.lblCommentData.AutoEllipsis = true;
             this.lblCommentData.CursorType = null;
             this.lblCommentData.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.lblCommentData.ForeColor = System.Drawing.Color.Black;
             this.lblCommentData.Location = new System.Drawing.Point(21, 103);
             this.lblCommentData.Name = "lblCommentData";
             this.lblCommentData.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblCommentData.Size = new System.Drawing.Size(474, 24);
+            this.lblCommentData.Size = new System.Drawing.Size(494, 21);
             this.lblCommentData.TabIndex = 99;
-            this.lblCommentData.Text = resources.GetString("lblCommentData.Text");
+            this.lblCommentData.Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non...";
             this.lblCommentData.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblCommentData.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 

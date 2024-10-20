@@ -111,8 +111,22 @@ namespace ClinicSystem.DoctorMain
             }
             else if (e.ColumnIndex == grdPatients.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {
+                DialogResult dialogConfirmDelete = MessageBox.Show("Are you sure you want to delete this patient data permanently?",
+                                                        "Patient Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (dialogConfirmDelete == DialogResult.No) { return; }
+
                 string fullName = grdPatients.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} deleted!");
+                g_proc.sqlCommand.Parameters.Clear();
+                g_proc.sqlCommand.CommandText = "procDeletePatient";
+                g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+                
+                g_proc.sqlCommand.Parameters.AddWithValue("@patientId", grdPatients.Rows[e.RowIndex].Cells[0].Value);
+                
+                g_proc.sqlCommand.ExecuteNonQuery();
+                g_proc.sqlClinicAdapter.Dispose();
+                g_proc.datPatients.Dispose();
+                func_Search(txtSearch.Text);
+                MessageBox.Show($"Patient {fullName}, has been deleted!");
             }
         }
 

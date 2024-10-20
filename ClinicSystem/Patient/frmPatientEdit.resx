@@ -127,18 +127,6 @@
     <value>#bunifu-label { padding: 0px; font-family: 'IBM Plex Sans'; font-size: 9pt; width: 100%; height: 100%; font-style: normal; font-weight: normal; text-decoration: none; color: rgb(0, 0, 0); text-align: left; }</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="txtMarital.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFoSURBVHhe7d2/TcNAFMBhl5SMQ0nJIpQMQMccLMAWtIyA
-        REEkgi92QHGCUAIhf8iRkxA8iQHw90mviC7t/WS7eRXAn4bD5iil9jql5unxcbQ1xvzvyXc93/mHh3RS
-        MvBTXY/Om2bczeeL7Wq12gL/X77r+c6Px8/dLhBXJQd7w+HouG2fuvJfoIcmk25a181pyUJV7Upxs1i8
-        lWOgj5bL5bau2/uShfwa0czX63U5Bvoqf3coWaiq/ANAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBA
-        GIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIBAGIDgdxg+NptNOQL66kcYUmpu
-        39+X5Qjoo7z5Oq/FL1n4WoF/NplMX8o50EOz2ctHSu1lycJe3njddbNXy22hX/Kd30ehuRsMBgclCd92
-        Tw4XefN1fs8wxvRj8p3PTwq7KByWFAD8VlWfGSnF1Ns+umkAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="txtEmergency.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAQYAAAAlCAYAAACgekcQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8

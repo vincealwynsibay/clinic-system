@@ -139,7 +139,7 @@ namespace ClinicSystem.Prescription
 
                 g_proc.sqlCommand.ExecuteNonQuery();
 
-                MessageBox.Show("Record added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Modified successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {

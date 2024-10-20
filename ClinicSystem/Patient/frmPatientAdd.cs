@@ -40,7 +40,7 @@ namespace ClinicSystem.Patient
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_gender", func_GetSelectedGender());
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_mobile", txtMobileNo.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_email", txtEmail.Text);
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_maritalstatus", txtMarital.Text);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_maritalstatus", cboMarital.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_emergency", txtEmergency.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_diagnosis", txtDiagnosis.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_comment", txtComment.Text);

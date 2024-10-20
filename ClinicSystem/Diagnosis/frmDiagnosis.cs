@@ -96,11 +96,7 @@ namespace ClinicSystem
         {
             DialogResult dialogConfirmDelete = MessageBox.Show("Are you sure you want to delete this diagnosis permanently?",
                                                         "Confirm Deletion", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-
-            if (dialogConfirmDelete == DialogResult.No)
-            {
-                return;
-            }
+            if (dialogConfirmDelete == DialogResult.No) { return; }
 
             try
             {
@@ -123,6 +119,13 @@ namespace ClinicSystem
                 MessageBox.Show("Error: " + ex.Message);
             }
         }
+
+        private string GetTruncatedText(string v_text, int v_max)
+        {
+            if (v_text.Length > v_max) { return v_text.Substring(0, v_max) + "..."; }
+            return v_text;
+        }
+
 
         private void func_DynamicGroupBoxes(DataTable datDiagnosis)
         {
@@ -147,12 +150,13 @@ namespace ClinicSystem
 
                 // Create lblDiagnosisData
                 Bunifu.UI.WinForms.BunifuLabel lblDiagnosisData = new Bunifu.UI.WinForms.BunifuLabel();
-                lblDiagnosisData.Text = row["diagnosis"].ToString();
+                lblDiagnosisData.Text = GetTruncatedText(row["diagnosis"].ToString(), 14);
                 lblDiagnosisData.Font = new System.Drawing.Font("IBM Plex Sans", 20.25F, System.Drawing.FontStyle.Bold);
                 lblDiagnosisData.ForeColor = System.Drawing.Color.Black;
                 lblDiagnosisData.Location = new System.Drawing.Point(21, 12);
                 lblDiagnosisData.Size = new System.Drawing.Size(170, 37);
                 lblDiagnosisData.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
+                lblDiagnosisData.AutoEllipsis = true;
                 newGroupBox.Controls.Add(lblDiagnosisData);
 
                 // Create btnDelete
@@ -196,12 +200,13 @@ namespace ClinicSystem
 
                 // Create lblCommentData
                 Bunifu.UI.WinForms.BunifuLabel lblCommentData = new Bunifu.UI.WinForms.BunifuLabel();
-                lblCommentData.Text = row["comment"].ToString();
                 lblCommentData.Font = new System.Drawing.Font("Segoe UI", 12F);
                 lblCommentData.ForeColor = System.Drawing.Color.Black;
                 lblCommentData.Location = new System.Drawing.Point(21, 103);
-                lblCommentData.Size = new System.Drawing.Size(474, 24);
+                lblCommentData.Size = new System.Drawing.Size(494, 21);
+                lblCommentData.Text = GetTruncatedText(row["comment"].ToString(),36);
                 newGroupBox.Controls.Add(lblCommentData);
+
 
                 // Create lblDiagnosisDate
                 Bunifu.UI.WinForms.BunifuLabel lblDiagnosisDate = new Bunifu.UI.WinForms.BunifuLabel();

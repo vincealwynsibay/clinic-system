@@ -133,6 +133,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DoctorAppointment\frmDashboardAppointment.cs">
     <Compile Include="Appointment\frmAddAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,7 +149,7 @@
     <Compile Include="Dashboard\frmDashboardAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Dashboard\frmDashboardAppointment.Designer.cs">
+    <Compile Include="DoctorAppointment\frmDashboardAppointment.Designer.cs">
       <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
     </Compile>
     <Compile Include="Dashboard\frmDoctorDashboard.cs">
