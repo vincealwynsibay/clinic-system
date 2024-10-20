@@ -90,8 +90,6 @@ namespace ClinicSystem.DoctorForm
             {
                 MessageBox.Show(ex.ToString());
             }
-            this.Close();
-            this.Dispose();
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
