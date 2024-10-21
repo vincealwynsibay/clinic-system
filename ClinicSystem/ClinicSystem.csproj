@@ -588,5 +588,9 @@
   <ItemGroup>
     <Folder Include="NewFolder2\" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\medicLogo.ico" />
+    <Content Include="Resources\medicLogo.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
