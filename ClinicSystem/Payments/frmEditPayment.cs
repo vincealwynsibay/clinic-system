@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -25,27 +26,27 @@ namespace ClinicSystem
         private void frmEditPayment_Load(object sender, EventArgs e)
         {
             g_proc.fncConnectToDatabase();
+            func_LoadBilling();
         }
 
         private void func_LoadBilling()
         {
-            // fetch billing details (procGetPatientBillByID)
-            // load existing amount to txtAmount
-            // load existing status to cmbStatus
-
             try
             {
+
+                g_proc.sqlClinicAdapter = new MySqlDataAdapter();
+                g_proc.datDoctors = new DataTable();
+                
                 g_proc.sqlCommand.Parameters.Clear();
                 g_proc.sqlCommand.CommandText = "procGetPatientBillByID";
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_billing_id", billing_id);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", billing_id);
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
-
                 g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
                 g_proc.datDoctors.Clear();
                 g_proc.sqlClinicAdapter.Fill(g_proc.datDoctors);
 
                 DataRow row = g_proc.datDoctors.Rows[0];
-                txtAmount.Text = row["amount"].ToString();
+                txtAmount.Text = row["amountpaid"].ToString();
                 cmbStatus.Text = row["status"].ToString();
             }
             catch (Exception ex)
@@ -64,7 +65,7 @@ namespace ClinicSystem
                 g_proc.sqlCommand.CommandText = "procUpdatePatientBillByID";
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
 
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_billing_id", billing_id);
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_id", billing_id);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_amount", txtAmount.Text);
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_status", cmbStatus.Text);
 
@@ -79,6 +80,12 @@ namespace ClinicSystem
             {
                 MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            this.Dispose();
         }
     }
 }
