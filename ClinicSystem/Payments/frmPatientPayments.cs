@@ -221,6 +221,7 @@ namespace ClinicSystem.Patient
             if (e.ColumnIndex == grdBillings.Columns["btnPay"].Index && e.RowIndex >= 0)
             {
                 g_proc.displayFormAsModal(mainForm, new frmPaymentForm(mainForm, Int32.Parse(grdBillings.Rows[e.RowIndex].Cells["id"].Value.ToString())));
+                func_LoadTable();
             }
             else if (e.ColumnIndex == grdBillings.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
