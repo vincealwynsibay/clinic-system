@@ -23,7 +23,7 @@ namespace ClinicSystem
             InitializeComponent();
             this.key_index = key_index;
             g_proc.fncConnectToDatabase();
-
+            btnDashboard.PerformClick();
             func_LoadDoctor();
         }
 

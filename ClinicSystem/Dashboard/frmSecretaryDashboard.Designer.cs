@@ -88,7 +88,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnAdd.Location = new System.Drawing.Point(885, 27);
+            this.btnAdd.Location = new System.Drawing.Point(756, 27);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(311, 60);
@@ -113,7 +113,7 @@
             this.pnlAppointment.Name = "pnlAppointment";
             this.pnlAppointment.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.pnlAppointment.ShowBorders = true;
-            this.pnlAppointment.Size = new System.Drawing.Size(356, 209);
+            this.pnlAppointment.Size = new System.Drawing.Size(321, 196);
             this.pnlAppointment.TabIndex = 141;
             // 
             // lblAppointmentPercent
@@ -200,12 +200,12 @@
             this.pnlEarning.Controls.Add(this.bunifuLabel2);
             this.pnlEarning.Controls.Add(this.lblEarningsCount);
             this.pnlEarning.Controls.Add(this.lblEarnings);
-            this.pnlEarning.Location = new System.Drawing.Point(840, 149);
+            this.pnlEarning.Location = new System.Drawing.Point(740, 149);
             this.pnlEarning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEarning.Name = "pnlEarning";
             this.pnlEarning.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.pnlEarning.ShowBorders = true;
-            this.pnlEarning.Size = new System.Drawing.Size(356, 209);
+            this.pnlEarning.Size = new System.Drawing.Size(321, 209);
             this.pnlEarning.TabIndex = 146;
             // 
             // lblEarningPercent
@@ -292,12 +292,12 @@
             this.pnlPatient.Controls.Add(this.bunifuLabel6);
             this.pnlPatient.Controls.Add(this.lblPatientCount);
             this.pnlPatient.Controls.Add(this.lblPatient);
-            this.pnlPatient.Location = new System.Drawing.Point(437, 149);
+            this.pnlPatient.Location = new System.Drawing.Point(392, 149);
             this.pnlPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPatient.Name = "pnlPatient";
             this.pnlPatient.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.pnlPatient.ShowBorders = true;
-            this.pnlPatient.Size = new System.Drawing.Size(356, 209);
+            this.pnlPatient.Size = new System.Drawing.Size(321, 209);
             this.pnlPatient.TabIndex = 147;
             // 
             // lblPatientPercent
@@ -431,7 +431,7 @@
             this.grdAppointment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdAppointment.RowTemplate.Height = 40;
             this.grdAppointment.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.Size = new System.Drawing.Size(1159, 364);
+            this.grdAppointment.Size = new System.Drawing.Size(1030, 261);
             this.grdAppointment.TabIndex = 151;
             this.grdAppointment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdAppointment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -501,7 +501,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1249, 903);
+            this.ClientSize = new System.Drawing.Size(1105, 810);
             this.Controls.Add(this.grdAppointment);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.pnlPatient);

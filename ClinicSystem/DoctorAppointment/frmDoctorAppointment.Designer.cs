@@ -58,11 +58,11 @@
             this.lblReport.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblReport.Font = new System.Drawing.Font("IBM Plex Sans", 24F, System.Drawing.FontStyle.Bold);
             this.lblReport.ForeColor = System.Drawing.Color.Black;
-            this.lblReport.Location = new System.Drawing.Point(28, 22);
-            this.lblReport.Margin = new System.Windows.Forms.Padding(2);
+            this.lblReport.Location = new System.Drawing.Point(37, 27);
+            this.lblReport.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblReport.Name = "lblReport";
             this.lblReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblReport.Size = new System.Drawing.Size(212, 43);
+            this.lblReport.Size = new System.Drawing.Size(265, 53);
             this.lblReport.TabIndex = 39;
             this.lblReport.Text = "Appointments";
             this.lblReport.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -76,10 +76,10 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.btnAdd.Location = new System.Drawing.Point(641, 22);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(710, 27);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(256, 49);
+            this.btnAdd.Size = new System.Drawing.Size(341, 60);
             this.btnAdd.TabIndex = 140;
             this.btnAdd.Text = "Add New Appointment";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -118,8 +118,8 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdAppointment.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdAppointment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.grdAppointment.Location = new System.Drawing.Point(28, 287);
-            this.grdAppointment.Margin = new System.Windows.Forms.Padding(2);
+            this.grdAppointment.Location = new System.Drawing.Point(37, 353);
+            this.grdAppointment.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdAppointment.Name = "grdAppointment";
             this.grdAppointment.ReadOnly = true;
             this.grdAppointment.RowHeadersVisible = false;
@@ -127,7 +127,7 @@
             this.grdAppointment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdAppointment.RowTemplate.Height = 40;
             this.grdAppointment.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.Size = new System.Drawing.Size(869, 386);
+            this.grdAppointment.Size = new System.Drawing.Size(1014, 475);
             this.grdAppointment.TabIndex = 149;
             this.grdAppointment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdAppointment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -172,6 +172,7 @@
             // 
             this.mobileno.FillWeight = 74.18671F;
             this.mobileno.HeaderText = "Phone Number";
+            this.mobileno.MinimumWidth = 6;
             this.mobileno.Name = "mobileno";
             this.mobileno.ReadOnly = true;
             // 
@@ -179,6 +180,7 @@
             // 
             this.gender.FillWeight = 74.18671F;
             this.gender.HeaderText = "Email";
+            this.gender.MinimumWidth = 6;
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 
@@ -186,6 +188,7 @@
             // 
             this.btnEdit.FillWeight = 25F;
             this.btnEdit.HeaderText = "";
+            this.btnEdit.MinimumWidth = 6;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ReadOnly = true;
             this.btnEdit.Visible = false;
@@ -194,6 +197,7 @@
             // 
             this.btnDelete.FillWeight = 25F;
             this.btnDelete.HeaderText = "";
+            this.btnDelete.MinimumWidth = 6;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
             this.btnDelete.Visible = false;
@@ -202,6 +206,7 @@
             // 
             this.btnApprove.FillWeight = 74.18671F;
             this.btnApprove.HeaderText = "";
+            this.btnApprove.MinimumWidth = 6;
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.ReadOnly = true;
             // 
@@ -222,12 +227,13 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = global::ClinicSystem.Properties.Resources.icnSearch;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSearch.Location = new System.Drawing.Point(28, 112);
+            this.txtSearch.Location = new System.Drawing.Point(37, 138);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search Appoinments";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(308, 36);
+            this.txtSearch.Size = new System.Drawing.Size(411, 44);
             this.txtSearch.TabIndex = 150;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -243,9 +249,10 @@
             this.btnFilterApprove.FillColor = System.Drawing.Color.White;
             this.btnFilterApprove.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnFilterApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnFilterApprove.Location = new System.Drawing.Point(28, 186);
+            this.btnFilterApprove.Location = new System.Drawing.Point(37, 229);
+            this.btnFilterApprove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnFilterApprove.Name = "btnFilterApprove";
-            this.btnFilterApprove.Size = new System.Drawing.Size(109, 33);
+            this.btnFilterApprove.Size = new System.Drawing.Size(145, 41);
             this.btnFilterApprove.TabIndex = 151;
             this.btnFilterApprove.Text = "Approved";
             this.btnFilterApprove.Click += new System.EventHandler(this.btnFilterApprove_Click);
@@ -262,9 +269,10 @@
             this.btnPending.FillColor = System.Drawing.Color.White;
             this.btnPending.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnPending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnPending.Location = new System.Drawing.Point(152, 186);
+            this.btnPending.Location = new System.Drawing.Point(203, 229);
+            this.btnPending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnPending.Name = "btnPending";
-            this.btnPending.Size = new System.Drawing.Size(109, 33);
+            this.btnPending.Size = new System.Drawing.Size(145, 41);
             this.btnPending.TabIndex = 151;
             this.btnPending.Text = "Pending";
             this.btnPending.Click += new System.EventHandler(this.btnPending_Click);
@@ -281,9 +289,10 @@
             this.btnCancelled.FillColor = System.Drawing.Color.White;
             this.btnCancelled.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnCancelled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnCancelled.Location = new System.Drawing.Point(275, 186);
+            this.btnCancelled.Location = new System.Drawing.Point(367, 229);
+            this.btnCancelled.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnCancelled.Name = "btnCancelled";
-            this.btnCancelled.Size = new System.Drawing.Size(109, 33);
+            this.btnCancelled.Size = new System.Drawing.Size(145, 41);
             this.btnCancelled.TabIndex = 151;
             this.btnCancelled.Text = "Cancelled";
             this.btnCancelled.Click += new System.EventHandler(this.btnCancelled_Click);
@@ -307,11 +316,12 @@
             "This Week",
             "This Month",
             "This Year"});
-            this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("IBM Plex Sans Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(753, 170);
+            this.cboFilter.Location = new System.Drawing.Point(895, 205);
+            this.cboFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboFilter.Name = "cboFilter";
-            this.cboFilter.Size = new System.Drawing.Size(118, 36);
+            this.cboFilter.Size = new System.Drawing.Size(156, 36);
             this.cboFilter.StartIndex = 1;
             this.cboFilter.TabIndex = 152;
             this.cboFilter.TextOffset = new System.Drawing.Point(10, 2);
@@ -319,11 +329,11 @@
             // 
             // frmDoctorAppointment
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(937, 734);
+            this.ClientSize = new System.Drawing.Size(1105, 810);
             this.Controls.Add(this.cboFilter);
             this.Controls.Add(this.btnCancelled);
             this.Controls.Add(this.btnPending);
@@ -333,7 +343,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "frmDoctorAppointment";
             this.Text = "frmDoctorDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.grdAppointment)).EndInit();

@@ -68,11 +68,12 @@
             "This Week",
             "This Month",
             "This Year"});
-            this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("IBM Plex Sans Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(761, 125);
+            this.cboFilter.Location = new System.Drawing.Point(915, 154);
+            this.cboFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cboFilter.Name = "cboFilter";
-            this.cboFilter.Size = new System.Drawing.Size(115, 36);
+            this.cboFilter.Size = new System.Drawing.Size(152, 36);
             this.cboFilter.StartIndex = 0;
             this.cboFilter.TabIndex = 9;
             this.cboFilter.TextOffset = new System.Drawing.Point(10, 2);
@@ -86,10 +87,11 @@
             this.lblFilter.CursorType = null;
             this.lblFilter.Font = new System.Drawing.Font("IBM Plex Sans SemiBold", 12F, System.Drawing.FontStyle.Bold);
             this.lblFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(55)))), ((int)(((byte)(75)))));
-            this.lblFilter.Location = new System.Drawing.Point(671, 133);
+            this.lblFilter.Location = new System.Drawing.Point(795, 164);
+            this.lblFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.lblFilter.Name = "lblFilter";
             this.lblFilter.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblFilter.Size = new System.Drawing.Size(83, 20);
+            this.lblFilter.Size = new System.Drawing.Size(104, 27);
             this.lblFilter.TabIndex = 10;
             this.lblFilter.Text = "Filter Date:";
             this.lblFilter.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
@@ -104,11 +106,11 @@
             this.lblPatient.CursorType = System.Windows.Forms.Cursors.Default;
             this.lblPatient.Font = new System.Drawing.Font("IBM Plex Sans", 24F, System.Drawing.FontStyle.Bold);
             this.lblPatient.ForeColor = System.Drawing.Color.Black;
-            this.lblPatient.Location = new System.Drawing.Point(28, 22);
-            this.lblPatient.Margin = new System.Windows.Forms.Padding(2);
+            this.lblPatient.Location = new System.Drawing.Point(37, 27);
+            this.lblPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblPatient.Name = "lblPatient";
             this.lblPatient.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblPatient.Size = new System.Drawing.Size(125, 43);
+            this.lblPatient.Size = new System.Drawing.Size(156, 53);
             this.lblPatient.TabIndex = 96;
             this.lblPatient.Text = "Patients";
             this.lblPatient.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -122,10 +124,10 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.btnAdd.Location = new System.Drawing.Point(641, 22);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(726, 27);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(256, 49);
+            this.btnAdd.Size = new System.Drawing.Size(341, 60);
             this.btnAdd.TabIndex = 141;
             this.btnAdd.Text = "Add New Patient";
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
@@ -147,12 +149,13 @@
             this.txtSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.txtSearch.IconLeft = global::ClinicSystem.Properties.Resources.icnSearch;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
-            this.txtSearch.Location = new System.Drawing.Point(28, 125);
+            this.txtSearch.Location = new System.Drawing.Point(37, 154);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search Patient";
             this.txtSearch.SelectedText = "";
-            this.txtSearch.Size = new System.Drawing.Size(299, 36);
+            this.txtSearch.Size = new System.Drawing.Size(399, 44);
             this.txtSearch.TabIndex = 151;
             this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
             // 
@@ -172,7 +175,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdPatients.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.grdPatients.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.grdPatients.ColumnHeadersHeight = 24;
             this.grdPatients.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.fullname,
@@ -191,24 +194,29 @@
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.grdPatients.DefaultCellStyle = dataGridViewCellStyle3;
             this.grdPatients.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            this.grdPatients.Location = new System.Drawing.Point(28, 180);
-            this.grdPatients.Margin = new System.Windows.Forms.Padding(2);
+            this.grdPatients.Location = new System.Drawing.Point(37, 222);
+            this.grdPatients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.grdPatients.Name = "grdPatients";
             this.grdPatients.ReadOnly = true;
             this.grdPatients.RowHeadersVisible = false;
             this.grdPatients.RowHeadersWidth = 51;
             this.grdPatients.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdPatients.RowTemplate.Height = 40;
-            this.grdPatients.Size = new System.Drawing.Size(869, 520);
+            this.grdPatients.Size = new System.Drawing.Size(1030, 640);
             this.grdPatients.TabIndex = 152;
             this.grdPatients.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdPatients.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.grdPatients.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.grdPatients.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.grdPatients.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            this.grdPatients.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Black;
             this.grdPatients.ThemeStyle.BackColor = System.Drawing.Color.White;
             this.grdPatients.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.grdPatients.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.White;
             this.grdPatients.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.grdPatients.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("IBM Plex Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdPatients.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.Black;
+            this.grdPatients.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.grdPatients.ThemeStyle.HeaderStyle.Height = 24;
             this.grdPatients.ThemeStyle.ReadOnly = true;
             this.grdPatients.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
@@ -244,18 +252,21 @@
             // gender
             // 
             this.gender.HeaderText = "Gender";
+            this.gender.MinimumWidth = 6;
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 
             // mobileno
             // 
             this.mobileno.HeaderText = "Mobile No.";
+            this.mobileno.MinimumWidth = 6;
             this.mobileno.Name = "mobileno";
             this.mobileno.ReadOnly = true;
             // 
             // email
             // 
             this.email.HeaderText = "Email";
+            this.email.MinimumWidth = 6;
             this.email.Name = "email";
             this.email.ReadOnly = true;
             // 
@@ -263,6 +274,7 @@
             // 
             this.btnEdit.FillWeight = 25F;
             this.btnEdit.HeaderText = "";
+            this.btnEdit.MinimumWidth = 6;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ReadOnly = true;
             // 
@@ -270,15 +282,16 @@
             // 
             this.btnDelete.FillWeight = 25F;
             this.btnDelete.HeaderText = "";
+            this.btnDelete.MinimumWidth = 6;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
             // 
             // frmPatients
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(937, 734);
+            this.ClientSize = new System.Drawing.Size(1105, 810);
             this.Controls.Add(this.grdPatients);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.btnAdd);
@@ -287,6 +300,7 @@
             this.Controls.Add(this.cboFilter);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmPatients";
             this.Text = "frmPatients";
             ((System.ComponentModel.ISupportInitialize)(this.grdPatients)).EndInit();

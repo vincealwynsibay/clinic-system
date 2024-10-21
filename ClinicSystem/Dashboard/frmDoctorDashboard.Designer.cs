@@ -79,8 +79,8 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnAdd.Location = new System.Drawing.Point(885, 27);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAdd.Location = new System.Drawing.Point(751, 27);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(4);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(311, 60);
             this.btnAdd.TabIndex = 140;
@@ -104,7 +104,7 @@
             this.pnlAppointment.Name = "pnlAppointment";
             this.pnlAppointment.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.pnlAppointment.ShowBorders = true;
-            this.pnlAppointment.Size = new System.Drawing.Size(356, 209);
+            this.pnlAppointment.Size = new System.Drawing.Size(321, 196);
             this.pnlAppointment.TabIndex = 141;
             // 
             // lblAppointmentPercent
@@ -191,12 +191,12 @@
             this.pnlEarning.Controls.Add(this.bunifuLabel2);
             this.pnlEarning.Controls.Add(this.lblEarningsCount);
             this.pnlEarning.Controls.Add(this.lblEarnings);
-            this.pnlEarning.Location = new System.Drawing.Point(840, 149);
+            this.pnlEarning.Location = new System.Drawing.Point(741, 149);
             this.pnlEarning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlEarning.Name = "pnlEarning";
             this.pnlEarning.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.pnlEarning.ShowBorders = true;
-            this.pnlEarning.Size = new System.Drawing.Size(356, 209);
+            this.pnlEarning.Size = new System.Drawing.Size(321, 209);
             this.pnlEarning.TabIndex = 146;
             // 
             // lblEarningPercent
@@ -247,7 +247,7 @@
             this.lblEarningsCount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.lblEarningsCount.Name = "lblEarningsCount";
             this.lblEarningsCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblEarningsCount.Size = new System.Drawing.Size(93, 60);
+            this.lblEarningsCount.Size = new System.Drawing.Size(32, 60);
             this.lblEarningsCount.TabIndex = 144;
             this.lblEarningsCount.Text = "₱";
             this.lblEarningsCount.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -283,12 +283,12 @@
             this.pnlPatient.Controls.Add(this.bunifuLabel6);
             this.pnlPatient.Controls.Add(this.lblPatientCount);
             this.pnlPatient.Controls.Add(this.lblPatient);
-            this.pnlPatient.Location = new System.Drawing.Point(437, 149);
+            this.pnlPatient.Location = new System.Drawing.Point(389, 149);
             this.pnlPatient.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pnlPatient.Name = "pnlPatient";
             this.pnlPatient.Padding = new System.Windows.Forms.Padding(11, 10, 11, 10);
             this.pnlPatient.ShowBorders = true;
-            this.pnlPatient.Size = new System.Drawing.Size(356, 209);
+            this.pnlPatient.Size = new System.Drawing.Size(321, 209);
             this.pnlPatient.TabIndex = 147;
             // 
             // lblPatientPercent
@@ -390,10 +390,10 @@
             this.pnlAppointmentTable.BorderRadius = 3;
             this.pnlAppointmentTable.BorderThickness = 1;
             this.pnlAppointmentTable.Location = new System.Drawing.Point(37, 475);
-            this.pnlAppointmentTable.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pnlAppointmentTable.Margin = new System.Windows.Forms.Padding(4);
             this.pnlAppointmentTable.Name = "pnlAppointmentTable";
             this.pnlAppointmentTable.ShowBorders = false;
-            this.pnlAppointmentTable.Size = new System.Drawing.Size(1159, 364);
+            this.pnlAppointmentTable.Size = new System.Drawing.Size(1025, 364);
             this.pnlAppointmentTable.TabIndex = 150;
             this.pnlAppointmentTable.Click += new System.EventHandler(this.pnlAppointmentTable_Click);
             // 
@@ -402,7 +402,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1249, 903);
+            this.ClientSize = new System.Drawing.Size(1105, 810);
             this.Controls.Add(this.pnlAppointmentTable);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.pnlPatient);

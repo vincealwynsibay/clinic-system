@@ -29,11 +29,11 @@ namespace ClinicSystem
         private string originalConsultationAmount;
         private string originalProfile;
 
-        public frmDoctorSetting(frmDoctorMain mainForm, int key_index)
+        public frmDoctorSetting(frmDoctorMain mainForm, int doctor_id)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
+            this.key_index = doctor_id;
             g_proc.fncConnectToDatabase();
             func_LoadDoctorData();
         }
@@ -83,7 +83,7 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error:1" + ex.Message);
             }
             g_proc.sqlClinicAdapter.Dispose();
             g_proc.datDoctors.Dispose();
@@ -169,7 +169,7 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -180,6 +180,11 @@ namespace ClinicSystem
                    txtAddress.Text != originalAddress ||
                    imgProfile != originalProfile ||
                    txtConsultation.Text != originalConsultationAmount;
+        }
+
+        private void frmDoctorSetting_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

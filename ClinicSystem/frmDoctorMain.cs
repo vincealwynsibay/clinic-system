@@ -43,14 +43,16 @@ namespace ClinicSystem
                 g_proc.sqlClinicAdapter.Fill(g_proc.datDoctors);
 
                 DataRow row = g_proc.datDoctors.Rows[0];
-                string name = (row["firstname"].ToString() + " " + (string.IsNullOrEmpty(row["middlename"].ToString()) ? "" : row["middlename"].ToString() + " ") + row["lastname"].ToString()) + ", PhD";
-                if (name.ToString().Length > 10)
-                {
-                    txtName.Text = "Dr. " + row["lastname"].ToString();
-                } else
-                {
-                    txtName.Text = "Dr. " + name;
-                }
+                //string name = (row["firstname"].ToString() + " " + (string.IsNullOrEmpty(row["middlename"].ToString()) ? "" : row["middlename"].ToString() + " ") + row["lastname"].ToString()) + ", PhD";
+                //if (name.ToString().Length > 10)
+                //{
+                //    txtName.Text = "Dr. " + row["lastname"].ToString();
+                //} else
+                //{
+                //    txtName.Text = "Dr. " + name;
+                //}
+
+                txtName.Text = (row["firstname"].ToString() + " " + (string.IsNullOrEmpty(row["middlename"].ToString()) ? "" : row["middlename"].ToString() + " ") + row["lastname"].ToString());
 
                 if (row["photo"] != DBNull.Value && row["photo"].ToString() != "")
                 {
@@ -59,7 +61,7 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error:1 " + ex.ToString());
             }
             g_proc.sqlClinicAdapter.Dispose();
             g_proc.datDoctors.Dispose();

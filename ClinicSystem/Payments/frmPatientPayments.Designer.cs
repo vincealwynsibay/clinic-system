@@ -33,12 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPatientPayments));
             this.grdBillings = new Guna.UI2.WinForms.Guna2DataGridView();
-            this.lblReport = new Bunifu.UI.WinForms.BunifuLabel();
-            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.btnPaid = new Guna.UI2.WinForms.Guna2Button();
-            this.btnAll = new Guna.UI2.WinForms.Guna2Button();
-            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.btnUnpaid = new Guna.UI2.WinForms.Guna2Button();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +41,12 @@
             this.status1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEdit = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPay = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblReport = new Bunifu.UI.WinForms.BunifuLabel();
+            this.cboFilter = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.btnPaid = new Guna.UI2.WinForms.Guna2Button();
+            this.btnAll = new Guna.UI2.WinForms.Guna2Button();
+            this.txtSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.btnUnpaid = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.grdBillings)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,7 +94,7 @@
             this.grdBillings.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdBillings.RowTemplate.Height = 40;
             this.grdBillings.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdBillings.Size = new System.Drawing.Size(1159, 475);
+            this.grdBillings.Size = new System.Drawing.Size(999, 475);
             this.grdBillings.TabIndex = 163;
             this.grdBillings.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdBillings.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -118,6 +118,69 @@
             this.grdBillings.ThemeStyle.RowsStyle.Height = 40;
             this.grdBillings.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.grdBillings.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.Black;
+            // 
+            // id
+            // 
+            this.id.FillWeight = 74.18671F;
+            this.id.HeaderText = "ID";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            // 
+            // fullname
+            // 
+            this.fullname.FillWeight = 74.18671F;
+            this.fullname.HeaderText = "Full Name";
+            this.fullname.MinimumWidth = 6;
+            this.fullname.Name = "fullname";
+            this.fullname.ReadOnly = true;
+            // 
+            // amount
+            // 
+            this.amount.FillWeight = 74.18671F;
+            this.amount.HeaderText = "Balance";
+            this.amount.MinimumWidth = 6;
+            this.amount.Name = "amount";
+            this.amount.ReadOnly = true;
+            // 
+            // amountpaid
+            // 
+            this.amountpaid.FillWeight = 74.18671F;
+            this.amountpaid.HeaderText = "Paid Amount";
+            this.amountpaid.MinimumWidth = 6;
+            this.amountpaid.Name = "amountpaid";
+            this.amountpaid.ReadOnly = true;
+            // 
+            // doctor
+            // 
+            this.doctor.HeaderText = "Doctor";
+            this.doctor.MinimumWidth = 6;
+            this.doctor.Name = "doctor";
+            this.doctor.ReadOnly = true;
+            // 
+            // status1
+            // 
+            this.status1.HeaderText = "Status";
+            this.status1.MinimumWidth = 6;
+            this.status1.Name = "status1";
+            this.status1.ReadOnly = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.FillWeight = 25F;
+            this.btnEdit.HeaderText = "";
+            this.btnEdit.MinimumWidth = 6;
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.ReadOnly = true;
+            this.btnEdit.Visible = false;
+            // 
+            // btnPay
+            // 
+            this.btnPay.FillWeight = 74.18671F;
+            this.btnPay.HeaderText = "";
+            this.btnPay.MinimumWidth = 6;
+            this.btnPay.Name = "btnPay";
+            this.btnPay.ReadOnly = true;
             // 
             // lblReport
             // 
@@ -159,7 +222,7 @@
             "All"});
             this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(1012, 233);
+            this.cboFilter.Location = new System.Drawing.Point(888, 231);
             this.cboFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cboFilter.Name = "cboFilter";
             this.cboFilter.Size = new System.Drawing.Size(156, 36);
@@ -255,75 +318,12 @@
             this.btnUnpaid.Text = "Unpaid";
             this.btnUnpaid.Click += new System.EventHandler(this.btnUnpaid_Click);
             // 
-            // id
-            // 
-            this.id.FillWeight = 74.18671F;
-            this.id.HeaderText = "ID";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            // 
-            // fullname
-            // 
-            this.fullname.FillWeight = 74.18671F;
-            this.fullname.HeaderText = "Full Name";
-            this.fullname.MinimumWidth = 6;
-            this.fullname.Name = "fullname";
-            this.fullname.ReadOnly = true;
-            // 
-            // amount
-            // 
-            this.amount.FillWeight = 74.18671F;
-            this.amount.HeaderText = "Balance";
-            this.amount.MinimumWidth = 6;
-            this.amount.Name = "amount";
-            this.amount.ReadOnly = true;
-            // 
-            // amountpaid
-            // 
-            this.amountpaid.FillWeight = 74.18671F;
-            this.amountpaid.HeaderText = "Paid Amount";
-            this.amountpaid.MinimumWidth = 6;
-            this.amountpaid.Name = "amountpaid";
-            this.amountpaid.ReadOnly = true;
-            // 
-            // doctor
-            // 
-            this.doctor.HeaderText = "Doctor";
-            this.doctor.MinimumWidth = 6;
-            this.doctor.Name = "doctor";
-            this.doctor.ReadOnly = true;
-            // 
-            // status1
-            // 
-            this.status1.HeaderText = "Status";
-            this.status1.MinimumWidth = 6;
-            this.status1.Name = "status1";
-            this.status1.ReadOnly = true;
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.FillWeight = 25F;
-            this.btnEdit.HeaderText = "";
-            this.btnEdit.MinimumWidth = 6;
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.ReadOnly = true;
-            this.btnEdit.Visible = false;
-            // 
-            // btnPay
-            // 
-            this.btnPay.FillWeight = 74.18671F;
-            this.btnPay.HeaderText = "";
-            this.btnPay.MinimumWidth = 6;
-            this.btnPay.Name = "btnPay";
-            this.btnPay.ReadOnly = true;
-            // 
             // frmPatientPayments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1249, 903);
+            this.ClientSize = new System.Drawing.Size(1105, 810);
             this.Controls.Add(this.grdBillings);
             this.Controls.Add(this.lblReport);
             this.Controls.Add(this.cboFilter);
