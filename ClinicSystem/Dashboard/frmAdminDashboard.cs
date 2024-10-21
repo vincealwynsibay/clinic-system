@@ -148,7 +148,7 @@ namespace ClinicSystem
                 {
                     lblDoctorCount.Text = reader.GetInt32(reader.GetOrdinal("DoctorCount")).ToString();
                     lblPatientsCount.Text = reader.GetInt32(reader.GetOrdinal("PatientCount")).ToString(); // based on total appoinments this month
-                    lblSecretaryCount.Text = reader.GetInt32(reader.GetOrdinal("SecretaryCount")).ToString();
+                    lblSecretaryCount.Text = "₱" + reader.GetInt32(reader.GetOrdinal("SecretaryCount")).ToString();
                 }
             }
         }

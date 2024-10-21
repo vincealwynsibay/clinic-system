@@ -266,7 +266,7 @@ namespace ClinicSystem
 
                 lblPatientCount.Text = patientCount.ToString();
                 lblAppointmentCount.Text = appointmentCount.ToString();
-                lblEarningsCount.Text = paymentCount.ToString();
+                lblEarningsCount.Text = "₱" + paymentCount.ToString();
             }
             catch (Exception ex)
             {
