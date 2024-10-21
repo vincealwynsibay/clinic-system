@@ -69,9 +69,9 @@
             this.bunifuGroupBox1.LabelIndent = 10;
             this.bunifuGroupBox1.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
             this.bunifuGroupBox1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGroupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGroupBox1.Name = "bunifuGroupBox1";
-            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGroupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.bunifuGroupBox1.Size = new System.Drawing.Size(1231, 78);
             this.bunifuGroupBox1.TabIndex = 0;
             this.bunifuGroupBox1.TabStop = false;
@@ -102,9 +102,9 @@
             this.bunifuGroupBox2.LabelIndent = 10;
             this.bunifuGroupBox2.LineStyle = Bunifu.UI.WinForms.BunifuGroupBox.LineStyles.Solid;
             this.bunifuGroupBox2.Location = new System.Drawing.Point(952, 18);
-            this.bunifuGroupBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGroupBox2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGroupBox2.Name = "bunifuGroupBox2";
-            this.bunifuGroupBox2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGroupBox2.Padding = new System.Windows.Forms.Padding(2);
             this.bunifuGroupBox2.Size = new System.Drawing.Size(277, 58);
             this.bunifuGroupBox2.TabIndex = 3;
             this.bunifuGroupBox2.TabStop = false;
@@ -116,7 +116,7 @@
             this.txtName.CursorType = null;
             this.txtName.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Location = new System.Drawing.Point(74, 13);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtName.Size = new System.Drawing.Size(125, 20);
@@ -133,7 +133,7 @@
             this.txtHi.CursorType = System.Windows.Forms.Cursors.Default;
             this.txtHi.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHi.Location = new System.Drawing.Point(51, 13);
-            this.txtHi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtHi.Margin = new System.Windows.Forms.Padding(2);
             this.txtHi.Name = "txtHi";
             this.txtHi.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtHi.Size = new System.Drawing.Size(19, 20);
@@ -151,7 +151,7 @@
             this.picProfile.Image = ((System.Drawing.Image)(resources.GetObject("picProfile.Image")));
             this.picProfile.IsCircle = true;
             this.picProfile.Location = new System.Drawing.Point(4, 0);
-            this.picProfile.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.picProfile.Margin = new System.Windows.Forms.Padding(2);
             this.picProfile.Name = "picProfile";
             this.picProfile.Size = new System.Drawing.Size(42, 42);
             this.picProfile.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -170,7 +170,7 @@
             this.bunifuPanel2.Controls.Add(this.bunifuGroupBox1);
             this.bunifuPanel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuPanel2.Location = new System.Drawing.Point(0, 0);
-            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel2.Name = "bunifuPanel2";
             this.bunifuPanel2.ShowBorders = true;
             this.bunifuPanel2.Size = new System.Drawing.Size(1231, 86);
@@ -187,7 +187,7 @@
             this.bunifuPanel1.Controls.Add(this.bunifuPanel3);
             this.bunifuPanel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.bunifuPanel1.Location = new System.Drawing.Point(0, 86);
-            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel1.Name = "bunifuPanel1";
             this.bunifuPanel1.ShowBorders = true;
             this.bunifuPanel1.Size = new System.Drawing.Size(254, 743);
@@ -207,7 +207,7 @@
             this.bunifuPanel3.Controls.Add(this.btnAppointment);
             this.bunifuPanel3.Controls.Add(this.btnSecretaries);
             this.bunifuPanel3.Location = new System.Drawing.Point(0, 5);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(260, 777);
@@ -229,7 +229,7 @@
             this.btnDashboard.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnDashboard.ImageSize = new System.Drawing.Size(24, 24);
             this.btnDashboard.Location = new System.Drawing.Point(16, 37);
-            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDashboard.Margin = new System.Windows.Forms.Padding(2);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.Size = new System.Drawing.Size(220, 37);
             this.btnDashboard.TabIndex = 0;
@@ -253,7 +253,7 @@
             this.btnUsers.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnUsers.ImageSize = new System.Drawing.Size(24, 24);
             this.btnUsers.Location = new System.Drawing.Point(19, 95);
-            this.btnUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUsers.Margin = new System.Windows.Forms.Padding(2);
             this.btnUsers.Name = "btnUsers";
             this.btnUsers.Size = new System.Drawing.Size(218, 37);
             this.btnUsers.TabIndex = 0;
@@ -277,7 +277,7 @@
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(24, 24);
             this.btnLogout.Location = new System.Drawing.Point(19, 262);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(2);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(220, 37);
             this.btnLogout.TabIndex = 0;
@@ -301,7 +301,7 @@
             this.btnAppointment.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAppointment.ImageSize = new System.Drawing.Size(24, 24);
             this.btnAppointment.Location = new System.Drawing.Point(19, 149);
-            this.btnAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.btnAppointment.Name = "btnAppointment";
             this.btnAppointment.Size = new System.Drawing.Size(220, 37);
             this.btnAppointment.TabIndex = 0;
@@ -325,7 +325,7 @@
             this.btnSecretaries.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSecretaries.ImageSize = new System.Drawing.Size(24, 24);
             this.btnSecretaries.Location = new System.Drawing.Point(19, 203);
-            this.btnSecretaries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSecretaries.Margin = new System.Windows.Forms.Padding(2);
             this.btnSecretaries.Name = "btnSecretaries";
             this.btnSecretaries.Size = new System.Drawing.Size(220, 37);
             this.btnSecretaries.TabIndex = 0;
@@ -359,7 +359,7 @@
             this.pnlMainParent.Controls.Add(this.pnlMain);
             this.pnlMainParent.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlMainParent.Location = new System.Drawing.Point(254, 86);
-            this.pnlMainParent.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlMainParent.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMainParent.Name = "pnlMainParent";
             this.pnlMainParent.Padding = new System.Windows.Forms.Padding(20, 4, 20, 4);
             this.pnlMainParent.ShowBorders = true;
@@ -375,10 +375,11 @@
             this.Controls.Add(this.pnlMainParent);
             this.Controls.Add(this.bunifuPanel1);
             this.Controls.Add(this.bunifuPanel2);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDoctorMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDoctorMain";
+            this.Text = "Medic";
             this.Load += new System.EventHandler(this.frmDoctorMain_Load);
             this.bunifuGroupBox1.ResumeLayout(false);
             this.bunifuGroupBox1.PerformLayout();

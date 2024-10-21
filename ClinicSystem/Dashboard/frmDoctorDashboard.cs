@@ -63,6 +63,8 @@ namespace ClinicSystem
                     DataRow row = g_proc.datPatients.Rows[0];
                     lblPatientCount.Text = row["PatientCount"].ToString();      // based on the diagnosis date is created this month
                     lblAppointmentCount.Text = row["AppointmentCount"].ToString();  // based on total appoinments this month
+                    lblAppointmentPercent.Text = "+" + row["AppointmentIncreasePercentage"].ToString() + "%";
+                    lblPatientPercent.Text = "+" + row["PatientIncreasePercentage"].ToString() + "%";
                     //lblEarningsCount.Text = "₱"+(Convert.ToDouble(row["EarningsCount"]).ToString());
                 }
             }
@@ -78,16 +80,6 @@ namespace ClinicSystem
         {
             this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
             this.Close();
-        }
-
-        private void frmDoctorDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlAppointmentTable_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
