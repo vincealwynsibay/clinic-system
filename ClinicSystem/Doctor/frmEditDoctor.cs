@@ -58,11 +58,10 @@ namespace ClinicSystem
 
                     if (reader["photo"] != DBNull.Value && reader["photo"].ToString() != "")
                     {
-                        picProfile.Image = new Bitmap(reader.GetString("photo"));
+                        //picProfile.Image = new Bitmap(reader.GetString("photo"));
                     } 
                 }
             }
-
 
             sqlCmd.Parameters.Clear();
             sqlCmd.CommandText = "procGetDoctorConsultationFee";
