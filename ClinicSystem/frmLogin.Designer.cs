@@ -47,6 +47,7 @@
             this.guna2PictureBox2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.bunifuFormControlBox1 = new Bunifu.UI.WinForms.BunifuFormControlBox();
             this.bunifuGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
@@ -283,10 +284,10 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(203)))), ((int)(((byte)(197)))));
-            this.bunifuGradientPanel1.Location = new System.Drawing.Point(579, 12);
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(579, 57);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
-            this.bunifuGradientPanel1.Size = new System.Drawing.Size(532, 750);
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(532, 705);
             this.bunifuGradientPanel1.TabIndex = 53;
             // 
             // guna2PictureBox2
@@ -331,12 +332,74 @@
             this.guna2PictureBox1.TabIndex = 55;
             this.guna2PictureBox1.TabStop = false;
             // 
+            // bunifuFormControlBox1
+            // 
+            this.bunifuFormControlBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.bunifuFormControlBox1.BunifuFormDrag = null;
+            this.bunifuFormControlBox1.CloseBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.CloseBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.CloseBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.CloseBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.CloseBoxOptions.HoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.bunifuFormControlBox1.CloseBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.CloseBoxOptions.Icon")));
+            this.bunifuFormControlBox1.CloseBoxOptions.IconAlt = null;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconHoverColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconPressedColor = System.Drawing.Color.White;
+            this.bunifuFormControlBox1.CloseBoxOptions.IconSize = new System.Drawing.Size(18, 18);
+            this.bunifuFormControlBox1.CloseBoxOptions.PressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(232)))), ((int)(((byte)(17)))), ((int)(((byte)(35)))));
+            this.bunifuFormControlBox1.HelpBox = false;
+            this.bunifuFormControlBox1.HelpBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.HelpBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.HelpBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.HelpBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.HelpBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.bunifuFormControlBox1.HelpBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.HelpBoxOptions.Icon")));
+            this.bunifuFormControlBox1.HelpBoxOptions.IconAlt = null;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.HelpBoxOptions.IconSize = new System.Drawing.Size(22, 22);
+            this.bunifuFormControlBox1.HelpBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.bunifuFormControlBox1.Location = new System.Drawing.Point(974, 0);
+            this.bunifuFormControlBox1.MaximizeBox = true;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MaximizeBoxOptions.Icon")));
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconAlt = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MaximizeBoxOptions.IconAlt")));
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MaximizeBoxOptions.IconSize = new System.Drawing.Size(16, 16);
+            this.bunifuFormControlBox1.MaximizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.bunifuFormControlBox1.MinimizeBox = true;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.BackColor = System.Drawing.Color.Transparent;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.BorderRadius = 0;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.Enabled = true;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.EnableDefaultAction = true;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.HoverColor = System.Drawing.Color.LightGray;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuFormControlBox1.MinimizeBoxOptions.Icon")));
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconAlt = null;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconHoverColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconPressedColor = System.Drawing.Color.Black;
+            this.bunifuFormControlBox1.MinimizeBoxOptions.IconSize = new System.Drawing.Size(14, 14);
+            this.bunifuFormControlBox1.MinimizeBoxOptions.PressedColor = System.Drawing.Color.Silver;
+            this.bunifuFormControlBox1.Name = "bunifuFormControlBox1";
+            this.bunifuFormControlBox1.ShowDesignBorders = false;
+            this.bunifuFormControlBox1.Size = new System.Drawing.Size(149, 34);
+            this.bunifuFormControlBox1.TabIndex = 57;
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1123, 779);
+            this.Controls.Add(this.bunifuFormControlBox1);
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.bunifuGradientPanel1);
@@ -371,5 +434,6 @@
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox2;
+        private Bunifu.UI.WinForms.BunifuFormControlBox bunifuFormControlBox1;
     }
 }
