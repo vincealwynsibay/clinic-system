@@ -45,12 +45,17 @@ namespace ClinicSystem
                     if (reader.Read())
                     {
                         txtName.Text = reader.GetString(reader.GetOrdinal("username"));
+                        var photo = reader.GetString(reader.GetOrdinal("username"));
+                        if (photo.ToString() != "")
+                        {
+                            picProfile.Image = new Bitmap(photo.ToString());
+                        }
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                //MessageBox.Show("Error: " + ex.Message);
             }
         }
 
