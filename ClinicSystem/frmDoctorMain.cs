@@ -26,6 +26,11 @@ namespace ClinicSystem
             func_LoadDoctor();
         }
 
+        public void func_DetailRefresh()
+        {
+            func_LoadDoctor();
+        }
+
         private void func_LoadDoctor()
         {
             try

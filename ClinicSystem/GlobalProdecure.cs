@@ -28,8 +28,11 @@ namespace ClinicSystem
 
 
         public MySqlDataAdapter sqlClinicAdapter;
+        public MySqlDataReader reader;
         public DataTable datDoctors;
         public DataTable datSecretaries;
+        public DataTable datMonthlyProfits;
+        public DataTable datGetDoctor;
         public DataTable datUsers;
         public DataTable datPatients;
         public DataTable datPrescription;
@@ -41,7 +44,7 @@ namespace ClinicSystem
                 server = "localhost";
                 database = "clinicsystem";
                 username = "root";
-                password = "vincealwyn.";
+                password = "Harmonize0805";
                 port = "3306";
 
                 strConnection = "Server=" + server + ";" +

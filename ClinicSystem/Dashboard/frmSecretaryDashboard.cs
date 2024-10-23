@@ -34,11 +34,6 @@ namespace ClinicSystem
             func_LoadSecretary();
         }
 
-        private void frmSecretaryDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void func_LoadAppointments()
         {
             try
@@ -260,7 +255,7 @@ namespace ClinicSystem
                         DataRow row = g_proc.datPatients.Rows[0];
                         patientCount += Convert.ToInt32(row["PatientCount"]);
                         appointmentCount += Convert.ToInt32(row["AppointmentCount"]);
-                        paymentCount += Convert.ToInt32(row["PaymentCount"]);
+                        paymentCount += Convert.ToInt32(row["EarningsCount"]);
                     }
                 }
 
@@ -280,12 +275,6 @@ namespace ClinicSystem
         {
             //this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
             this.Close();
-        }
-
-
-        private void pnlAppointmentTable_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -60,9 +60,9 @@
             this.lblTitleBirthdate.Location = new System.Drawing.Point(29, 152);
             this.lblTitleBirthdate.Name = "lblTitleBirthdate";
             this.lblTitleBirthdate.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblTitleBirthdate.Size = new System.Drawing.Size(27, 20);
+            this.lblTitleBirthdate.Size = new System.Drawing.Size(68, 20);
             this.lblTitleBirthdate.TabIndex = 97;
-            this.lblTitleBirthdate.Text = "Age";
+            this.lblTitleBirthdate.Text = "Birthdate";
             this.lblTitleBirthdate.TextAlignment = System.Drawing.ContentAlignment.TopLeft;
             this.lblTitleBirthdate.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
             // 
@@ -181,7 +181,7 @@
             this.pnlDiagnosis.Name = "pnlDiagnosis";
             this.pnlDiagnosis.Padding = new System.Windows.Forms.Padding(1);
             this.pnlDiagnosis.ShowBorders = true;
-            this.pnlDiagnosis.Size = new System.Drawing.Size(869, 342);
+            this.pnlDiagnosis.Size = new System.Drawing.Size(773, 264);
             this.pnlDiagnosis.TabIndex = 120;
             // 
             // lblName
@@ -210,7 +210,7 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.btnAdd.Location = new System.Drawing.Point(641, 22);
+            this.btnAdd.Location = new System.Drawing.Point(545, 22);
             this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(256, 49);
@@ -368,7 +368,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(937, 734);
+            this.ClientSize = new System.Drawing.Size(829, 658);
             this.Controls.Add(this.guna2Shapes2);
             this.Controls.Add(this.bunifuLabel7);
             this.Controls.Add(this.bunifuLabel5);

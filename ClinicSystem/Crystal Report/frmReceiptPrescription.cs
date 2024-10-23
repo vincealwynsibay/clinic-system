@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ClinicSystem
+namespace ClinicSystem.CrystalReport
 {
-    public partial class Test : Form
+    public partial class frmReceiptPrescription : Form
     {
-        public Test()
+        public frmReceiptPrescription()
         {
             InitializeComponent();
         }

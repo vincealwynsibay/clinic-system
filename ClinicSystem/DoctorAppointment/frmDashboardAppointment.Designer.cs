@@ -81,7 +81,7 @@
             this.grdAppointment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdAppointment.RowTemplate.Height = 40;
             this.grdAppointment.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.Size = new System.Drawing.Size(869, 296);
+            this.grdAppointment.Size = new System.Drawing.Size(769, 296);
             this.grdAppointment.TabIndex = 150;
             this.grdAppointment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdAppointment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -148,7 +148,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(869, 296);
+            this.ClientSize = new System.Drawing.Size(769, 296);
             this.Controls.Add(this.grdAppointment);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmDashboardAppointment";

@@ -1,4 +1,5 @@
-﻿using ClinicSystem.Patient;
+﻿using ClinicSystem.Appointment;
+using ClinicSystem.Patient;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
@@ -54,7 +55,7 @@ namespace ClinicSystem.DoctorAppointment
                 g_proc.sqlCommand.CommandText = "procSearchAppointment";
 
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);               // checks the tbldiagnosis if patient and doctor is related
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
 
@@ -122,7 +123,10 @@ namespace ClinicSystem.DoctorAppointment
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            g_proc.displayFormAsModal(mainForm, new frmPatientAdd(mainForm, doctor_id));
+            g_proc.displayFormAsModal(mainForm, new frmAddAppointmentDoctor(mainForm, doctor_id));
+            func_LoadTable();
+            HighlightButton(btnPending);
+            btnPending_Click(null, null);
         }
 
         private void ResetButtons()

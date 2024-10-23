@@ -63,10 +63,43 @@ namespace ClinicSystem
                     DataRow row = g_proc.datPatients.Rows[0];
                     lblPatientCount.Text = row["PatientCount"].ToString();      // based on the diagnosis date is created this month
                     lblAppointmentCount.Text = row["AppointmentCount"].ToString();  // based on total appoinments this month
-                    lblAppointmentPercent.Text = "+" + row["AppointmentIncreasePercentage"].ToString() + "%";
-                    lblPatientPercent.Text = "+" + row["PatientIncreasePercentage"].ToString() + "%";
                     lblEarningsCount.Text = "₱"+(Convert.ToDouble(row["EarningsCount"]).ToString());
-                    lblEarningPercent.Text = "+" + row["EarningsIncreasePercentage"].ToString() + "%";
+
+                    double earningsPercentage = Convert.ToDouble(row["EarningsIncreasePercentage"]);
+
+                    if (earningsPercentage >= 0)
+                    {
+                        lblEarningPercent.Text = "+" + earningsPercentage.ToString() + "%";
+                    }
+                    else
+                    {
+                        lblEarningPercent.Text = earningsPercentage.ToString() + "%"; // Negative numbers already have a "-" sign.
+                        lblAppointmentPercent.DisabledState.FillColor = Color.FromArgb(253, 109, 92);
+                    }
+
+                    double appointmentPercentage = Convert.ToDouble(row["AppointmentIncreasePercentage"]);
+                    if (appointmentPercentage >= 0)
+                    {
+                        lblAppointmentPercent.Text = "+" + appointmentPercentage.ToString() + "%";
+                    }
+                    else
+                    {
+                        lblAppointmentPercent.Text = appointmentPercentage.ToString() + "%"; // Negative already includes the "-" sign
+                        lblAppointmentPercent.DisabledState.FillColor = Color.FromArgb(253, 109, 92);
+                    }
+
+                    // For Patient Increase Percentage
+                    double patientPercentage = Convert.ToDouble(row["PatientIncreasePercentage"]);
+                    if (patientPercentage >= 0)
+                    {
+                        lblPatientPercent.Text = "+" + patientPercentage.ToString() + "%";
+                    }
+                    else
+                    {
+                        lblPatientPercent.Text = patientPercentage.ToString() + "%"; // Negative already includes the "-" sign
+                        lblAppointmentPercent.DisabledState.FillColor = Color.FromArgb(253, 109, 92);
+                    }
+
                 }
             }
             catch (Exception ex)

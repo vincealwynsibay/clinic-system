@@ -83,7 +83,7 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:1" + ex.Message);
+                MessageBox.Show("Error:" + ex.Message);
             }
             g_proc.sqlClinicAdapter.Dispose();
             g_proc.datDoctors.Dispose();

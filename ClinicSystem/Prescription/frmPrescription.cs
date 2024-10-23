@@ -1,15 +1,9 @@
-﻿using ClinicSystem.DoctorMain;
+﻿using ClinicSystem.CrystalReport;
 using ClinicSystem.Prescription;
-using Google.Protobuf.WellKnownTypes;
 using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClinicSystem
@@ -211,6 +205,74 @@ namespace ClinicSystem
                     e.Handled = true;
                 }
             }
+        }
+
+        private void btnPrint_Click(object sender, EventArgs e)
+        {
+            DataSet ds = new DataSet();
+            g_proc.datPrescription = new DataTable();
+            g_proc.datGetDoctor = new DataTable();
+
+            g_proc.datPrescription.Columns.Add("Qty.", typeof(string));
+            g_proc.datPrescription.Columns.Add("Medicine", typeof(string));
+            g_proc.datPrescription.Columns.Add("Dosage", typeof(string));
+            g_proc.datPrescription.Columns.Add("Frequency", typeof(string));
+            g_proc.datPrescription.Columns.Add("Comment", typeof(string));
+            g_proc.datPrescription.Columns.Add("Name", typeof(string));
+
+
+            g_proc.datGetDoctor.Columns.Add("firstname", typeof(String));
+            g_proc.datGetDoctor.Columns.Add("middlename", typeof(String));
+            g_proc.datGetDoctor.Columns.Add("lastname", typeof(String));
+
+
+            g_proc.sqlCommand.Parameters.Clear();
+            g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
+            g_proc.sqlCommand.CommandText = "procGetDoctorById";
+            g_proc.sqlCommand.Parameters.AddWithValue(@"p_doctorId", this.doctor_id);
+            g_proc.reader = g_proc.sqlCommand.ExecuteReader();
+
+
+            if (g_proc.reader.Read())
+            {
+                g_proc.datGetDoctor.Rows.Add(g_proc.reader["firstname"].ToString(),
+                                             g_proc.reader["middlename"].ToString(),
+                                             g_proc.reader["lastname"].ToString());
+            }
+            else
+            {
+                g_proc.reader.Close();
+            }
+            String[] Fullname =
+                {
+                  g_proc.datGetDoctor.Rows[0]["firstname"].ToString(),
+                  g_proc.datGetDoctor.Rows[0]["middlename"].ToString(),
+                  g_proc.datGetDoctor.Rows[0]["lastname"].ToString()
+                };
+
+            for (int i = 0; i < grdPrescription.Rows.Count; i++)
+            {
+
+                g_proc.datPrescription.Rows.Add(grdPrescription.Rows[i].Cells[0].Value,
+                                                grdPrescription.Rows[i].Cells[1].Value,
+                                                grdPrescription.Rows[i].Cells[2].Value,
+                                                grdPrescription.Rows[i].Cells[3].Value,
+                                                grdPrescription.Rows[i].Cells[4].Value,
+                                                String.Concat("Dr. ", String.Join(" ", Fullname)));
+            }
+            ds.Tables.Add(g_proc.datPrescription);
+            ds.Tables.Add(g_proc.datGetDoctor);
+            ds.WriteXmlSchema("ReceiptPrescription.xml");
+
+            frmReceiptPrescription receiptPrescription = new frmReceiptPrescription();
+
+            csrReceiptPrescription report = new csrReceiptPrescription();
+            report.SetDataSource(ds);
+
+            receiptPrescription.csrReceiptPrescriptionView.ReportSource = report;
+            receiptPrescription.csrReceiptPrescriptionView.Refresh();
+            receiptPrescription.ShowDialog();
+            g_proc.reader.Close();
         }
     }
 }
