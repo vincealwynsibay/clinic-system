@@ -233,12 +233,11 @@
             this.cboFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.cboFilter.ItemHeight = 30;
             this.cboFilter.Items.AddRange(new object[] {
-            "(None)",
+            "All",
             "Today",
             "This Week",
             "This Month",
-            "This Year",
-            "All"});
+            "This Year"});
             this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.cboFilter.Location = new System.Drawing.Point(878, 227);
@@ -343,7 +342,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1105, 810);
+            this.ClientSize = new System.Drawing.Size(1126, 810);
             this.Controls.Add(this.grdAppointment);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblReport);

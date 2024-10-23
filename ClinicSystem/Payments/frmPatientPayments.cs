@@ -36,7 +36,7 @@ namespace ClinicSystem.Patient
         {
 
             g_proc.fncConnectToDatabase();
-
+            btnUnpaid.PerformClick();
             func_LoadTable();
         }
 
@@ -80,7 +80,7 @@ namespace ClinicSystem.Patient
                     g_proc.sqlCommand.Parameters.Clear();
                     g_proc.sqlCommand.CommandText = "procGetPatientBillingsByDoctor";
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
-                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);
+                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
                     g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -93,7 +93,7 @@ namespace ClinicSystem.Patient
                 }
 
 
-                 //Merge all appointments into a single DataTable
+                //Merge all appointments into a single DataTable
                 DataTable mergedData = fncMergeDataTables(allBillings);
 
                 // Sort merged data by status (pending first) and then by ID
@@ -111,7 +111,7 @@ namespace ClinicSystem.Patient
                     grdBillings.Rows[row].Cells[2].Value = billingRow["amount"].ToString();
                     grdBillings.Rows[row].Cells[3].Value = billingRow["amountpaid"].ToString();
                     grdBillings.Rows[row].Cells[4].Value = billingRow["doctor"].ToString();
-                    grdBillings.Rows[row].Cells[4].Value = billingRow["status"].ToString();
+                    grdBillings.Rows[row].Cells[5].Value = billingRow["status"].ToString();
                     row++;
                 }
             }
@@ -176,9 +176,9 @@ namespace ClinicSystem.Patient
         {
             ResetButtons();
             HighlightButton(btnAll);
-            //grdBillings.Columns["btnEdit"].Visible = true;
-            //grdBillings.Columns["btnDelete"].Visible = true;
-            //grdBillings.Columns["btnApprove"].Visible = true;
+
+            grdBillings.Columns["btnEdit"].Visible = true;
+            grdBillings.Columns["btnPay"].Visible = false;
             status = "";
             func_LoadTable();
         }
@@ -186,10 +186,9 @@ namespace ClinicSystem.Patient
         private void btnPaid_Click(object sender, EventArgs e)
         {
             ResetButtons();
-            HighlightButton(btnAll);
-            //grdBillings.Columns["btnEdit"].Visible = true;
-            //grdBillings.Columns["btnDelete"].Visible = true;
-            //grdBillings.Columns["btnApprove"].Visible = true;
+            HighlightButton(btnPaid);
+            grdBillings.Columns["btnEdit"].Visible = true;
+            grdBillings.Columns["btnPay"].Visible = false;
             status = "paid";
             func_LoadTable();
         }
@@ -197,10 +196,10 @@ namespace ClinicSystem.Patient
         private void btnUnpaid_Click(object sender, EventArgs e)
         {
             ResetButtons();
-            HighlightButton(btnAll);
-            //grdBillings.Columns["btnEdit"].Visible = true;
-            //grdBillings.Columns["btnDelete"].Visible = true;
-            //grdBillings.Columns["btnApprove"].Visible = true;
+            HighlightButton(btnUnpaid);
+
+            grdBillings.Columns["btnEdit"].Visible = true;
+            grdBillings.Columns["btnPay"].Visible = true;
             status = "unpaid";
             func_LoadTable();
         }
@@ -221,12 +220,14 @@ namespace ClinicSystem.Patient
         {
             if (e.ColumnIndex == grdBillings.Columns["btnPay"].Index && e.RowIndex >= 0)
             {
-                g_proc.displayFormAsModal(mainForm, new frmPaymentForm(mainForm, (int) grdBillings.Rows[e.RowIndex].Cells["id"].Value));
+                g_proc.displayFormAsModal(mainForm, new frmPaymentForm(mainForm, Int32.Parse(grdBillings.Rows[e.RowIndex].Cells["id"].Value.ToString())));
+                func_LoadTable();
             }
             else if (e.ColumnIndex == grdBillings.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                g_proc.displayFormAsModal(mainForm, new frmEditPayment(mainForm, (int)grdBillings.Rows[e.RowIndex].Cells["id"].Value));
+                g_proc.displayFormAsModal(mainForm, new frmEditPayment(mainForm, Int32.Parse(grdBillings.Rows[e.RowIndex].Cells["id"].Value.ToString())));
                 string fullName = grdBillings.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
+                func_LoadTable();
             }
         }
 
@@ -303,7 +304,7 @@ namespace ClinicSystem.Patient
                 }
             }
 
-           
+
 
         }
     }
