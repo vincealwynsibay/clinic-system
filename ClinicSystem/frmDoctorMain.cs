@@ -26,11 +26,6 @@ namespace ClinicSystem
             func_LoadDoctor();
         }
 
-        public void func_DetailRefresh()
-        {
-            func_LoadDoctor();
-        }
-
         private void func_LoadDoctor()
         {
             try
@@ -43,7 +38,6 @@ namespace ClinicSystem
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_id", doctor_id);
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
                 g_proc.sqlClinicAdapter.SelectCommand = g_proc.sqlCommand;
-
                 g_proc.datDoctors.Clear();
                 g_proc.sqlClinicAdapter.Fill(g_proc.datDoctors);
 
@@ -66,7 +60,6 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error:1 " + ex.ToString());
             }
             g_proc.sqlClinicAdapter.Dispose();
             g_proc.datDoctors.Dispose();
