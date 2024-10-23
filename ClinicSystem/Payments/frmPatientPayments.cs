@@ -80,7 +80,7 @@ namespace ClinicSystem.Patient
                     g_proc.sqlCommand.Parameters.Clear();
                     g_proc.sqlCommand.CommandText = "procGetPatientBillingsByDoctor";
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
-                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);
+                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
                     g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
