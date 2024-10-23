@@ -55,6 +55,7 @@
             this.fullname = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.mobileno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Doctor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnApprove = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAppointment.SuspendLayout();
             this.pnlEarning.SuspendLayout();
@@ -412,6 +413,7 @@
             this.fullname,
             this.mobileno,
             this.gender,
+            this.Doctor,
             this.btnApprove});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -488,6 +490,13 @@
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 
+            // Doctor
+            // 
+            this.Doctor.HeaderText = "doctor";
+            this.Doctor.MinimumWidth = 6;
+            this.Doctor.Name = "Doctor";
+            this.Doctor.ReadOnly = true;
+            // 
             // btnApprove
             // 
             this.btnApprove.FillWeight = 74.18671F;
@@ -550,6 +559,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn fullname;
         private System.Windows.Forms.DataGridViewTextBoxColumn mobileno;
         private System.Windows.Forms.DataGridViewTextBoxColumn gender;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Doctor;
         private System.Windows.Forms.DataGridViewTextBoxColumn btnApprove;
     }
 }
