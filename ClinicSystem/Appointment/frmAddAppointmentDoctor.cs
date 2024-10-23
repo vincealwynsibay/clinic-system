@@ -32,6 +32,12 @@ namespace ClinicSystem.Appointment
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtFullname.Text.ToString()) || g_proc.CheckIfEmpty(txtMobileNo.Text.ToString()) || g_proc.CheckIfEmpty(txtEmail.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 g_proc.sqlCommand.Parameters.Clear();

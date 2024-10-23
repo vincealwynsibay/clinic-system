@@ -112,8 +112,7 @@ namespace ClinicSystem
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
-            this.Close();
+            g_proc.displayFormAsModal(mainForm, new frmPatientAdd(mainForm, doctor_id));
         }
 
         private void frmDoctorDashboard_Load(object sender, EventArgs e)

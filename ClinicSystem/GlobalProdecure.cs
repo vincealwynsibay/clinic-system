@@ -121,5 +121,11 @@ namespace ClinicSystem
             frmParent.BringToFront();
 
         }
+
+        public bool CheckIfEmpty(string input)
+        {
+            if (string.IsNullOrEmpty(input)) return true;
+            return false;
+        }
     }
 }

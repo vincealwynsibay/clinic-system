@@ -28,6 +28,13 @@ namespace ClinicSystem.Patient
 
         private void btnAddPatient_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtDiagnosis.Text.ToString()) || g_proc.CheckIfEmpty(txtFirstName.Text.ToString()) || g_proc.CheckIfEmpty(txtLastName.Text.ToString()) ||
+                g_proc.CheckIfEmpty(txtMobileNo.Text.ToString()) || g_proc.CheckIfEmpty(txtEmail.Text.ToString()) || g_proc.CheckIfEmpty(txtEmergency.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 g_proc.sqlCommand.Parameters.Clear();

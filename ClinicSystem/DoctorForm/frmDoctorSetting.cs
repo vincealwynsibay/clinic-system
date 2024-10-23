@@ -133,6 +133,12 @@ namespace ClinicSystem
 
         private void btnSaveEditDoctor_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtMobileNo.Text.ToString()) || g_proc.CheckIfEmpty(txtEmail.Text.ToString()) || g_proc.CheckIfEmpty(txtAddress.Text.ToString())
+                || g_proc.CheckIfEmpty(txtConsultation.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             try
             {
@@ -166,6 +172,7 @@ namespace ClinicSystem
 
                 MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 func_LoadDoctorData();
+                mainForm.func_DetailRefresh();
             }
             catch (Exception ex)
             {

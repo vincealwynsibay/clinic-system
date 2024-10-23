@@ -31,26 +31,15 @@ namespace ClinicSystem.Prescription
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtQuantity.Text.ToString()) || g_proc.CheckIfEmpty(txtMedicine.Text.ToString()) || g_proc.CheckIfEmpty(txtDosage.Text.ToString()) ||
+                g_proc.CheckIfEmpty(txtFrequency.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
-                string quantity = txtQuantity.Text;
-                string medicine = txtMedicine.Text;
-                string dosage = txtDosage.Text;
-                string frequency = txtFrequency.Text;
-                string comment = txtComment.Text;
-
-                if (string.IsNullOrWhiteSpace(quantity) ||
-                    string.IsNullOrWhiteSpace(medicine) ||
-                    string.IsNullOrWhiteSpace(dosage) ||
-                    string.IsNullOrWhiteSpace(frequency))
-                {
-                    MessageBox.Show("Please fill in all required fields (Quantity, Medicine, Dosage, Frequency).",
-                                    "Validation Error",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Warning);
-                    return;
-                }
-
                 g_proc.sqlCommand.Parameters.Clear();
                 g_proc.sqlCommand.CommandText = "procAddPrescriptionItem";
                 g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;

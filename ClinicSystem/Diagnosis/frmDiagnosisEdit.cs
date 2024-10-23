@@ -66,6 +66,12 @@ namespace ClinicSystem
 
         private void btnSaveEdit_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtDiagnosis.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 g_proc.sqlCommand.Parameters.Clear();

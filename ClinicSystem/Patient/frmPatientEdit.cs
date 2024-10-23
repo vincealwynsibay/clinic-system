@@ -112,6 +112,12 @@ namespace ClinicSystem
 
         private void btnSaveEditPatient_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtMobileNo.Text.ToString()) || g_proc.CheckIfEmpty(txtEmail.Text.ToString()) || g_proc.CheckIfEmpty(txtEmergency.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 if (!func_HasDataChanged())
