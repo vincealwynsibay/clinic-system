@@ -71,7 +71,7 @@ namespace ClinicSystem
                     g_proc.sqlCommand.Parameters.Clear();
                     g_proc.sqlCommand.CommandText = "procSearchAppointment2";
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_search", "");
-                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", 2);
+                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", 1);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_status", "pending");
                     g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;

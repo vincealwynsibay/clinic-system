@@ -94,7 +94,7 @@
             this.grdBillings.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdBillings.RowTemplate.Height = 40;
             this.grdBillings.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdBillings.Size = new System.Drawing.Size(1159, 475);
+            this.grdBillings.Size = new System.Drawing.Size(1016, 475);
             this.grdBillings.TabIndex = 163;
             this.grdBillings.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdBillings.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -221,7 +221,7 @@
             "This Year"});
             this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(1012, 233);
+            this.cboFilter.Location = new System.Drawing.Point(905, 253);
             this.cboFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cboFilter.Name = "cboFilter";
             this.cboFilter.Size = new System.Drawing.Size(156, 36);
@@ -322,7 +322,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1249, 903);
+            this.ClientSize = new System.Drawing.Size(1105, 810);
             this.Controls.Add(this.grdBillings);
             this.Controls.Add(this.lblReport);
             this.Controls.Add(this.cboFilter);

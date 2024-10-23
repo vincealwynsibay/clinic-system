@@ -172,7 +172,7 @@ namespace ClinicSystem
 
                 MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 func_LoadDoctorData();
-                mainForm.func_DetailRefresh();
+                //mainForm.func_DetailRefresh();
             }
             catch (Exception ex)
             {
