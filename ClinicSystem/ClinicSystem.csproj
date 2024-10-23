@@ -133,6 +133,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment\frmEditAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\frmEditAppointment.Designer.cs">
+      <DependentUpon>frmEditAppointment.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorAppointment\frmDashboardAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -366,6 +372,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Appointment\frmAddAppointment.resx">
       <DependentUpon>frmAddAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Appointment\frmEditAppointment.resx">
+      <DependentUpon>frmEditAppointment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Appointment\frmSecretaryAppointment.resx">
       <DependentUpon>frmSecretaryAppointment.cs</DependentUpon>

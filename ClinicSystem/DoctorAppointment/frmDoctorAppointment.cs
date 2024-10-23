@@ -1,4 +1,5 @@
-﻿using ClinicSystem.Patient;
+﻿using ClinicSystem.Appointment;
+using ClinicSystem.Patient;
 using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
@@ -54,7 +55,7 @@ namespace ClinicSystem.DoctorAppointment
                 g_proc.sqlCommand.CommandText = "procSearchAppointment";
 
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
-                g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
+                g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);    // use index to know what filter to do (0 - none, 1 today, 2 this week, 3 this month, 4 this year)
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);               // checks the tbldiagnosis if patient and doctor is related
                 g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
 
@@ -109,7 +110,7 @@ namespace ClinicSystem.DoctorAppointment
             else if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
                 //func_ChangeAppointmentStatus(e, "procApproveAppointment", "edited!");
-                MessageBox.Show($"Appointment for edited, idk what the form look like but button works yey");
+                g_proc.displayFormAsModal(mainForm, new frmEditAppointment(Convert.ToInt32(grdAppointment.Rows[e.RowIndex].Cells["id"].Value.ToString())));
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {

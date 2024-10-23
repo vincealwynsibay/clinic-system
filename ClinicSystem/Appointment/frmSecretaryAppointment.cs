@@ -160,8 +160,8 @@ namespace ClinicSystem.Appointment
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} edited!");
+                g_proc.displayFormAsModal(mainForm, new frmEditAppointment(Convert.ToInt32(grdAppointment.Rows[e.RowIndex].Cells["id"].Value.ToString())));
+                func_LoadTable();
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {
@@ -232,7 +232,6 @@ namespace ClinicSystem.Appointment
 
         private void cboFilter_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(cboFilter.SelectedIndex.ToString());
             func_LoadTable();
         }
 

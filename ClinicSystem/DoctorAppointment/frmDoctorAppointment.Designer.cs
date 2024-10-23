@@ -250,7 +250,7 @@
             this.btnFilterApprove.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnFilterApprove.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.btnFilterApprove.Location = new System.Drawing.Point(37, 229);
-            this.btnFilterApprove.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFilterApprove.Margin = new System.Windows.Forms.Padding(4);
             this.btnFilterApprove.Name = "btnFilterApprove";
             this.btnFilterApprove.Size = new System.Drawing.Size(145, 41);
             this.btnFilterApprove.TabIndex = 151;
@@ -270,7 +270,7 @@
             this.btnPending.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnPending.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.btnPending.Location = new System.Drawing.Point(203, 229);
-            this.btnPending.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnPending.Margin = new System.Windows.Forms.Padding(4);
             this.btnPending.Name = "btnPending";
             this.btnPending.Size = new System.Drawing.Size(145, 41);
             this.btnPending.TabIndex = 151;
@@ -290,7 +290,7 @@
             this.btnCancelled.Font = new System.Drawing.Font("IBM Plex Sans", 9F);
             this.btnCancelled.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.btnCancelled.Location = new System.Drawing.Point(367, 229);
-            this.btnCancelled.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelled.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelled.Name = "btnCancelled";
             this.btnCancelled.Size = new System.Drawing.Size(145, 41);
             this.btnCancelled.TabIndex = 151;
@@ -311,7 +311,7 @@
             this.cboFilter.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.cboFilter.ItemHeight = 30;
             this.cboFilter.Items.AddRange(new object[] {
-            "(None)",
+            "All",
             "Today",
             "This Week",
             "This Month",
@@ -319,7 +319,7 @@
             this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.cboFilter.Location = new System.Drawing.Point(895, 205);
-            this.cboFilter.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cboFilter.Margin = new System.Windows.Forms.Padding(4);
             this.cboFilter.Name = "cboFilter";
             this.cboFilter.Size = new System.Drawing.Size(156, 36);
             this.cboFilter.StartIndex = 1;
@@ -333,7 +333,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1105, 810);
+            this.ClientSize = new System.Drawing.Size(1126, 810);
             this.Controls.Add(this.cboFilter);
             this.Controls.Add(this.btnCancelled);
             this.Controls.Add(this.btnPending);
