@@ -1,15 +1,9 @@
-﻿using ClinicSystem.Patient;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlTypes;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClinicSystem.Appointment
@@ -76,7 +70,7 @@ namespace ClinicSystem.Appointment
                     g_proc.sqlCommand.Parameters.Clear();
                     g_proc.sqlCommand.CommandText = "procSearchAppointment2";
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
-                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);
+                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
                     g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -166,33 +160,14 @@ namespace ClinicSystem.Appointment
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} edited!");
+                g_proc.displayFormAsModal(mainForm, new frmEditAppointment(Convert.ToInt32(grdAppointment.Rows[e.RowIndex].Cells["id"].Value.ToString())));
+                func_LoadTable();
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {
-                DialogResult dialogConfirmDelete = MessageBox.Show("Are you sure you want to cancel this appointment permanently?",
-                                                         "Confirm Cancellation", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (dialogConfirmDelete == DialogResult.No) { return; }
-                func_ChangeAppointmentStatus(e, "procCancelAppointment", "cancelled!");
+                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
+                MessageBox.Show($"Appointment for {fullName} deleted!");
             }
-        }
-
-        private void func_ChangeAppointmentStatus(DataGridViewCellEventArgs e, string v_proc, string v_message)
-        {
-            g_proc.sqlCommand.Parameters.Clear();
-            g_proc.sqlCommand.CommandText = v_proc;
-            g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
-
-            g_proc.sqlCommand.Parameters.AddWithValue("@p_id", grdAppointment.Rows[e.RowIndex].Cells["id"].Value);
-
-            g_proc.sqlCommand.ExecuteNonQuery();
-            g_proc.sqlClinicAdapter.Dispose();
-            g_proc.datPatients.Dispose();
-
-            string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-            func_LoadTable();
-            MessageBox.Show($"Appointment for {fullName} " + v_message);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)

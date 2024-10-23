@@ -34,6 +34,11 @@ namespace ClinicSystem
             func_LoadSecretary();
         }
 
+        private void frmSecretaryDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void func_LoadAppointments()
         {
             try
@@ -66,7 +71,7 @@ namespace ClinicSystem
                     g_proc.sqlCommand.Parameters.Clear();
                     g_proc.sqlCommand.CommandText = "procSearchAppointment2";
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_search", "");
-                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", 1);
+                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", 2);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_status", "pending");
                     g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -275,6 +280,12 @@ namespace ClinicSystem
         {
             //this.mainForm.NavigateToForm(new frmPatientAdd(mainForm, doctor_id));
             this.Close();
+        }
+
+
+        private void pnlAppointmentTable_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
