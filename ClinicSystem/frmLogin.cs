@@ -42,6 +42,7 @@ namespace ClinicSystem
                 int doctor_id = -1;
                 int secretary_id = -1;
                 int role = -1;
+                Boolean isExist = false;
                 using (var reader = sqlCmd.ExecuteReader())
                 {
                     if (reader.Read())
@@ -52,7 +53,14 @@ namespace ClinicSystem
                         role = Int32.Parse(reader[3].ToString());
                         doctor_id = Int32.Parse(reader[4].ToString() == "" ? "-1" : reader[4].ToString());
                         secretary_id = Int32.Parse(reader[5].ToString() == "" ? "-1" : reader[5].ToString());
+                        isExist = true;
                     }
+                }
+
+                if (!isExist)
+                {
+                    MessageBox.Show("Invalid Credentials");
+                    return;
                 }
 
                 bool isValid = BCrypt.Net.BCrypt.EnhancedVerify(txtPassword.Text, password);
