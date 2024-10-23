@@ -221,8 +221,8 @@
             this.cmbStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbStatus.ItemHeight = 30;
             this.cmbStatus.Items.AddRange(new object[] {
-            "paid",
-            "unpaid"});
+            "PAID",
+            "UNPAID"});
             this.cmbStatus.Location = new System.Drawing.Point(39, 218);
             this.cmbStatus.Name = "cmbStatus";
             this.cmbStatus.Size = new System.Drawing.Size(469, 36);

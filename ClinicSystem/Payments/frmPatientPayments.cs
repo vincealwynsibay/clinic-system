@@ -36,7 +36,7 @@ namespace ClinicSystem.Patient
         {
 
             g_proc.fncConnectToDatabase();
-            btnAll.PerformClick();
+            btnUnpaid.PerformClick();
             func_LoadTable();
         }
 
