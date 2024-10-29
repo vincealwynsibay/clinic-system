@@ -29,11 +29,11 @@ namespace ClinicSystem
         private string originalConsultationAmount;
         private string originalProfile;
 
-        public frmDoctorSetting(frmDoctorMain mainForm, int key_index)
+        public frmDoctorSetting(frmDoctorMain mainForm, int doctor_id)
         {
             InitializeComponent();
             this.mainForm = mainForm;
-            this.key_index = key_index;
+            this.key_index = doctor_id;
             g_proc.fncConnectToDatabase();
             func_LoadDoctorData();
         }
@@ -83,7 +83,7 @@ namespace ClinicSystem
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error:" + ex.Message);
             }
             g_proc.sqlClinicAdapter.Dispose();
             g_proc.datDoctors.Dispose();
@@ -133,6 +133,12 @@ namespace ClinicSystem
 
         private void btnSaveEditDoctor_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtMobileNo.Text.ToString()) || g_proc.CheckIfEmpty(txtEmail.Text.ToString()) || g_proc.CheckIfEmpty(txtAddress.Text.ToString())
+                || g_proc.CheckIfEmpty(txtConsultation.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             try
             {
@@ -166,10 +172,11 @@ namespace ClinicSystem
 
                 MessageBox.Show("Record updated successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 func_LoadDoctorData();
+                //mainForm.func_DetailRefresh();
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error:1 " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -180,6 +187,11 @@ namespace ClinicSystem
                    txtAddress.Text != originalAddress ||
                    imgProfile != originalProfile ||
                    txtConsultation.Text != originalConsultationAmount;
+        }
+
+        private void frmDoctorSetting_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

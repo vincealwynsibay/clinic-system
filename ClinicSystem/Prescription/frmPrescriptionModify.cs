@@ -92,6 +92,13 @@ namespace ClinicSystem.Prescription
         
         private void btnSave_Click(object sender, EventArgs e)
         {
+            if (g_proc.CheckIfEmpty(txtQuantity.Text.ToString()) || g_proc.CheckIfEmpty(txtMedicine.Text.ToString()) || g_proc.CheckIfEmpty(txtDosage.Text.ToString()) ||
+                g_proc.CheckIfEmpty(txtFrequency.Text.ToString()))
+            {
+                MessageBox.Show("Required Field is Empty.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 string quantity = txtQuantity.Text;

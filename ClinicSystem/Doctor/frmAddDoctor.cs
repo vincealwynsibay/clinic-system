@@ -64,7 +64,6 @@ namespace ClinicSystem
                 sqlCmd.Parameters.AddWithValue("@p_mobileno", txtMobileNo.Text);
                 sqlCmd.Parameters.AddWithValue("@p_address", txtAddress.Text);
                 sqlCmd.Parameters.AddWithValue("@p_photo", imgProfile);
-
                 var doctor_id = sqlCmd.ExecuteScalar();
 
                 string hashedPassword = BCrypt.Net.BCrypt.EnhancedHashPassword(txtPassword.Text, 13);

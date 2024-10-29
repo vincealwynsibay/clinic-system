@@ -1,15 +1,9 @@
-﻿using ClinicSystem.Patient;
-using Guna.UI2.WinForms;
+﻿using Guna.UI2.WinForms;
 using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
-using System.Data.SqlTypes;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace ClinicSystem.Appointment
@@ -76,7 +70,7 @@ namespace ClinicSystem.Appointment
                     g_proc.sqlCommand.Parameters.Clear();
                     g_proc.sqlCommand.CommandText = "procSearchAppointment2";
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_search", txtSearch.Text);
-                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex + 1);
+                    g_proc.sqlCommand.Parameters.AddWithValue("@p_filter", cboFilter.SelectedIndex);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_doctor_id", doctor_id);
                     g_proc.sqlCommand.Parameters.AddWithValue("@p_status", status.ToUpper());
                     g_proc.sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -166,8 +160,8 @@ namespace ClinicSystem.Appointment
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnEdit"].Index && e.RowIndex >= 0)
             {
-                string fullName = grdAppointment.Rows[e.RowIndex].Cells["fullname"].Value.ToString();
-                MessageBox.Show($"Appointment for {fullName} edited!");
+                g_proc.displayFormAsModal(mainForm, new frmEditAppointment(Convert.ToInt32(grdAppointment.Rows[e.RowIndex].Cells["id"].Value.ToString())));
+                func_LoadTable();
             }
             else if (e.ColumnIndex == grdAppointment.Columns["btnDelete"].Index && e.RowIndex >= 0)
             {

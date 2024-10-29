@@ -260,13 +260,13 @@ namespace ClinicSystem
                         DataRow row = g_proc.datPatients.Rows[0];
                         patientCount += Convert.ToInt32(row["PatientCount"]);
                         appointmentCount += Convert.ToInt32(row["AppointmentCount"]);
-                        paymentCount += Convert.ToInt32(row["PaymentCount"]);
+                        paymentCount += Convert.ToInt32(row["EarningsCount"]);
                     }
                 }
 
                 lblPatientCount.Text = patientCount.ToString();
                 lblAppointmentCount.Text = appointmentCount.ToString();
-                lblEarningsCount.Text = paymentCount.ToString();
+                lblEarningsCount.Text = "₱" + paymentCount.ToString();
             }
             catch (Exception ex)
             {

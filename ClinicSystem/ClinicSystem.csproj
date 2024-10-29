@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA00C920-5AC3-49A4-81BF-C44DB9325C9B}</ProjectGuid>
+    <ProjectGuid>{23E29A30-7DAF-4BEC-96E2-919E5863CE02}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>ClinicSystem</RootNamespace>
     <AssemblyName>ClinicSystem</AssemblyName>
@@ -46,6 +46,10 @@
     <Reference Include="Bunifu.UI.WinForms, Version=0.0.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
       <HintPath>..\packages\Bunifu.UI.WinForms.7.2.0\lib\net48\Bunifu.UI.WinForms.dll</HintPath>
     </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Google.Protobuf, Version=3.26.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
       <HintPath>..\packages\Google.Protobuf.3.26.1\lib\net45\Google.Protobuf.dll</HintPath>
     </Reference>
@@ -118,6 +122,7 @@
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -133,6 +138,60 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Appointment\frmAddAppointmentDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\frmAddAppointmentDoctor.Designer.cs">
+      <DependentUpon>frmAddAppointmentDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Appointment\frmEditAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Appointment\frmEditAppointment.Designer.cs">
+      <DependentUpon>frmEditAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport\csrMonthlyReports.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>csrMonthlyReports.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="CrystalReport\csrReceiptPrescription.cs">
+      <DependentUpon>csrReceiptPrescription.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="CrystalReport\frmMonthlyReports.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport\frmMonthlyReports.Designer.cs">
+      <DependentUpon>frmMonthlyReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CrystalReport\frmReceiptPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrystalReport\frmReceiptPrescription.Designer.cs">
+      <DependentUpon>frmReceiptPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmAdminDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmAdminDashboard.Designer.cs">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmDoctorDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmDoctorDashboard.Designer.cs">
+      <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\frmSecretaryDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard\frmSecretaryDashboard.Designer.cs">
+      <DependentUpon>frmSecretaryDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="DoctorAppointment\frmDashboardAppointment.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,18 +209,6 @@
     </Compile>
     <Compile Include="DoctorAppointment\frmDashboardAppointment.Designer.cs">
       <DependentUpon>frmDashboardAppointment.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\frmDoctorDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\frmDoctorDashboard.Designer.cs">
-      <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard\frmSecretaryDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\frmSecretaryDashboard.Designer.cs">
-      <DependentUpon>frmSecretaryDashboard.cs</DependentUpon>
     </Compile>
     <Compile Include="Diagnosis\frmDiagnosisAdd.cs">
       <SubType>Form</SubType>
@@ -289,12 +336,6 @@
     <Compile Include="Secretary\frmAddSecretary.Designer.cs">
       <DependentUpon>frmAddSecretary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\frmAdminDashboard.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Dashboard\frmAdminDashboard.Designer.cs">
-      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmAdminMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,8 +402,28 @@
     <EmbeddedResource Include="Appointment\frmAddAppointment.resx">
       <DependentUpon>frmAddAppointment.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Appointment\frmAddAppointmentDoctor.resx">
+      <DependentUpon>frmAddAppointmentDoctor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Appointment\frmSecretaryAppointment.resx">
       <DependentUpon>frmSecretaryAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\csrMonthlyReports.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>csrMonthlyReports.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\csrReceiptPrescription.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>csrReceiptPrescription.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\frmMonthlyReports.resx">
+      <DependentUpon>frmMonthlyReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrystalReport\frmReceiptPrescription.resx">
+      <DependentUpon>frmReceiptPrescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard\frmAdminDashboard.resx">
+      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Dashboard\frmDoctorDashboard.resx">
       <DependentUpon>frmDoctorDashboard.cs</DependentUpon>
@@ -432,9 +493,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Secretary\frmAddSecretary.resx">
       <DependentUpon>frmAddSecretary.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard\frmAdminDashboard.resx">
-      <DependentUpon>frmAdminDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAdminMain.resx">
       <DependentUpon>frmAdminMain.cs</DependentUpon>
@@ -574,8 +632,9 @@
   <ItemGroup>
     <None Include="Resources\icn_print.png" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="NewFolder2\" />
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

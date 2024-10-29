@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDoctorAppointment));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblReport = new Bunifu.UI.WinForms.BunifuLabel();
             this.btnAdd = new Guna.UI2.WinForms.Guna2Button();
             this.grdAppointment = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -59,7 +59,7 @@
             this.lblReport.Font = new System.Drawing.Font("IBM Plex Sans", 24F, System.Drawing.FontStyle.Bold);
             this.lblReport.ForeColor = System.Drawing.Color.Black;
             this.lblReport.Location = new System.Drawing.Point(28, 22);
-            this.lblReport.Margin = new System.Windows.Forms.Padding(2);
+            this.lblReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lblReport.Name = "lblReport";
             this.lblReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblReport.Size = new System.Drawing.Size(212, 43);
@@ -76,8 +76,8 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-5, 0);
-            this.btnAdd.Location = new System.Drawing.Point(641, 22);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(532, 22);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(256, 49);
             this.btnAdd.TabIndex = 140;
@@ -88,18 +88,18 @@
             // 
             this.grdAppointment.AllowUserToAddRows = false;
             this.grdAppointment.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.grdAppointment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("IBM Plex Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdAppointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.Black;
+            this.grdAppointment.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("IBM Plex Sans", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(248)))), ((int)(((byte)(249)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdAppointment.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.grdAppointment.ColumnHeadersHeight = 24;
             this.grdAppointment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
@@ -109,17 +109,17 @@
             this.btnEdit,
             this.btnDelete,
             this.btnApprove});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdAppointment.DefaultCellStyle = dataGridViewCellStyle6;
             this.grdAppointment.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(239)))), ((int)(((byte)(241)))), ((int)(((byte)(243)))));
             this.grdAppointment.Location = new System.Drawing.Point(28, 287);
-            this.grdAppointment.Margin = new System.Windows.Forms.Padding(2);
+            this.grdAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.grdAppointment.Name = "grdAppointment";
             this.grdAppointment.ReadOnly = true;
             this.grdAppointment.RowHeadersVisible = false;
@@ -127,7 +127,7 @@
             this.grdAppointment.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdAppointment.RowTemplate.Height = 40;
             this.grdAppointment.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdAppointment.Size = new System.Drawing.Size(869, 386);
+            this.grdAppointment.Size = new System.Drawing.Size(760, 356);
             this.grdAppointment.TabIndex = 149;
             this.grdAppointment.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.WhiteGrid;
             this.grdAppointment.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -172,6 +172,7 @@
             // 
             this.mobileno.FillWeight = 74.18671F;
             this.mobileno.HeaderText = "Phone Number";
+            this.mobileno.MinimumWidth = 6;
             this.mobileno.Name = "mobileno";
             this.mobileno.ReadOnly = true;
             // 
@@ -179,6 +180,7 @@
             // 
             this.gender.FillWeight = 74.18671F;
             this.gender.HeaderText = "Email";
+            this.gender.MinimumWidth = 6;
             this.gender.Name = "gender";
             this.gender.ReadOnly = true;
             // 
@@ -186,6 +188,7 @@
             // 
             this.btnEdit.FillWeight = 25F;
             this.btnEdit.HeaderText = "";
+            this.btnEdit.MinimumWidth = 6;
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.ReadOnly = true;
             this.btnEdit.Visible = false;
@@ -194,6 +197,7 @@
             // 
             this.btnDelete.FillWeight = 25F;
             this.btnDelete.HeaderText = "";
+            this.btnDelete.MinimumWidth = 6;
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.ReadOnly = true;
             this.btnDelete.Visible = false;
@@ -202,6 +206,7 @@
             // 
             this.btnApprove.FillWeight = 74.18671F;
             this.btnApprove.HeaderText = "";
+            this.btnApprove.MinimumWidth = 6;
             this.btnApprove.Name = "btnApprove";
             this.btnApprove.ReadOnly = true;
             // 
@@ -223,6 +228,7 @@
             this.txtSearch.IconLeft = global::ClinicSystem.Properties.Resources.icnSearch;
             this.txtSearch.IconLeftOffset = new System.Drawing.Point(10, 0);
             this.txtSearch.Location = new System.Drawing.Point(28, 112);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.PasswordChar = '\0';
             this.txtSearch.PlaceholderText = "Search Appoinments";
@@ -307,9 +313,9 @@
             "This Week",
             "This Month",
             "This Year"});
-            this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("IBM Plex Sans Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboFilter.ItemsAppearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboFilter.ItemsAppearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.cboFilter.Location = new System.Drawing.Point(753, 170);
+            this.cboFilter.Location = new System.Drawing.Point(671, 167);
             this.cboFilter.Name = "cboFilter";
             this.cboFilter.Size = new System.Drawing.Size(118, 36);
             this.cboFilter.StartIndex = 1;
@@ -323,7 +329,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(937, 734);
+            this.ClientSize = new System.Drawing.Size(829, 658);
             this.Controls.Add(this.cboFilter);
             this.Controls.Add(this.btnCancelled);
             this.Controls.Add(this.btnPending);
@@ -333,7 +339,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmDoctorAppointment";
             this.Text = "frmDoctorDashboard";
             ((System.ComponentModel.ISupportInitialize)(this.grdAppointment)).EndInit();

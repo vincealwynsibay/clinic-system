@@ -62,9 +62,10 @@
             this.lblReport.Font = new System.Drawing.Font("IBM Plex Sans", 24F, System.Drawing.FontStyle.Bold);
             this.lblReport.ForeColor = System.Drawing.Color.Black;
             this.lblReport.Location = new System.Drawing.Point(28, 22);
-            this.lblReport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblReport.Margin = new System.Windows.Forms.Padding(2);
             this.lblReport.Name = "lblReport";
             this.lblReport.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblReport.Size = new System.Drawing.Size(186, 43);
             this.lblReport.Size = new System.Drawing.Size(186, 43);
             this.lblReport.TabIndex = 39;
             this.lblReport.Text = "Daily Report";
@@ -79,8 +80,9 @@
             this.btnAdd.ForeColor = System.Drawing.Color.White;
             this.btnAdd.Image = global::ClinicSystem.Properties.Resources.plus;
             this.btnAdd.ImageOffset = new System.Drawing.Point(-10, 0);
-            this.btnAdd.Location = new System.Drawing.Point(664, 22);
+            this.btnAdd.Location = new System.Drawing.Point(563, 22);
             this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(233, 49);
             this.btnAdd.Size = new System.Drawing.Size(233, 49);
             this.btnAdd.TabIndex = 140;
             this.btnAdd.Text = "Add New Patient";
@@ -99,11 +101,11 @@
             this.pnlAppointment.Controls.Add(this.lblAppointmentCount);
             this.pnlAppointment.Controls.Add(this.lblAppoint);
             this.pnlAppointment.Location = new System.Drawing.Point(28, 121);
-            this.pnlAppointment.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlAppointment.Margin = new System.Windows.Forms.Padding(2);
             this.pnlAppointment.Name = "pnlAppointment";
-            this.pnlAppointment.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pnlAppointment.Padding = new System.Windows.Forms.Padding(8);
             this.pnlAppointment.ShowBorders = true;
-            this.pnlAppointment.Size = new System.Drawing.Size(267, 170);
+            this.pnlAppointment.Size = new System.Drawing.Size(241, 159);
             this.pnlAppointment.TabIndex = 141;
             // 
             // lblAppointmentPercent
@@ -118,8 +120,10 @@
             this.lblAppointmentPercent.ForeColor = System.Drawing.Color.White;
             this.lblAppointmentPercent.ImageSize = new System.Drawing.Size(1, 2);
             this.lblAppointmentPercent.Location = new System.Drawing.Point(29, 129);
+            this.lblAppointmentPercent.Location = new System.Drawing.Point(29, 129);
             this.lblAppointmentPercent.Margin = new System.Windows.Forms.Padding(0);
             this.lblAppointmentPercent.Name = "lblAppointmentPercent";
+            this.lblAppointmentPercent.Size = new System.Drawing.Size(56, 19);
             this.lblAppointmentPercent.Size = new System.Drawing.Size(56, 19);
             this.lblAppointmentPercent.TabIndex = 144;
             this.lblAppointmentPercent.Text = "+0%";
@@ -132,10 +136,11 @@
             this.bunifuLabel3.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel3.Font = new System.Drawing.Font("IBM Plex Sans", 6.75F);
             this.bunifuLabel3.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel3.Location = new System.Drawing.Point(91, 133);
-            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel3.Location = new System.Drawing.Point(88, 133);
+            this.bunifuLabel3.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel3.Name = "bunifuLabel3";
             this.bunifuLabel3.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel3.Size = new System.Drawing.Size(78, 11);
             this.bunifuLabel3.Size = new System.Drawing.Size(78, 11);
             this.bunifuLabel3.TabIndex = 145;
             this.bunifuLabel3.Text = "Increase in 30 Days";
@@ -151,9 +156,10 @@
             this.lblAppointmentCount.Font = new System.Drawing.Font("IBM Plex Sans", 27.75F, System.Drawing.FontStyle.Bold);
             this.lblAppointmentCount.ForeColor = System.Drawing.Color.Black;
             this.lblAppointmentCount.Location = new System.Drawing.Point(30, 58);
-            this.lblAppointmentCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblAppointmentCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblAppointmentCount.Name = "lblAppointmentCount";
             this.lblAppointmentCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblAppointmentCount.Size = new System.Drawing.Size(164, 49);
             this.lblAppointmentCount.Size = new System.Drawing.Size(164, 49);
             this.lblAppointmentCount.TabIndex = 144;
             this.lblAppointmentCount.Text = "APPOINT";
@@ -169,9 +175,10 @@
             this.lblAppoint.Font = new System.Drawing.Font("IBM Plex Sans", 14.25F);
             this.lblAppoint.ForeColor = System.Drawing.Color.Black;
             this.lblAppoint.Location = new System.Drawing.Point(29, 26);
-            this.lblAppoint.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblAppoint.Margin = new System.Windows.Forms.Padding(2);
             this.lblAppoint.Name = "lblAppoint";
             this.lblAppoint.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblAppoint.Size = new System.Drawing.Size(170, 25);
             this.lblAppoint.Size = new System.Drawing.Size(170, 25);
             this.lblAppoint.TabIndex = 144;
             this.lblAppoint.Text = "Total Appointments";
@@ -190,28 +197,31 @@
             this.pnlEarning.Controls.Add(this.bunifuLabel2);
             this.pnlEarning.Controls.Add(this.lblEarningsCount);
             this.pnlEarning.Controls.Add(this.lblEarnings);
-            this.pnlEarning.Location = new System.Drawing.Point(630, 121);
-            this.pnlEarning.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlEarning.Location = new System.Drawing.Point(556, 121);
+            this.pnlEarning.Margin = new System.Windows.Forms.Padding(2);
             this.pnlEarning.Name = "pnlEarning";
-            this.pnlEarning.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pnlEarning.Padding = new System.Windows.Forms.Padding(8);
             this.pnlEarning.ShowBorders = true;
-            this.pnlEarning.Size = new System.Drawing.Size(267, 170);
+            this.pnlEarning.Size = new System.Drawing.Size(241, 170);
             this.pnlEarning.TabIndex = 146;
             // 
             // lblEarningPercent
             // 
+            this.lblEarningPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
             this.lblEarningPercent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(248)))), ((int)(((byte)(230)))));
             this.lblEarningPercent.BorderRadius = 8;
             this.lblEarningPercent.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(109)))), ((int)(((byte)(92)))));
             this.lblEarningPercent.DisabledState.ForeColor = System.Drawing.Color.White;
             this.lblEarningPercent.Enabled = false;
             this.lblEarningPercent.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(253)))), ((int)(((byte)(109)))), ((int)(((byte)(92)))));
-            this.lblEarningPercent.Font = new System.Drawing.Font("IBM Plex Sans", 6F);
+            this.lblEarningPercent.Font = new System.Drawing.Font("IBM Plex Sans", 6F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEarningPercent.ForeColor = System.Drawing.Color.White;
             this.lblEarningPercent.ImageSize = new System.Drawing.Size(1, 2);
             this.lblEarningPercent.Location = new System.Drawing.Point(29, 129);
+            this.lblEarningPercent.Location = new System.Drawing.Point(29, 129);
             this.lblEarningPercent.Margin = new System.Windows.Forms.Padding(0);
             this.lblEarningPercent.Name = "lblEarningPercent";
+            this.lblEarningPercent.Size = new System.Drawing.Size(56, 19);
             this.lblEarningPercent.Size = new System.Drawing.Size(56, 19);
             this.lblEarningPercent.TabIndex = 144;
             this.lblEarningPercent.Text = "+0%";
@@ -224,10 +234,11 @@
             this.bunifuLabel2.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel2.Font = new System.Drawing.Font("IBM Plex Sans", 6.75F);
             this.bunifuLabel2.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel2.Location = new System.Drawing.Point(91, 133);
-            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel2.Location = new System.Drawing.Point(88, 133);
+            this.bunifuLabel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel2.Name = "bunifuLabel2";
             this.bunifuLabel2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel2.Size = new System.Drawing.Size(78, 11);
             this.bunifuLabel2.Size = new System.Drawing.Size(78, 11);
             this.bunifuLabel2.TabIndex = 145;
             this.bunifuLabel2.Text = "Increase in 30 Days";
@@ -243,9 +254,10 @@
             this.lblEarningsCount.Font = new System.Drawing.Font("IBM Plex Sans", 27.75F, System.Drawing.FontStyle.Bold);
             this.lblEarningsCount.ForeColor = System.Drawing.Color.Black;
             this.lblEarningsCount.Location = new System.Drawing.Point(30, 58);
-            this.lblEarningsCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblEarningsCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblEarningsCount.Name = "lblEarningsCount";
             this.lblEarningsCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEarningsCount.Size = new System.Drawing.Size(26, 49);
             this.lblEarningsCount.Size = new System.Drawing.Size(26, 49);
             this.lblEarningsCount.TabIndex = 144;
             this.lblEarningsCount.Text = "₱";
@@ -261,9 +273,10 @@
             this.lblEarnings.Font = new System.Drawing.Font("IBM Plex Sans", 14.25F);
             this.lblEarnings.ForeColor = System.Drawing.Color.Black;
             this.lblEarnings.Location = new System.Drawing.Point(29, 26);
-            this.lblEarnings.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblEarnings.Margin = new System.Windows.Forms.Padding(2);
             this.lblEarnings.Name = "lblEarnings";
             this.lblEarnings.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblEarnings.Size = new System.Drawing.Size(122, 25);
             this.lblEarnings.Size = new System.Drawing.Size(122, 25);
             this.lblEarnings.TabIndex = 144;
             this.lblEarnings.Text = "Total Earnings";
@@ -282,12 +295,12 @@
             this.pnlPatient.Controls.Add(this.bunifuLabel6);
             this.pnlPatient.Controls.Add(this.lblPatientCount);
             this.pnlPatient.Controls.Add(this.lblPatient);
-            this.pnlPatient.Location = new System.Drawing.Point(328, 121);
-            this.pnlPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlPatient.Location = new System.Drawing.Point(292, 121);
+            this.pnlPatient.Margin = new System.Windows.Forms.Padding(2);
             this.pnlPatient.Name = "pnlPatient";
-            this.pnlPatient.Padding = new System.Windows.Forms.Padding(8, 8, 8, 8);
+            this.pnlPatient.Padding = new System.Windows.Forms.Padding(8);
             this.pnlPatient.ShowBorders = true;
-            this.pnlPatient.Size = new System.Drawing.Size(267, 170);
+            this.pnlPatient.Size = new System.Drawing.Size(241, 170);
             this.pnlPatient.TabIndex = 147;
             // 
             // lblPatientPercent
@@ -302,8 +315,10 @@
             this.lblPatientPercent.ForeColor = System.Drawing.Color.White;
             this.lblPatientPercent.ImageSize = new System.Drawing.Size(1, 2);
             this.lblPatientPercent.Location = new System.Drawing.Point(29, 129);
+            this.lblPatientPercent.Location = new System.Drawing.Point(29, 129);
             this.lblPatientPercent.Margin = new System.Windows.Forms.Padding(0);
             this.lblPatientPercent.Name = "lblPatientPercent";
+            this.lblPatientPercent.Size = new System.Drawing.Size(56, 19);
             this.lblPatientPercent.Size = new System.Drawing.Size(56, 19);
             this.lblPatientPercent.TabIndex = 144;
             this.lblPatientPercent.Text = "+0%";
@@ -316,10 +331,11 @@
             this.bunifuLabel6.CursorType = System.Windows.Forms.Cursors.Default;
             this.bunifuLabel6.Font = new System.Drawing.Font("IBM Plex Sans", 6.75F);
             this.bunifuLabel6.ForeColor = System.Drawing.Color.Black;
-            this.bunifuLabel6.Location = new System.Drawing.Point(91, 133);
-            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel6.Location = new System.Drawing.Point(88, 133);
+            this.bunifuLabel6.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel6.Name = "bunifuLabel6";
             this.bunifuLabel6.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel6.Size = new System.Drawing.Size(78, 11);
             this.bunifuLabel6.Size = new System.Drawing.Size(78, 11);
             this.bunifuLabel6.TabIndex = 145;
             this.bunifuLabel6.Text = "Increase in 30 Days";
@@ -335,9 +351,10 @@
             this.lblPatientCount.Font = new System.Drawing.Font("IBM Plex Sans", 27.75F, System.Drawing.FontStyle.Bold);
             this.lblPatientCount.ForeColor = System.Drawing.Color.Black;
             this.lblPatientCount.Location = new System.Drawing.Point(30, 58);
-            this.lblPatientCount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblPatientCount.Margin = new System.Windows.Forms.Padding(2);
             this.lblPatientCount.Name = "lblPatientCount";
             this.lblPatientCount.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPatientCount.Size = new System.Drawing.Size(158, 49);
             this.lblPatientCount.Size = new System.Drawing.Size(158, 49);
             this.lblPatientCount.TabIndex = 144;
             this.lblPatientCount.Text = "PATIENT";
@@ -353,9 +370,10 @@
             this.lblPatient.Font = new System.Drawing.Font("IBM Plex Sans", 14.25F);
             this.lblPatient.ForeColor = System.Drawing.Color.Black;
             this.lblPatient.Location = new System.Drawing.Point(29, 26);
-            this.lblPatient.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lblPatient.Margin = new System.Windows.Forms.Padding(2);
             this.lblPatient.Name = "lblPatient";
             this.lblPatient.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblPatient.Size = new System.Drawing.Size(119, 25);
             this.lblPatient.Size = new System.Drawing.Size(119, 25);
             this.lblPatient.TabIndex = 144;
             this.lblPatient.Text = "Total Patients";
@@ -371,9 +389,10 @@
             this.bunifuLabel1.Font = new System.Drawing.Font("IBM Plex Sans", 18F, System.Drawing.FontStyle.Bold);
             this.bunifuLabel1.ForeColor = System.Drawing.Color.Black;
             this.bunifuLabel1.Location = new System.Drawing.Point(28, 346);
-            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuLabel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuLabel1.Name = "bunifuLabel1";
             this.bunifuLabel1.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.bunifuLabel1.Size = new System.Drawing.Size(159, 33);
             this.bunifuLabel1.Size = new System.Drawing.Size(159, 33);
             this.bunifuLabel1.TabIndex = 148;
             this.bunifuLabel1.Text = "Appointments";
@@ -389,17 +408,19 @@
             this.pnlAppointmentTable.BorderRadius = 3;
             this.pnlAppointmentTable.BorderThickness = 1;
             this.pnlAppointmentTable.Location = new System.Drawing.Point(28, 386);
+            this.pnlAppointmentTable.Location = new System.Drawing.Point(28, 386);
             this.pnlAppointmentTable.Name = "pnlAppointmentTable";
             this.pnlAppointmentTable.ShowBorders = false;
-            this.pnlAppointmentTable.Size = new System.Drawing.Size(869, 296);
+            this.pnlAppointmentTable.Size = new System.Drawing.Size(769, 296);
             this.pnlAppointmentTable.TabIndex = 150;
             // 
             // frmDoctorDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(937, 734);
+            this.ClientSize = new System.Drawing.Size(855, 743);
             this.Controls.Add(this.pnlAppointmentTable);
             this.Controls.Add(this.bunifuLabel1);
             this.Controls.Add(this.pnlPatient);
@@ -408,7 +429,7 @@
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.lblReport);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDoctorDashboard";
             this.Text = "frmDoctorDashboard";
             this.pnlAppointment.ResumeLayout(false);

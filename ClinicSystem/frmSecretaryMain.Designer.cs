@@ -41,7 +41,6 @@
             this.btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnAppointments = new Guna.UI2.WinForms.Guna2Button();
-            this.btnSecretaries = new Guna.UI2.WinForms.Guna2Button();
             this.bunifuPanel1 = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMain = new Bunifu.UI.WinForms.BunifuPanel();
             this.pnlMainParent = new Bunifu.UI.WinForms.BunifuPanel();
@@ -189,9 +188,7 @@
             this.bunifuPanel3.Controls.Add(this.btnDashboard);
             this.bunifuPanel3.Controls.Add(this.btnLogout);
             this.bunifuPanel3.Controls.Add(this.btnAppointments);
-            this.bunifuPanel3.Controls.Add(this.btnSecretaries);
-            this.bunifuPanel3.Location = new System.Drawing.Point(0, 5);
-            this.bunifuPanel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuPanel3.Location = new System.Drawing.Point(0, 6);
             this.bunifuPanel3.Name = "bunifuPanel3";
             this.bunifuPanel3.ShowBorders = true;
             this.bunifuPanel3.Size = new System.Drawing.Size(260, 777);
@@ -243,6 +240,7 @@
             this.btnDashboard.TabIndex = 0;
             this.btnDashboard.Text = "Dashboard";
             this.btnDashboard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.btnDashboard.Click += new System.EventHandler(this.btnDashboard_Click);
             // 
             // btnLogout
             // 
@@ -259,8 +257,7 @@
             this.btnLogout.Image = global::ClinicSystem.Properties.Resources.logout;
             this.btnLogout.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnLogout.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnLogout.Location = new System.Drawing.Point(16, 249);
-            this.btnLogout.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLogout.Location = new System.Drawing.Point(25, 243);
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(220, 37);
             this.btnLogout.TabIndex = 0;
@@ -290,29 +287,6 @@
             this.btnAppointments.Text = "Appointments";
             this.btnAppointments.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnAppointments.Click += new System.EventHandler(this.btnAppointments_Click);
-            // 
-            // btnSecretaries
-            // 
-            this.btnSecretaries.Animated = true;
-            this.btnSecretaries.BackColor = System.Drawing.Color.White;
-            this.btnSecretaries.BorderColor = System.Drawing.Color.Transparent;
-            this.btnSecretaries.BorderRadius = 12;
-            this.btnSecretaries.ButtonMode = Guna.UI2.WinForms.Enums.ButtonMode.RadioButton;
-            this.btnSecretaries.CheckedState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSecretaries.FillColor = System.Drawing.Color.White;
-            this.btnSecretaries.Font = new System.Drawing.Font("IBM Plex Sans", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSecretaries.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
-            this.btnSecretaries.HoverState.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.btnSecretaries.Image = global::ClinicSystem.Properties.Resources.settings;
-            this.btnSecretaries.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.btnSecretaries.ImageSize = new System.Drawing.Size(24, 24);
-            this.btnSecretaries.Location = new System.Drawing.Point(16, 196);
-            this.btnSecretaries.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnSecretaries.Name = "btnSecretaries";
-            this.btnSecretaries.Size = new System.Drawing.Size(220, 37);
-            this.btnSecretaries.TabIndex = 0;
-            this.btnSecretaries.Text = "Settings";
-            this.btnSecretaries.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuPanel1
             // 
@@ -405,7 +379,6 @@
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
         private Guna.UI2.WinForms.Guna2Button btnLogout;
         private Guna.UI2.WinForms.Guna2Button btnAppointments;
-        private Guna.UI2.WinForms.Guna2Button btnSecretaries;
         private Bunifu.UI.WinForms.BunifuPanel bunifuPanel1;
         private Bunifu.UI.WinForms.BunifuPanel pnlMain;
         private Bunifu.UI.WinForms.BunifuPanel pnlMainParent;
