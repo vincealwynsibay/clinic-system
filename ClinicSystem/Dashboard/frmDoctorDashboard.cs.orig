@@ -63,7 +63,8 @@ namespace ClinicSystem
                     DataRow row = g_proc.datPatients.Rows[0];
                     lblPatientCount.Text = row["PatientCount"].ToString();      // based on the diagnosis date is created this month
                     lblAppointmentCount.Text = row["AppointmentCount"].ToString();  // based on total appoinments this month
-                    lblEarningsCount.Text = "₱" + (Convert.ToDouble(row["EarningsCount"]).ToString());
+<<<<<<< HEAD
+                    lblEarningsCount.Text = "₱"+(Convert.ToDouble(row["EarningsCount"]).ToString());
 
                     double earningsPercentage = Convert.ToDouble(row["EarningsIncreasePercentage"]);
 
@@ -100,6 +101,11 @@ namespace ClinicSystem
                         lblAppointmentPercent.DisabledState.FillColor = Color.FromArgb(253, 109, 92);
                     }
 
+=======
+                    lblAppointmentPercent.Text = "+" + row["AppointmentIncreasePercentage"].ToString() + "%";
+                    lblPatientPercent.Text = "+" + row["PatientIncreasePercentage"].ToString() + "%";
+                    //lblEarningsCount.Text = "₱"+(Convert.ToDouble(row["EarningsCount"]).ToString());
+>>>>>>> master
                 }
             }
             catch (Exception ex)
@@ -113,16 +119,6 @@ namespace ClinicSystem
         private void btnAdd_Click(object sender, EventArgs e)
         {
             g_proc.displayFormAsModal(mainForm, new frmPatientAdd(mainForm, doctor_id));
-        }
-
-        private void frmDoctorDashboard_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pnlAppointmentTable_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

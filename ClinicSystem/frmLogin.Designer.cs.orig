@@ -285,10 +285,18 @@
             this.bunifuGradientPanel1.GradientBottomRight = System.Drawing.Color.FromArgb(((int)(((byte)(93)))), ((int)(((byte)(184)))), ((int)(((byte)(169)))));
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(43)))), ((int)(((byte)(42)))));
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(203)))), ((int)(((byte)(197)))));
+<<<<<<< HEAD
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(579, 57);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(532, 705);
+=======
+            this.bunifuGradientPanel1.Location = new System.Drawing.Point(434, 10);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
+            this.bunifuGradientPanel1.Quality = 10;
+            this.bunifuGradientPanel1.Size = new System.Drawing.Size(399, 609);
+>>>>>>> master
             this.bunifuGradientPanel1.TabIndex = 53;
             // 
             // guna2PictureBox2
@@ -402,8 +410,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1123, 779);
             this.Controls.Add(this.bunifuFormControlBox1);
+=======
+            this.ClientSize = new System.Drawing.Size(842, 633);
+>>>>>>> master
             this.Controls.Add(this.guna2PictureBox1);
             this.Controls.Add(this.guna2GradientButton1);
             this.Controls.Add(this.bunifuGradientPanel1);

@@ -405,6 +405,7 @@
             this.Name = "frmDoctorMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Medic";
+            this.Text = "Medic";
             this.Load += new System.EventHandler(this.frmDoctorMain_Load);
             this.bunifuPanel2.ResumeLayout(false);
             this.bunifuGroupBox1.ResumeLayout(false);
